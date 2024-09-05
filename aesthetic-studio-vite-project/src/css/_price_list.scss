@@ -1,0 +1,60 @@
+.price_list_section {
+  //background-color: rgba(200, 200, 200, 0.2);
+  //margin: 0 15rem;
+  //padding: 1rem 1rem;
+}
+
+h1 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+
+
+  .price_list_heading {
+    font-family: "Poiret One", sans-serif;
+    text-transform: uppercase;
+    //color: goldenrod;
+  }
+
+  .price_list_item {
+    font-family: "Poiret One", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 0.2rem 1rem;
+
+    .price_list_description {
+      color: black;
+    }
+    .price_list_price {
+      color: black;
+    }
+
+
+  }
+
+  .price_list_text {
+
+  }
+
+  hr {
+    border-top: 0.8px solid goldenrod;
+    margin: 0.5rem -4rem;
+  }
+
+.submenu {
+
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 10px;
+
+  .submenu_item {
+    font-family: "Poiret One", sans-serif;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

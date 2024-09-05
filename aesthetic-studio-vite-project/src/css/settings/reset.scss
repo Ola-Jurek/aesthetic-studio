@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+$columns: 10;
+$base-width: calc(100% / $columns);
+
+.container {
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 5px;
+  margin: 0 0;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+
+    [class*="col"] {
+      min-height: 20px;
+      padding: 15px 15px; // gutters
+      width: $base-width;
+      margin-top: 5px;
+
+      .about_name {
+        padding-bottom: 20px;
+      }
+
+    }
+
+    @for $i from 1 through $columns {
+      .col-#{$i} {
+        width: $base-width * $i;
+      }
+    }
+  }
+}

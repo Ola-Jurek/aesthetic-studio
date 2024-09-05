@@ -1,0 +1,36 @@
+.footer {
+  margin: 5rem auto 0 auto;
+  background-color: black;
+  width: 100%;
+  height: 300px;
+  line-height: 2rem;
+
+
+  .footer_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 6rem;
+    font-size: 1.2rem;
+    color: whitesmoke;
+
+
+    .footer_social_media {
+      display: flex;
+      justify-content: center;
+      //line-height: 2rem;
+      color: white;
+    }
+  }
+
+  .footer_logo {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-top: 7rem;
+
+    .logo {
+      scale: 300%;
+    }
+  }
+}

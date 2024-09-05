@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 5px;
+  margin: 0 0;
+}
+.container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .row [class*=col] {
+  min-height: 20px;
+  padding: 15px 15px;
+  width: 10%;
+  margin-top: 5px;
+}
+.container .row [class*=col] .about_name {
+  padding-bottom: 20px;
+}
+.container .row .col-1 {
+  width: 10%;
+}
+.container .row .col-2 {
+  width: 20%;
+}
+.container .row .col-3 {
+  width: 30%;
+}
+.container .row .col-4 {
+  width: 40%;
+}
+.container .row .col-5 {
+  width: 50%;
+}
+.container .row .col-6 {
+  width: 60%;
+}
+.container .row .col-7 {
+  width: 70%;
+}
+.container .row .col-8 {
+  width: 80%;
+}
+.container .row .col-9 {
+  width: 90%;
+}
+.container .row .col-10 {
+  width: 100%;
+}
+
+/*# sourceMappingURL=reset.css.map */
