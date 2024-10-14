@@ -8,7 +8,7 @@ import facebook from '../assets/brand-identity_-facebook-128.png';
 
 export function Footer() {
     return (
-        <Container className='footer'>
+        <Container className='footer' fluid style={{padding: 0, margin: 0, maxWidth: '100%',}}>
             <Row>
                 <Col sm={6} className='footer_info'>
                     <div><a>Qubus Hotel, pok. 217 </a></div>

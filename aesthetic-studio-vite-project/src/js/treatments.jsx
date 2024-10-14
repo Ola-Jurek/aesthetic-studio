@@ -49,14 +49,20 @@ export function Treatments() {
                     <Col sm={2.27} className='submenu_item dropdown toggle' ref={el => toggleRefs.current.body = el} onClick={() => setIsChecked(prevState => ({ ...prevState, body: !prevState.body }))}>
                         Ciało
                         {isChecked.body && (
-                            <ul>
-                                <li><Link to='/treatment_depilacja'>Depilacja laserowa</Link></li>
-                                <li><a href="#">Terapia blizn i rozstępów</a></li>
-                                <li><a href="#">Lipoliza infekcyjna</a></li>
-                                <li><a href="#">Radiofrekwencja mikroigłowa</a></li>
-                                <li><a href="#">Laserowe usuwanie tatuaży</a></li>
-                                <li><a href="#">Rewitalizacja skóry głowy</a></li>
-                            </ul>
+
+                                <div className='treatments_menu'>
+
+                                <Link to='/treatment_depilacja'>Depilacja laserowa</Link>
+                                <a href="#">Terapia blizn i rozstępów</a>
+                                <a href="#">Lipoliza infekcyjna</a>
+                                <a href="#">Radiofrekwencja mikroigłowa</a>
+                                <a href="#">Laserowe usuwanie tatuaży</a>
+                                <a href="#">Rewitalizacja skóry głowy</a>
+
+                            </div>
+
+
+
                         )}
                     </Col>
                     <Col sm={2.27} className='submenu_item dropdown toggle' ref={el => toggleRefs.current.face = el} onClick={() => setIsChecked(prevState => ({ ...prevState, face: !prevState.face }))}>
@@ -103,8 +109,9 @@ export function Treatments() {
                         )}
                     </Col>
                 </Row>
+                <div style={{height:'400px'}}></div>
             </Container>
-            <Footer />
+            <Footer/>
         </>
     );
 }

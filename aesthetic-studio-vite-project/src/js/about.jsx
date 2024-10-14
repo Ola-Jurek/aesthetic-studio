@@ -5,6 +5,8 @@ import {Navbar} from "./navbar.jsx";
 import {Container, Row, Col} from "react-grid-system";
 import '../css/settings/reset.scss';
 import {Footer} from "./footer.jsx";
+// import marta from "../assets/IMG_1179.jpg";
+// import bartek from'../assets/IMG_1080.jpg'
 
 export function About(props) {
     return (
@@ -12,14 +14,22 @@ export function About(props) {
             <Navbar/>
             <Container className='container'>
                 <Row className='row'>
-                    <Col sm={4} className='col'>
-                        <img></img>
-                        <div className='about_name'>Marta Kazimierska</div>
+                    <Col sm={4} className='col' style={{fontFamily:'Poiret One'}}>
+                        <div className='about_name' style={{fontFamily:'Poiret One', padding:'2px 0', marginBottom:'8px'}}>Marta Kazimierska</div>
+                        <div>
+                            <img alt='zdjęcie' style={{height:'250px', borderRadius:'4px', backgroundSize: 'cover', marginBottom:'8px'}}></img>
+                        </div>
+
+
                         Utalentowana i doświadczona kosmetolog, która pasjonuje się pielęgnacją skóry i urodą od najmłodszych lat. Po ukończeniu studiów z kosmetologii na Uniwersytecie Medycznym w Warszawie, zdobyła dodatkowe certyfikaty i szkolenia w zakresie nowoczesnych metod pielęgnacyjnych oraz technik makijażu. Marta specjalizuje się w zabiegach twarzy, takich jak oczyszczanie skóry, peelingi chemiczne oraz zabiegi anti-aging. Jej cierpliwość i empatia sprawiają, że potrafi słuchać potrzeb swoich klientów i dostosowywać zabiegi do indywidualnych potrzeb i oczekiwań. Marta jest również zaangażowana w ciągłe doskonalenie swoich umiejętności poprzez uczestnictwo w konferencjach branżowych oraz szkoleniach. Poza pracą zawodową, Marta uwielbia podróże i aktywny wypoczynek na świeżym powietrzu. Jej celem zawodowym jest nie tylko poprawa wyglądu zewnętrznego klientów, ale również podniesienie ich poczucia własnej wartości i pewności siebie poprzez dbałość o skórę i urodę.
                     </Col>
-                    <Col sm={4} className='col'>
-                        <img></img>
-                        <div className='about_name'>Bartosz Kazimierski</div>
+                    <Col sm={4} className='col' style={{fontFamily:'Poiret One'}}>
+                        <div className='about_name' style={{fontFamily:'Poiret One', padding:'2px 0', marginBottom:'8px'}}>Bartosz Kazimierski</div>
+                        <div>
+                            <img style={{height:'250px', borderRadius:'4px', backgroundSize: 'cover', marginBottom:'8px'}}></img>
+                        </div>
+
+
                         Ceniony lekarz medycyny estetycznej z bogatym doświadczeniem i pasją do doskonalenia urody. Ukończył studia medyczne na Uniwersytecie Jagiellońskim, po których podjął specjalizację z zakresu medycyny estetycznej i anti-agingowej. Bartosz jest znany ze swojego profesjonalizmu, delikatności oraz precyzji w wykonywaniu zabiegów. Jego podejście do pacjentów jest indywidualne i empatyczne – zawsze stara się zrozumieć ich oczekiwania oraz dostosować zabiegi do ich potrzeb. Posiada szeroką wiedzę na temat najnowszych osiągnięć w dziedzinie medycyny estetycznej i stale podnosi swoje kwalifikacje poprzez uczestnictwo w międzynarodowych konferencjach i szkoleniach. Bartosz specjalizuje się w różnorodnych zabiegach, takich jak wypełniacze, toksyna botulinowa, mezoterapia czy laseroterapia. Jego celem jest nie tylko poprawa wyglądu pacjentów, ale przede wszystkim ich zadowolenie oraz samopoczucie. Poza pracą zawodową, Bartosz jest miłośnikiem sportu i aktywnego trybu życia, co dodatkowo wpływa na jego podejście do zdrowia i urody.
                     </Col>
                     <Col sm={4} className='col'>

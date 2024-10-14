@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import { HashLink as Link } from 'react-router-hash-link';
 import '../css/_navbar.scss';
 import {Container, Row, Col} from "react-grid-system";
+import {Searchbar} from "./searchbar.jsx";
 
 
 
@@ -36,7 +37,11 @@ export function Navbar() {
 
     const enterSubmenu = () => {
         setIsSubmenuActive(true);
-    }
+    };
+
+    const handleSearch = () => {
+        console.log('wyszykiwanie dla:', query);
+    };
 
 
     return (
@@ -46,11 +51,13 @@ export function Navbar() {
                     <Col sm={4}>
 
                     </Col>
+
                     <Col sm={4}>
                         <a href='/'>
                             <img src={logo} className='logo' alt='logo' />
                         </a>
                     </Col>
+
                     <Col sm={4}>
 
                     </Col>
@@ -61,13 +68,15 @@ export function Navbar() {
 
     <Row className='menu'>
 
+        {/*<Col sm={2} className='menu_item'> <Searchbar onSearch={handleSearch}/> </Col>*/}
+
         <Col sm={2} className='menu_item'> <Link to='/about'> O nas </Link> </Col>
+
+        <Col sm={2} className='menu_item'> <Link to='/treatments'>Zabiegi </Link> </Col>
 
         <Col sm={2} className='menu_item'> <Link to='/price_list' > Cennik </Link> </Col>
 
         <Col sm={2} className='menu_item'> <Link to='/cosmetics' className='nav_item' >Kosmetyki </Link> </Col>
-
-        <Col sm={2} className='menu_item'> <Link to='/treatments'>Zabiegi </Link> </Col>
 
         <Col sm={2} className='menu_item'> <Link to='/contact' className='nav_item' >Kontakt </Link> </Col>
 
