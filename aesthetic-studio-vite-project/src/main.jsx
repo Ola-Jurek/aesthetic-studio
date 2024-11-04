@@ -9,6 +9,7 @@ import {Contact} from "./js/contact.jsx";
 import {Treatments} from "./js/treatments.jsx";
 import {Cosmetics} from "./js/cosmetics.jsx";
 import {TreatmentDepilacja} from "./js/treatment_1_depilacja.jsx";
+import {StartPage} from "./js/start_page.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/treatment_depilacja' element={<TreatmentDepilacja/>}/>
               <Route path='/cosmetics' element={<Cosmetics/>}/>
               <Route path='/contact' element={<Contact/>}/>
+              <Route path='/start_page' element={<StartPage/>}/>
           </Routes>
       </HashRouter>
 
