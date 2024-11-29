@@ -1,9 +1,8 @@
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
-import React from "react";
-import {TreatmentHeading, TreatmentSidebar, TreatmentDescription, TreatmentsPriceList} from "./treatmentSingle.jsx";
+// import React from "react";
 import {Navbar} from "./navbar.jsx";
-import Treatments from "./treatments.jsx";
+
 
 
 
@@ -21,7 +20,7 @@ export function TreatmentDepilacja() {
                 </Row>
                 <Row>
                     <Col sm={8}>
-                        <img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
+                        {/*<img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>*/}
                     </Col>
                     <Col sm={4} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid blue' }}>
                         <h3> Cena: </h3>

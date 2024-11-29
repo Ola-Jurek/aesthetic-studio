@@ -1,7 +1,6 @@
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
-import React from "react";
-import {TreatmentHeading, TreatmentSidebar, TreatmentDescription, TreatmentsPriceList} from "./treatmentSingle.jsx";
+// import React from "react";
 import {Navbar} from "./navbar.jsx";
 
 
@@ -19,62 +18,68 @@ export function TreatmentBlizny() {
                 </Row>
                 <Row>
                     <Col sm={8}>
-                        <img src={} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
+                        {/*<img src={foto} style={{height: '400px',backgroundSize:'cover'}}></img>*/}
                     </Col>
                     <Col sm={4} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid blue' }}>
                         <h3> Cena: </h3>
-                        <p>0d 150 zł - szczegółowy cennik na dole strony</p>
+                        <p>0d 250 zł </p>
 
                         <h3>Obszar zabigowy:</h3>
-                        <p>Bikini, Brzuch, Kolana, Łydki, Pachy, Plecy, Przedramiona, Ramiona, Wąsik, Twarz, Uda</p>
+                        <p>Wszelkiego rodzaju blizny</p>
 
                         <h3>Na problem:</h3>
-                        <p> Owłosienie </p>
+                        <p> blizny, rozstępy, ubytki tkanki </p>
                     </Col>
                 </Row>
                 <Row>
                     <Col sm={8} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid pink', textAlign:'start', paddingLeft:'20px' }}>
-                        <h2> Laser diodowy Medika Polska Trio Laser SLD 755nm + 808nm + 1064nm </h2>
+                        <h2> Na czym polega zabieg? </h2>
+
+                        <p> Blizny są powszechnym defektem skórnym, który może znacząco wpłynąć na wygląd i
+                            samopoczucie każdego człowieka. Tworzenie się blizn jest nieodłącznym procesem w naturalnym
+                            cyklu gojenia się skóry. Gdy dochodzi do uszkodzenia ciągłości naskórka, organizm natychmiast
+                            rozpoczyna proces naprawy, w którym tworzą się blizny. Chociaż jest to istotny mechanizm obronny
+                            organizmu, mający na celu zabezpieczenie rany i przywrócenie integralności skóry, jednakże blizny
+                            mogą prowadzić do różnorodnych problemów i obniżać komfort życia jednostki. Blizny, będące
+                            efektem tego niezbędnego procesu gojenia, mogą być bolesne, swędzące, a także ograniczać zakres
+                            ruchów skóry. Mogą przybierać różne formy, wielkości i kolory. Pojawiają się w wyniku różnych
+                            przyczyn, takich jak urazy, oparzenia czy też operacje chirurgiczne. Pozostają one często na ciele
+                            przez całe życie. Ponadto stanowią wyzwanie estetyczne i często prowadzą do kompleksu związanego
+                            z wyglądem skóry. Ich obecność może prowadzić nie tylko do problemów kosmetycznych, ale
+                            również do powikłań fizycznych i psychicznych.
+                        </p>
+
+                        <p>
+                            Jako jedyni w naszym regionie prowadzimy terapię blizn metodą ScarINK. Mikronakłuwanie
+                            to proces polegający na kontrolowanym wywołaniu mikrouszkodzeń na powierzchni skóry za pomocą
+                            specjalnego urządzenia PURO. Jest to niewielkie automatyczne narzędzie wyposażone w igły
+
+                            precyzyjnie nakłuwające skórę. Celem tego zabiegu jest wytworzenie kontrolowanego urazu skóry i
+                            rozpoczęcie naturalnego procesu odbudowy włókien kolagenu i nowej tkanki skórnej. Dodatkowo po
+                            wykonanym zabiegu wykorzystuje się składniki aktywne oraz preparatu stymulujące Gen Factor,
+                            które mają za zadanie wspomagać zainicjowane procesy naprawcze skóry.
+                        </p>
 
                         <div>
-                            <ul>
-                                <li> Laser Trio SLD jest idealnym i skutecznym rozwiązaniem, które wykorzystuje najnowocześniejszą technologię połączenia 3 długości fal: </li>
-                                <li> •	755 nm: reaguje nawet na niewielką ilość melaniny, </li>
-                                <li> •	808 nm: to najczęściej spotykana długość fali w laserach diodowych, która wykazuje się niezwykłą skutecznością przy ciemnych włosach </li>
-                                <li> •	1064 nm: jest to wiązka, która jest w stanie dostać się nawet do najgłębiej położonych mieszków włosowych, nie uszkadzając przy tym skóry. Fala o tej długości działa przede wszystkim na hemoglobinę. Fale te nastawione są na naczynia włosowate, które otaczają mieszek włosowy, a nie na melaninę, która zawarta jest we włosku. Laser dociera aż do brodawki, gdzie niszczone są naczynia włosowate, które odżywiają mieszek włosowy. Jeśli mieszek nie jest odżywiony, to umiera, dzięki czemu depilacja jest skuteczna. </li>
-                            </ul>
-                        </div>
-                        <p> Idealnie gładkie ciało jest możliwe! Nasz cel to - koniec z podrażnieniami, wrastającymi włoskami i krótkotrwałym efektem gładkości skóry. </p>
+                            <h3> Proces regeneracji: </h3>
+                            <p>
+                                Zabieg mikronakłuwania zwykle wiąże się z niewielkim lub umiarkowanym bólem, który może
+                                się różnić w zależności od obszaru poddanego zabiegowi, parametrów urządzenia, długości wysuwu
+                                igły, głębokości iniekcji oraz indywidualnej tolerancji bólu. Po zabiegu może pojawić się rumień, który
+                                zazwyczaj ustępuje w ciągu 38 kilku do kilkunastu godzin, oraz możliwy obrzęk i uczucie pieczenia.
+                                Proces regeneracji i przebudowy skóry w obszarze poddanym zabiegowi może trwać nawet kilka
+                                tygodni od jego wykonania.
+                            </p>
 
-                        <div>
-                            <h3> Przeciwwskazania do depilacji laserowej: </h3>
-                            <ul>
-                                <li> •	Fototypy skóry 5 i 6 według Fitzpatricka </li>
-                                <li> •	mocna, świeża opalenizna </li>
-                                <li> •	zażywanie preparatów światłouczulających (np. zioła rumianek, słonecznik, pokrzywa, krwawnik, wrotycz, nawłoć, bylica pospolita czy stokrotka) </li>
-                                <li> •	wyrywanie włosów do 4 tygodni przed zabiegiem;</li>
-                                <li> •	choroba nowotworowa </li>
-                                <li> •	ciąża, karmienie piersią </li>
-                                <li> •	opryszczka, zmiany wirusowe, bakteryjne w miejscu depilacji </li>
-                                <li> •	stosowanie retinoidów w miejscu depilacji;</li>
-                                <li> •	łuszczyca, rybia łuska </li>
-                            </ul>
+                            <h3> Kiedy najlepiej wykonać zabieg? </h3>
+                            <p>
+                                Procedurę mikronakłuć na bliźnie można przeprowadzić najwcześniej po sześciu miesiącach
+                                od momentu jej powstania. Liczba zabiegów oraz ich częstotliwość jest ustalana indywidualnie w
+                                zależności od rodzaju, rozmiaru blizny i obszaru zabiegowego oraz od satysfakcji z uzyskanych
+                                efektów. Zazwyczaj wykonuje się 3-10 zabiegów co 30 dni.
+                            </p>
 
-                            <h3> Jak przygotować się do zabiegu depilacji laserowej? </h3>
-                            <ul>
-                                <li> W przeddzień depilacji laserowej zgól włosy </li>
-                                <li> Nie nakładaj na skórę środków nawilżających, odżywczych (kremów, balsamów, olejków) </li>
-                                <li> Nie używaj perfumów na miejsce zabiegowe </li>
-                                <li> Nie stosuj w dniu zabiegu antyprespirantu </li>
-                                <li> Przez 2-3 tygodnie przed zabiegiem unikaj ekspozycji na promieniowanie UV. </li>
-                            </ul>
 
-                            <h3> Zalecenie pozabiegowe: </h3>
-                            <ul>
-                                <li> Zastosuj preparat łagodzący (żel aloesowy, alantan lub d-panthenol). Do 2 tygodni po zabiegu nie opalaj skóry oraz stosuj krem z filtrem SPF </li>
-                                <li> Ilość zabiegów oraz efekty są uzależnione od wielu czynników - koloru włosa, stanu hormonalnego, predyspozycji genetycznych oraz innych czynników u każdego pacjenta. Najczęściej nasi klienci wykonują około 6-8 zabiegów w odstępach co około 6-8 tygodni. </li>
-                                <li> Oczywiście wybierając kilka obszarów </li>
-                            </ul>
                         </div>
                     </Col>
                 </Row>

@@ -43,77 +43,153 @@ export function Treatments() {
     return (
         <>
             <Navbar />
-            <Container className='treatments_nav submenu'>
-                <Row>
-                    <Col sm={12}><hr /></Col>
-                    <Col sm={2.27} className='submenu_item dropdown toggle' ref={el => toggleRefs.current.body = el} onClick={() => setIsChecked(prevState => ({ ...prevState, body: !prevState.body }))}>
-                        Ciało
-                        {isChecked.body && (
+            <Row>
+                <Col sm={12}><hr /></Col>
+            </Row>
+            <Container>
 
-                                <div className='treatments_menu'>
+                <Row  className='treatments_nav'>
 
-                                <Link to='/treatment_depilacja'>Depilacja laserowa</Link>
-                                <a href="#">Terapia blizn i rozstępów</a>
-                                <a href="#">Lipoliza infekcyjna</a>
-                                <a href="#">Radiofrekwencja mikroigłowa</a>
-                                <a href="#">Laserowe usuwanie tatuaży</a>
-                                <a href="#">Rewitalizacja skóry głowy</a>
+                        <Col sm={2.3} className='treatment_submenu dropdown toggle' ref={el => toggleRefs.current.body = el}
+                             onClick={() => setIsChecked(prevState => ({...prevState, body: !prevState.body}))}>
+                            Ciało
+                            {isChecked.body && (
+                                <ul className='treatment_submenu_item'>
+                                    <Link to='/treatment_depilacja'>Depilacja laserowa</Link>
+                                    <Link to='/treatment_blizny_i_rozstepy'>Terapia blizn i rozstępów</Link>
+                                    <Link to='/treatment_lipoliza_iniekcyjna'>Lipoliza iniekcyjna</Link>
+                                    <Link to='/treatment_radiofrekwencja_mikroiglowa'>Radiofrekwencja mikroigłowa</Link>
+                                    <Link to='/treatment_usuwamie_tatuazy'>Laserowe usuwanie tatuaży</Link>
+                                    <Link href="#">Rewitalizacja skóry dłoni</Link>
+                                </ul>
+                            )}
+                        </Col>
+                        <Col sm={2.3} className='treatment_submenu dropdown toggle' ref={el => toggleRefs.current.face = el}
+                             onClick={() => setIsChecked(prevState => ({...prevState, face: !prevState.face}))}>
+                            Twarz
+                            {isChecked.face && (
+                                <div className='treatment_submenu_item'>
+                                    <Link to="#">Makijaż permanentny</Link>
+                                    <Link to="#">Henna pudrowa</Link>
+                                    <Link to="#">Makijaż okolicznościowy</Link>
+                                    <Link to="#">Mezoteriapia igłowa</Link>
+                                    <Link to="#">Mezoterapia mikroigłowa</Link>
+                                    <Link to="#">Osocze bogatopłytkowe</Link>
+                                    <Link to="#">Radiofrekwencja mikroigłowa</Link>
+                                    <Link to="#">BTX</Link>
+                                </div>
+                            )}
+                        </Col>
+                        <Col sm={2.3} className='treatment_submenu dropdown toggle' ref={el => toggleRefs.current.model = el}
+                             onClick={() => setIsChecked(prevState => ({...prevState, model: !prevState.model}))}>
+                            Modelowanie kwasem hialuronowym
+                            {isChecked.model && (
+                                <div className='treatment_submenu_item'>
+                                    <Link to="#">Modelowanie us</Link>
+                                </div>
+                            )}
+                        </Col>
+                        <Col sm={2.3} className='treatment_submenu dropdown toggle' ref={el => toggleRefs.current.tychology = el}
+                             onClick={() => setIsChecked(prevState => ({
+                                 ...prevState,
+                                 tychology: !prevState.tychology
+                             }))}>
+                            Tychologia
+                            {isChecked.tychology && (
+                                <div className='treatment_submenu_item'>
+                                    <Link to="#">Mezoterapia igłowa skóry głowy</Link>
+                                </div>
+                            )}
+                        </Col>
+                        <Col sm={2.3} className='treatment_submenu dropdown toggle' ref={el => toggleRefs.current.whelk = el}
+                             onClick={() => setIsChecked(prevState => ({...prevState, whelk: !prevState.whelk}))}>
+                            Trądzik
+                            {isChecked.whelk && (
+                                <div className='treatment_submenu_item'>
+                                    <Link to='/treatment_oczyszczanie_wodorowe'>Oczyszczanie wodorowe</Link>
+                                    <Link to='/treatment_peeling_kawitacyjny'>Peeling kawitacyjny</Link>
+                                    <Link to='/treatment_peeling_weglowy'>Peeling węglowy</Link>
+                                    <Link to='/treatment_peeling_chemiczny'>Peeling chemiczny</Link>
+                                    <Link to='/treatment_terapia_tradziku'>Indywidualne terapie trądziku</Link>
+                                </div>
+                            )}
+                        </Col>
 
-                            </div>
 
-
-
-                        )}
-                    </Col>
-                    <Col sm={2.27} className='submenu_item dropdown toggle' ref={el => toggleRefs.current.face = el} onClick={() => setIsChecked(prevState => ({ ...prevState, face: !prevState.face }))}>
-                        Twarz
-                        {isChecked.face && (
-                            <ul>
-                                <li><a href="#">Makijaż permanentny</a></li>
-                                <li><a href="#">Henna pudrowa</a></li>
-                                <li><a href="#">Makijaż okolicznościowy</a></li>
-                                <li><a href="#">Mezoteriapia igłowa</a></li>
-                                <li><a href="#">Mezoterapia mikroigłowa</a></li>
-                                <li><a href="#">Osocze bogatopłytkowe</a></li>
-                                <li><a href="#">Radiofrekwencja mikroigłowa</a></li>
-                                <li><a href="#">BTX</a></li>
-                            </ul>
-                        )}
-                    </Col>
-                    <Col sm={2.27} className='submenu_item dropdown toggle' ref={el => toggleRefs.current.model = el} onClick={() => setIsChecked(prevState => ({ ...prevState, model: !prevState.model }))}>
-                        Modelowanie kwasem hialuronowym
-                        {isChecked.model && (
-                            <ul>
-                                <li><a href="#">Modelowanie ust</a></li>
-                            </ul>
-                        )}
-                    </Col>
-                    <Col sm={2.27} className='submenu_item dropdown toggle' ref={el => toggleRefs.current.tychology = el} onClick={() => setIsChecked(prevState => ({ ...prevState, tychology: !prevState.tychology }))}>
-                        Tychologia
-                        {isChecked.tychology && (
-                            <ul>
-                                <li><a href="#">Mezoterapia igłowa skóry głowy</a></li>
-                            </ul>
-                        )}
-                    </Col>
-                    <Col sm={2.27} className='submenu_item dropdown toggle' ref={el => toggleRefs.current.whelk = el} onClick={() => setIsChecked(prevState => ({ ...prevState, whelk: !prevState.whelk }))}>
-                        Trądzik
-                        {isChecked.whelk && (
-                            <ul>
-                                <li><a href="#">Oczyszczanie wodorowe</a></li>
-                                <li><a href="#">Peeling kawitacyjny</a></li>
-                                <li><a href="#">Peeling węglowy</a></li>
-                                <li><a href="#">Peeling chemiczny</a></li>
-                                <li><a href="#">Indywidualne terapie trądziku</a></li>
-                            </ul>
-                        )}
-                    </Col>
                 </Row>
-                <div style={{height:'400px'}}></div>
+                <div style={{height: '400px'}}></div>
             </Container>
-            <Footer/>
         </>
     );
 }
 
-export default Treatments;
+// return (
+//     <>
+//         <Navbar />
+//         <Row>
+//             <Col sm={12}><hr /></Col>
+//         </Row>
+//         <Container>
+//             <div className="treatments_nav">
+//                 <div className="treatment_submenu" onClick={() => setIsChecked(prevState => ({...prevState, body: !prevState.body}))}>
+//                     Ciało
+//                     {isChecked.body && (
+//                         <ul className="treatment_submenu_item">
+//                             <li><Link to='/treatment_depilacja'>Depilacja laserowa</Link></li>
+//                             <li><Link to='/treatment_blizny_i_rozstepy'>Terapia blizn i rozstępów</Link></li>
+//                             <li><Link to='/treatment_lipoliza_iniekcyjna'>Lipoliza iniekcyjna</Link></li>
+//                             <li><Link to='/treatment_radiofrekwencja_mikroiglowa'>Radiofrekwencja mikroigłowa</Link></li>
+//                             <li><Link to='/treatment_usuwamie_tatuazy'>Laserowe usuwanie tatuaży</Link></li>
+//                             <li><Link href="#">Rewitalizacja skóry dłoni</Link></li>
+//                         </ul>
+//                     )}
+//                 </div>
+//                 <div className="treatment_submenu" onClick={() => setIsChecked(prevState => ({...prevState, face: !prevState.face}))}>
+//                     Twarz
+//                     {isChecked.face && (
+//                         <ul className="treatment_submenu_item">
+//                             <li><Link to="#">Makijaż permanentny</Link></li>
+//                             <li><Link to="#">Henna pudrowa</Link></li>
+//                             <li><Link to="#">Makijaż okolicznościowy</Link></li>
+//                             <li><Link to="#">Mezoteriapia igłowa</Link></li>
+//                             <li><Link to="#">Mezoterapia mikroigłowa</Link></li>
+//                             <li><Link to="#">Osocze bogatopłytkowe</Link></li>
+//                             <li><Link to="#">Radiofrekwencja mikroigłowa</Link></li>
+//                             <li><Link to="#">BTX</Link></li>
+//                         </ul>
+//                     )}
+//                 </div>
+//                 <div className="treatment_submenu" onClick={() => setIsChecked(prevState => ({...prevState, model: !prevState.model}))}>
+//                     Modelowanie kwasem hialuronowym
+//                     {isChecked.model && (
+//                         <ul className="treatment_submenu_item">
+//                             <li><Link to="#">Modelowanie us</Link></li>
+//                         </ul>
+//                     )}
+//                 </div>
+//                 <div className="treatment_submenu" onClick={() => setIsChecked(prevState => ({...prevState, tychology: !prevState.tychology}))}>
+//                     Tychologia
+//                     {isChecked.tychology && (
+//                         <ul className="treatment_submenu_item">
+//                             <li><Link to="#">Mezoterapia igłowa skóry głowy</Link></li>
+//                         </ul>
+//                     )}
+//                 </div>
+//                 <div className="treatment_submenu" onClick={() => setIsChecked(prevState => ({...prevState, whelk: !prevState.whelk}))}>
+//                     Trądzik
+//                     {isChecked.whelk && (
+//                         <ul className="treatment_submenu_item">
+//                             <li><Link to='/treatment_oczyszczanie_wodorowe'>Oczyszczanie wodorowe</Link></li>
+//                             <li><Link to='/treatment_peeling_kawitacyjny'>Peeling kawitacyjny</Link></li>
+//                             <li><Link to='/treatment_peeling_weglowy'>Peeling węglowy</Link></li>
+//                             <li><Link to='/treatment_peeling_chemiczny'>Peeling chemiczny</Link></li>
+//                             <li><Link to='/treatment_terapia_tradziku'>Indywidualne terapie trądziku</Link></li>
+//                         </ul>
+//                     )}
+//                 </div>
+//             </div>
+//             <div style={{height: '400px'}}></div>
+//         </Container>
+//     </>
+// );
+

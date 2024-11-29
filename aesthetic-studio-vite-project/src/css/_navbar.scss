@@ -1,25 +1,23 @@
-.nav{
-  padding: 3rem;
+.nav {
+  //display: flex;
+  font-family: Poiret One, sans-serif;
+  font-size: 1.5em;
+  color: goldenrod;
+  //border: 2px solid black;
+  width: 100%;
+
 
   .logo {
-    scale: 400%;
-    margin: 20px 0;
+    scale:200%;
+    padding-top: 3rem;
+    //margin-left: -5rem;
+    //border: 2px solid yellow;
   }
-}
-
-
-.menu {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 1rem;
-  font-family: Poiret One, sans-serif;
-  font-size: 1.5rem;
-  color: goldenrod;
 
   .menu_item {
-    margin: 1rem 2rem;
-    padding: 0.5rem 0.5rem;
     border-bottom: none;
+    padding-top: 6.5rem;
+    //border: 2px solid orange;
 
 
     &::before {
@@ -43,4 +41,8 @@
       width: 100vw;
     }
   }
+
+
 }
+
+

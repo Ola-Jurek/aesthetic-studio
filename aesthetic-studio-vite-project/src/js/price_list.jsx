@@ -36,7 +36,7 @@ export function PriceList() {
         <>
             <Navbar/>
 
-            <Container>
+            <Container className='price_list_submenu'>
                 <Row className='submenu' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '10px'}}>
                     <Col sm={12}><hr/></Col>
                         <Col sm={1.3} className='submenu_item' style={{ display: 'flex', justifyContent: 'center', margin: '10px 10px' }}> <Link to='price1' activeClass="active" spy={true} offset={-50} smooth={true} duration={500}> Peeling chemiczny </Link> </Col>
