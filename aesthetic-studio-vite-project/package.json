@@ -2,7 +2,10 @@
   "name": "aesthetic-studio-vite-project",
   "private": true,
   "version": "0.0.0",
+<<<<<<< HEAD
   "main": "index.html",
+=======
+>>>>>>> 606bc70c1bd261f34e941d5bb50965039b4395af
   "type": "module",
   "scripts": {
     "dev": "vite",
