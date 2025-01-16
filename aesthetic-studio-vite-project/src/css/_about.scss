@@ -1,0 +1,30 @@
+.about_card {
+}
+
+.about_name {
+  font-family: "Poiret One", sans-serif;
+  padding: 2px 0;
+  margin-bottom: 8px;
+  }
+.about_img {
+  height: 500px;
+  width: auto;
+  border-radius: 5%;
+  background-size: cover;
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeInImage 2s forwards;
+  animation-delay: 10ms;
+
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+}
+p{
+  font-family: "Poiret One", sans-serif;
+  padding: 0 3rem;
+  margin-bottom: 5rem;
+}

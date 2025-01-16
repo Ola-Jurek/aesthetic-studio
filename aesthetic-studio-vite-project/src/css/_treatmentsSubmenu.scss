@@ -1,130 +1,134 @@
-.treatments_nav {
-  position: relative;
-  border: 1px solid red;
-
-
-    .treatment_submenu {
-    display: flex;
-      justify-content: center;
-    flex-direction: row;
-    font-family: "Poiret One", sans-serif;
-    margin-top: 3rem;
-    text-transform: uppercase;
-    font-size: 1rem;
-    //border: 1px solid green;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    .treatment_submenu_item {
-      border: 3px dotted blue;
-      margin-top: 3rem;
-      position: absolute;  /* Submenu będzie wyjęte z normalnego przepływu dokumentu */
-      top: 80%;           /* Submenu pojawi się poniżej swojego elementu rodzica */
-      left: 0;             /* Zaczyna od lewej krawędzi */
-      width: 100%;
-      max-width: 100%;
-      padding: 1rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 2;
-    }
-  }
-}
-
-
-
-
-
-
-
-
 //.treatments_nav {
-//  display: flex;
-//  justify-content: space-between;
-//  flex-wrap: wrap; /* Umożliwia zawijanie na mniejszych ekranach */
-//  padding: 20px;
 //  position: relative;
-//  width: 100%;
+//  border: 1px solid red;
 //
-//  .treatment_submenu {
-//    position: relative;
+//
+//    .treatment_submenu {
+//    display: flex;
+//      justify-content: center;
+//    flex-direction: row;
 //    font-family: "Poiret One", sans-serif;
-//    margin: 1rem 0;
-//    cursor: pointer;
-//    padding: 10px;
+//    margin-top: 3rem;
 //    text-transform: uppercase;
 //    font-size: 1rem;
-//    border: 1px solid #ccc;
-//    background-color: #f9f9f9;
-//    width: 20%; /* Standardowa szerokość dla desktopów */
-//    display: flex;
-//    justify-content: center;
-//    text-align: center;
+//    //border: 1px solid green;
 //
 //    &:hover {
-//      background-color: #ddd;
-//    }
-//
-//    &:focus {
-//      outline: none;
+//      cursor: pointer;
 //    }
 //
 //    .treatment_submenu_item {
-//      display: none; /* Domyślnie submenu jest ukryte */
-//      position: absolute;
-//      top: 100%;
-//      left: 0;
-//      width: 100%; /* Submenu zajmuje pełną szerokość swojego kontenera */
-//      padding: 1rem 0;
-//      background-color: #fff;
-//      border: 1px solid #ccc;
-//      list-style: none;
-//      z-index: 1000;
-//      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-//
-//      li {
-//        padding: 10px;
-//        text-align: center;
-//
-//        a {
-//          text-decoration: none;
-//          color: #333;
-//          display: block;
-//        }
-//
-//        &:hover {
-//          background-color: #f0f0f0;
-//        }
-//      }
-//    }
-//
-//    &.open .treatment_submenu_item {
-//      display: block; /* Pokaż submenu, gdy ma klasę 'open' */
-//    }
-//  }
-//
-//  /* Responsywność dla małych ekranów */
-//  @media (max-width: 768px) {
-//    .treatment_submenu {
-//      width: 100%; /* Na urządzeniach mobilnych zajmuje całą szerokość */
-//      text-align: left; /* Wyrównanie tekstu do lewej */
-//      padding-left: 20px;
-//      padding-right: 20px;
-//    }
-//
-//    .treatment_submenu_item {
-//      position: static; /* Submenu będzie wyświetlane poniżej swojego elementu */
+//      border: 3px dotted blue;
+//      margin-top: 3rem;
+//      position: absolute;  /* Submenu będzie wyjęte z normalnego przepływu dokumentu */
+//      top: 80%;           /* Submenu pojawi się poniżej swojego elementu rodzica */
+//      left: 0;             /* Zaczyna od lewej krawędzi */
 //      width: 100%;
-//      top: auto;
-//      left: auto;
-//      box-shadow: none;
+//      max-width: 100%;
+//      padding: 1rem 0;
+//      display: flex;
+//      justify-content: space-between;
+//      align-items: center;
+//      z-index: 2;
 //    }
 //  }
 //}
 
+
+
+
+
+
+
+
+.treatments_nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //flex-wrap: nowrap;
+  //padding: 20px;
+  width: 100%;
+
+
+  .treatment_submenu {
+
+    font-family: "Poiret One", sans-serif;
+    //margin: 1rem 0;
+    cursor: pointer;
+    padding: 0.2rem 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    //border: 1px solid #ccc;
+    width: 20%; /* Standardowa szerokość dla desktopów */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+
+
+    &:focus {
+      outline: none;
+    }
+
+    .treatment_submenu_item {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 0.4rem 0;
+      list-style: none;
+      z-index: 1000;
+      opacity: 80%;
+      //border-bottom: 1px solid goldenrod;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+      &:hover .submenu {
+        display: flex;
+        width: 100vw;
+      }
+
+      li {
+        padding: 10px;
+        text-align: center;
+      }
+    }
+
+    &.open .treatment_submenu_item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  /* Responsywność dla małych ekranów */
+  .treatment_submenu {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .treatment_submenu_item {
+    position: static; /* Submenu będzie wyświetlane poniżej swojego elementu */
+    width: 100%; /* Submenu rozciąga się na całą szerokość ekranu */
+    top: auto;
+    left: auto;
+    box-shadow: none;
+    display: block; /* Submenu rozwija się w pionie na urządzeniach mobilnych */
+  }
+}
+
+//img {
+//  max-width: 100%;
+//  background-size: contain;
+//  border: 3px solid red;
+//}
 
 
 

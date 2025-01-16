@@ -52,7 +52,7 @@ export function PriceList() {
                         <Col sm={1.3} className='submenu_item'  style={{ display: 'flex', justifyContent: 'center', margin: '10px 10px' }}> <Link to='price11' activeClass="active" spy={true} offset={-50} smooth={true} duration={500}> modelowanie </Link> </Col>
                         <Col sm={1.3} className='submenu_item'  style={{ display: 'flex', justifyContent: 'center', margin: '10px 10px' }}> <Link to='price12' activeClass="active" spy={true} offset={-50} smooth={true} duration={500}> lipoliza </Link> </Col>
                         <Col sm={1.3} className='submenu_item'  style={{ display: 'flex', justifyContent: 'center', margin: '10px 10px' }}> <Link to="price13" activeClass="active" spy={true} offset={-50} smooth={true} duration={500}> osocze bogatopłytkowe </Link></Col>
-                     <Col sm={12}><hr/></Col>
+                     {/*<Col sm={12}><hr/></Col>*/}
                 </Row>
             </Container>
 
@@ -63,9 +63,10 @@ export function PriceList() {
                     <Col sm={12}><h1> CENNIK </h1></Col>
 
                     <Col sm={12} id="price1">{<PriceListHeading title={'Peeling Chemiczny'}/>}</Col>
-                    <Col sm={12}><hr/></Col>
+                        <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'dives'} price={'180-250 pln'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id="price2">{<PriceListHeading title={'peeling węglowy'} />}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'twarz'} price={'150 PLN'}/></Col>
@@ -73,15 +74,18 @@ export function PriceList() {
                     <Col sm={12}><PriceListItem description={'twarz + szyja + dekolt'} price={'250 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'plecy'} price={'300 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id="price3">{<PriceListHeading title={'oczyszczanie wodorowe'} />}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'pakiet podstawowy'} price={'200 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'pakiet premium'} price={'300 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price4'>{<PriceListHeading title={'usuwanie laserowe'} />}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'tatuaż/makijaż permanentny'} price={'od 150 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price5'>{<PriceListHeading title={'epilacja laserowa'}/>} </Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'twarz(wąsik + broda + szyja'} price={'150 PLN'}/></Col>
@@ -99,9 +103,9 @@ export function PriceList() {
                     <Col sm={12}><PriceListItem description={'uda'} price={'300 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'stopy'} price={'150 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'dłonie'} price={'100 PLN'}/></Col>
-
-                    <Col sm={12}><a className='price_list_text'> Pozostałe strefy wyceniane indywidualnie</a></Col>
+                    <Col sm={12}> <a>Pozostałe strefy wyceniane indywidualnie</a></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price6'>{<PriceListHeading title={'radiofrekwencja mikroigłowa'}/>}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'twarz'} price={'550 PLN'}/></Col>
@@ -115,42 +119,48 @@ export function PriceList() {
                     <Col sm={12}><PriceListItem description={'uda'} price={'od 400 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'blizny'} price={'od 250 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price7'>{<PriceListHeading title={'mezoterapia igłowa'}/>}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'trzy etapowy protokół zabiegowy'} price={'350 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'mezoterapia skóry głowy'} price={'300 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'mezoterapia dr.cyj'} price={'500 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price8'>{<PriceListHeading title={'mezoterapia mikroigłowa'}/>}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'peeling chemiczny + dermapen + ampułka'} price={'450 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'dermapen + ampułka'} price={'350 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price9'>{<PriceListHeading title={'btx'}/>}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'jedna partia'} price={'300 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'dwie partie'} price={'500 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'trzy partie'} price={'700 PLN'}/></Col>
-
                     <Col sm={12}><a> Przykładowe partie: boczny kąt oka (kurze łapki), gładzizna czoła (lwia zmarszczka), zmarszczki
                         poprzeczne czoła.</a></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price10'>{<PriceListHeading title={'makijaż permanentny'}/>}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'brwi'} price={'700 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'usta'} price={'700 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'kreska na powiece'} price={'600 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price11'>{<PriceListHeading title={'modelowanie'}/>}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'usta'} price={'800 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price12'>{<PriceListHeading title={'lipoliza'}/>}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'podbródek'} price={'250 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'brzuch'} price={'300 PLN'}/></Col>
                     <Col sm={12}><PriceListItem description={'uda'} price={'350 PLN'}/></Col>
                         <Col sm={12}><hr/></Col>
+
                     <Col sm={12} id='price13'>{<PriceListHeading title={'osocze bogatopłytkowe'}/>}</Col>
                         <Col sm={12}><hr/></Col>
                     <Col sm={12}><PriceListItem description={'twarz'} price={'650 PLN'}/></Col>

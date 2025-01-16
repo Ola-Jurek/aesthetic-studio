@@ -2,30 +2,50 @@ import React from 'react';
 import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
+import '../css/_treatment_single.scss';
+import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
+
+function PriceListItem(props) {
+    return (
+        <>
+            <div className='price_list_item'>
+                <a className='price_list_description'> {props.description} </a>
+                <a className='price_list_price'> {props.price} </a>
+            </div>
+        </>
+    );
+}
 
 export function TreatmentTerapiaTradziku() {
     return (
         <>
             <Navbar/>
-            <Container fluid style={{padding: 0, margin: 0, maxWidth: '100vw',}}>
+
+            <Container>
+                <Row>
+                    <Col sm={12}><hr/></Col>
+                </Row>
+                <Row>
+                    <TreatmentSubmenu/>
+                </Row>
+            </Container>
+
+            <Container fluid style={{maxWidth: '100vw'}} className='treatment_section1'>
 
                 <Row>
-                    <Col sm={12} style={{
-                        wordWrap: 'break-word',
-                        lineHeight: '1.6',
-                        padding: '10px',
-                        border: '2px solid green'
-                    }}>
+                    <Col sm={12}>
                         <h1> Kompleksowe Leczenie Trądziku</h1>
-                        <h2>Skuteczność Dzięki Wielu Metodom </h2>
+                        <p>Skuteczność Dzięki Wielu Metodom </p>
 
                     </Col>
                 </Row>
+
                 <Row>
-                    <Col sm={8}>
+                    <Col sm={6} className='treatment_photoPlace'>
                         {/*<img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>*/}
                     </Col>
-                    <Col sm={4} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid blue' }}>
+
+                    <Col sm={6} className='treatment_small_description'>
                         <h3> Cena: </h3>
                         <p> od 200 zł</p>
 
@@ -36,8 +56,18 @@ export function TreatmentTerapiaTradziku() {
                         <p> Około 60 minut </p>
                     </Col>
                 </Row>
+
+            </Container>
+
+            <Container>
+
                 <Row>
-                    <Col sm={8} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid pink', textAlign:'start', paddingLeft:'20px' }}>
+                    <Col sm={12}><hr/></Col>
+                </Row>
+
+                <Row className='treatment_section2'>
+
+                    <Col sm={12}>
 
                         <p>
                             Trądzik to problem, który dotyka osoby w różnym wieku, wpływając na komfort i pewność siebie. W
@@ -50,14 +80,13 @@ export function TreatmentTerapiaTradziku() {
                         </p>
 
 
-                        <h2>1. Produkty Gen Factor – Zaawansowana Biotechnologia w Walce z Trądzikiem</h2>
+                        <h3> 1. Produkty Gen Factor – Zaawansowana Biotechnologia w Walce z Trądzikiem</h3>
 
-                        <div>
-                            <p>Produkty Gen Factor to innowacyjne preparaty, które wykorzystują najnowsze osiągnięcia
+                            <ul>
+                                Produkty Gen Factor to innowacyjne preparaty, które wykorzystują najnowsze osiągnięcia
                                 biotechnologii. Składniki aktywne zawarte w tych produktach działają na poziomie komórkowym,
                                 wspierając regenerację skóry, redukcję stanów zapalnych oraz regulację wydzielania sebum. Gen
-                                Factor pomaga w leczeniu trądziku poprzez: </p>
-                            <ul>
+                                Factor pomaga w leczeniu trądziku poprzez:
                                 <li> Redukcję stanów zapalnych – zmniejszenie zaczerwienień i obrzęków.
                                 </li>
                                 <li> Wspomaganie regeneracji skóry – przyspieszenie gojenia zmian trądzikowych.
@@ -66,16 +95,13 @@ export function TreatmentTerapiaTradziku() {
                                     powstawaniu nowych wyprysków.
                                 </li>
                             </ul>
-                        </div>
 
-                        <div>
                             <h3> 2. Peeling Kawitacyjny – Delikatne, a Skuteczne Oczyszczanie </h3>
-                            <p>
+
+                            <ul>
                                 Peeling kawitacyjny to metoda, która wykorzystuje ultradźwięki do głębokiego, ale jednocześnie
                                 delikatnego oczyszczenia skóry. Dzięki niemu usunięte zostają zanieczyszczenia, nadmiar sebum oraz
                                 martwe komórki naskórka. Zabieg ten jest idealny dla skóry trądzikowej, ponieważ:
-                            </p>
-                            <ul>
                                 <li> Oczyszcza pory – redukuje ilość zaskórników i zapobiega ich powstawaniu.
                                 </li>
                                 <li> Zmniejsza przetłuszczanie się skóry – regulując wydzielanie sebum.
@@ -86,13 +112,10 @@ export function TreatmentTerapiaTradziku() {
 
                             <h3> 3. Peelingi Chemiczne – Intensywne Złuszczanie i Odnowa Skóry</h3>
 
-                            <p>
+                            <ul>
                                 Peelingi chemiczne, takie jak te na bazie kwasu salicylowego czy glikolowego, to skuteczna metoda
                                 leczenia trądziku, zwłaszcza przy problemach z bliznami i przebarwieniami potrądzikowymi. Działają
                                 poprzez kontrolowane złuszczanie naskórka, co sprzyja:
-                            </p>
-
-                            <ul>
                                 <li> Zmniejszeniu blizn potrądzikowych – wygładzenie skóry i poprawa jej tekstury.
                                 </li>
                                 <li>Rozjaśnieniu przebarwień – wyrównanie kolorytu skóry.
@@ -103,12 +126,9 @@ export function TreatmentTerapiaTradziku() {
 
                             <h3> 4. Peeling Węglowy z Laserem ND YAG Q-SWITCH – Głębokie Oczyszczanie i Odmłodzenie</h3>
 
-                            <p>
+                            <ul>
                                 Peeling węglowy to innowacyjny zabieg, który łączy działanie lasera ND YAG Q-SWITCH z maską
                                 węglową. To doskonała metoda dla skóry trądzikowej, ponieważ:
-                            </p>
-
-                            <ul>
                                 <li> Głęboko oczyszcza skórę – usuwając zanieczyszczenia i redukując przetłuszczanie się skóry.
                                 </li>
                                 <li>Zwęża pory – minimalizując ich widoczność.
@@ -121,13 +141,10 @@ export function TreatmentTerapiaTradziku() {
 
                             <h3>5. Odpowiednia Pielęgnacja Domowa – Klucz do Długotrwałych Efektów</h3>
 
-                            <p>
+                            <ul>
                                 Poza zabiegami profesjonalnymi, kluczowe znaczenie ma codzienna pielęgnacja skóry w domu. Dobór
                                 odpowiednich produktów do mycia, nawilżania i ochrony przeciwsłonecznej pomaga utrzymać efekty
                                 zabiegów i zapobiega nawrotom trądziku. Odpowiednia pielęgnacja powinna obejmować:
-                            </p>
-
-                            <ul>
                                 <li> Delikatne oczyszczanie – aby nie naruszać bariery ochronnej skóry.
                                 </li>
                                 <li>Nawilżanie – lekkie, niekomedogenne kremy, które zapobiegają przesuszeniu skóry.
@@ -150,18 +167,9 @@ export function TreatmentTerapiaTradziku() {
                                 Zadbaj o swoją skórę i odkryj nową jakość życia bez trądziku!
                             </p>
 
-                        </div>
                     </Col>
                 </Row>
 
-
-                <Row>
-                    <Col sm={3}> </Col>
-                    <Col sm={9}>
-                        <div>price title</div>
-                        <div>price</div>
-                    </Col>
-                </Row>
             </Container>
             <Footer/>
         </>

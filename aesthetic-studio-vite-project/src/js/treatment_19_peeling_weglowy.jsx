@@ -2,30 +2,48 @@ import React from 'react';
 import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
+import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
+
+function PriceListItem(props) {
+    return (
+        <>
+            <div className='price_list_item'>
+                <a className='price_list_description'> {props.description} </a>
+                <a className='price_list_price'> {props.price} </a>
+            </div>
+        </>
+    );
+}
 
 export function TreatmentPeelingWeglowy() {
     return (
         <>
             <Navbar/>
-            <Container fluid style={{padding: 0, margin: 0, maxWidth: '100vw',}}>
 
+            <Container>
                 <Row>
-                    <Col sm={12} style={{
-                        wordWrap: 'break-word',
-                        lineHeight: '1.6',
-                        padding: '10px',
-                        border: '2px solid green'
-                    }}>
-                        <h1> Peeling węglowy</h1>
-                        <h2>z wykorzystaniem Laserem ND YAG Q-SWITCH </h2>
-
-                    </Col>
+                    <Col sm={12}><hr/></Col>
                 </Row>
                 <Row>
-                <Col sm={8}>
+                    <TreatmentSubmenu/>
+                </Row>
+            </Container>
+
+            <Container fluid style={{maxWidth: '100vw',}} className='treatment_section1'>
+
+                <Row>
+                    <Col>
+                        <h1> Peeling węglowy</h1>
+                        <p>z wykorzystaniem Laserem ND YAG Q-SWITCH </p>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col sm={6} className='treatment_photoPlace'>
                         {/*<img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>*/}
                     </Col>
-                    <Col sm={4} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid blue' }}>
+
+                    <Col sm={6} className='treatment_small_description'>
                         <h3> Cena: </h3>
                         <p> od 200 zł</p>
 
@@ -36,8 +54,16 @@ export function TreatmentPeelingWeglowy() {
                         <p> Około 45 minut </p>
                     </Col>
                 </Row>
+            </Container>
+
+            <Container>
+
                 <Row>
-                    <Col sm={8} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid pink', textAlign:'start', paddingLeft:'20px' }}>
+                    <Col sm={12}><hr/></Col>
+                </Row>
+
+                <Row className='treatment_section2'>
+                    <Col sm={12}>
 
                         <p>
                             Peeling węglowy, znany również jako „Black Doll Peel” lub „Hollywood Peel”, to
@@ -47,15 +73,13 @@ export function TreatmentPeelingWeglowy() {
                             spektakularnych efektów bez długiego okresu rekonwalescencji.
                         </p>
 
+                        <h3> Na czym polega peeling węglowy?</h3>
 
-                        <h2> Na czym polega peeling węglowy?</h2>
-
-                        <div>
-                            <p>Peeling węglowy polega na nałożeniu na skórę specjalnej maski z aktywnym węglem, a
+                            <ul>
+                                Peeling węglowy polega na nałożeniu na skórę specjalnej maski z aktywnym węglem, a
                                 następnie naświetlaniu jej laserem ND YAG Q-SWITCH. Aktywny węgiel przyciąga
                                 zanieczyszczenia, sebum i martwe komórki naskórka, a laser, poprzez swoje działanie, usuwa
-                                te zanieczyszczenia wraz z węglem. Zabieg działa wielokierunkowo: </p>
-                            <ul>
+                                te zanieczyszczenia wraz z węglem. Zabieg działa wielokierunkowo:
                                 <li> Oczyszcza skórę z głębokich zanieczyszczeń.
                                 </li>
                                 <li> Zwęża pory i reguluje wydzielanie sebum.
@@ -67,14 +91,12 @@ export function TreatmentPeelingWeglowy() {
                                 <li> Wygładza drobne zmarszczki i linie mimiczne.
                                 </li>
                             </ul>
-                        </div>
 
-                        <div>
+
                             <h3> Dla kogo jest ten zabieg? </h3>
-                            <p>
-                                Peeling węglowy z laserem ND YAG Q-SWITCH jest idealny dla osób:
-                            </p>
+
                             <ul>
+                                Peeling węglowy z laserem ND YAG Q-SWITCH jest idealny dla osób:
                                 <li> Z tłustą, mieszaną lub trądzikową cerą, zmagających się z nadmiernym wydzielaniem
                                     sebum i zaskórnikami.
                                 </li>
@@ -89,11 +111,8 @@ export function TreatmentPeelingWeglowy() {
 
                             <h3> Jak przygotować się do zabiegu?</h3>
 
-                            <p>
-                                Aby uzyskać najlepsze efekty peelingu węglowego, warto odpowiednio przygotować skórę:
-                            </p>
-
                             <ul>
+                                Aby uzyskać najlepsze efekty peelingu węglowego, warto odpowiednio przygotować skórę:
                                 <li> Unikaj opalania – zarówno na słońcu, jak i w solarium przez co najmniej 2 tygodnie
                                     przed zabiegiem.
                                 </li>
@@ -137,17 +156,24 @@ export function TreatmentPeelingWeglowy() {
                                 węglowego!
                             </p>
 
-                        </div>
                     </Col>
                 </Row>
 
 
-                <Row>
-                    <Col sm={3}> </Col>
-                    <Col sm={9}>
-                        <div>price title</div>
-                        <div>price</div>
+                <Row className="treatment_section2">
+                    <Col sm={12}>
+                        <hr/>
+                        <h3> Szczegółowy cennik: </h3>
                     </Col>
+
+                    <Col sm={12}><PriceListItem description={'twarz'} price={'150 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'twarz + szyja'} price={'200 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'twarz + szyja + dekolt'} price={'250 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'plecy'} price={'300 PLN'}/></Col>
+                </Row>
+
+                <Row className="treatment_section2" >
+                    <Col sm={12}><hr/></Col>
                 </Row>
             </Container>
             <Footer/>

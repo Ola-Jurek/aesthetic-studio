@@ -2,30 +2,51 @@ import React from 'react';
 import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
+import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
+import '../css/_treatment_single.scss';
+
+
+function PriceListItem(props) {
+    return (
+        <>
+            <div className='price_list_item'>
+                <a className='price_list_description'> {props.description} </a>
+                <a className='price_list_price'> {props.price} </a>
+            </div>
+        </>
+    );
+}
+
 
 export function TreatmentPeelingChemiczny() {
     return (
         <>
             <Navbar/>
-            <Container fluid style={{padding: 0, margin: 0, maxWidth: '100vw',}}>
 
+            <Container>
                 <Row>
-                    <Col sm={12} style={{
-                        wordWrap: 'break-word',
-                        lineHeight: '1.6',
-                        padding: '10px',
-                        border: '2px solid green'
-                    }}>
-                        <h1> Peelini chemiczne</h1>
-                        <h2>klucz do pięknej skóry</h2>
-
-                    </Col>
+                    <Col sm={12}><hr/></Col>
                 </Row>
                 <Row>
-                <Col sm={8}>
+                    <TreatmentSubmenu/>
+                </Row>
+            </Container>
+
+            <Container fluid style={{maxWidth: '100vw',}} className='treatment_section1'>
+
+                <Row>
+                    <Col sm={12}>
+                        <h1> Peelingi chemiczne</h1>
+                        <p>klucz do pięknej skóry</p>
+                    </Col>
+                </Row>
+
+                <Row>
+                <Col sm={6} className='treatment_photoPlace'>
                         {/*<img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>*/}
                     </Col>
-                    <Col sm={4} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid blue' }}>
+
+                    <Col sm={6} className='treatment_small_description'>
                         <h3> Cena: </h3>
                         <p> od 200 zł</p>
 
@@ -36,8 +57,17 @@ export function TreatmentPeelingChemiczny() {
                         <p> Około 45 minut </p>
                     </Col>
                 </Row>
+
+            </Container>
+
+            <Container>
+
                 <Row>
-                    <Col sm={8} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid pink', textAlign:'start', paddingLeft:'20px' }}>
+                    <Col sm={12}><hr/></Col>
+                </Row>
+
+                <Row className='treatment_section2'>
+                    <Col sm={12}>
 
                         <p>
                             Peelingi chemiczne to skuteczna metoda odnowy skóry, która polega na aplikacji specjalnych kwasów
@@ -47,12 +77,10 @@ export function TreatmentPeelingChemiczny() {
                             spektakularne efekty odmłodzenia i regeneracji skóry.
                         </p>
 
+                        <h3> Dla kogo są peelingi chemiczne?</h3>
 
-                        <h2> Dla kogo są peelingi chemiczne?</h2>
-
-                        <div>
-                            <h3>Peelingi chemiczne są odpowiednie dla osób: </h3>
                             <ul>
+                                Peelingi chemiczne są odpowiednie dla osób:
                                 <li> Zmagających się z trądzikiem, zaskórnikami i nadmiernym wydzielaniem sebum.
                                 </li>
                                 <li> Z przebarwieniami, plamami pigmentacyjnymi i nierównym kolorytem skóry.
@@ -66,15 +94,12 @@ export function TreatmentPeelingChemiczny() {
                                 <li> Szukających metody, która przyspieszy regenerację skóry i poprawi jej strukturę.
                                 </li>
                             </ul>
-                        </div>
 
-                        <div>
                             <h3> Jak działają peelingi chemiczne? </h3>
-                            <p>
+
+                            <ul>
                                 Peelingi chemiczne działają poprzez złuszczanie wierzchniej warstwy naskórka, co pobudza skórę do
                                 regeneracji i odnowy. W zależności od rodzaju kwasu, peeling może działać na różnej głębokości:
-                            </p>
-                            <ul>
                                 <li> Peelingi powierzchowne (np. kwas glikolowy, mlekowy) – usuwają martwe komórki z
                                     zewnętrznej warstwy naskórka, poprawiając wygląd skóry, jej gładkość i blask.</li>
                                 <li>Peelingi średniogłębokie (np. kwas TCA) – penetrują głębiej, redukując zmarszczki, blizny i
@@ -90,11 +115,10 @@ export function TreatmentPeelingChemiczny() {
                             </p>
 
                             <h3> Jak przygotować się do zabiegu? </h3>
-                            <p>
+
+                            <ul>
                                 Aby maksymalnie wykorzystać potencjał peelingu chemicznego, ważne jest odpowiednie
                                 przygotowanie skóry:
-                            </p>
-                            <ul>
                                 <li> Unikaj opalania – przez co najmniej 2 tygodnie przed zabiegiem.
                                 </li>
                                 <li>Zrezygnuj z retinoidów i kwasów AHA/BHA na tydzień przed zabiegiem, aby uniknąć
@@ -130,17 +154,20 @@ export function TreatmentPeelingChemiczny() {
                                 Zadbaj o swoją skórę i odkryj moc peelingów chemicznych – umów się na wizytę już dziś!
                             </p>
 
-                        </div>
                     </Col>
                 </Row>
 
-
-                <Row>
-                    <Col sm={3}> </Col>
-                    <Col sm={9}>
-                        <div>price title</div>
-                        <div>price</div>
+                <Row className="treatment_section2">
+                    <Col sm={12}>
+                        <hr/>
+                        <h3> Szczegółowy cennik: </h3>
                     </Col>
+
+                    <Col sm={12}><PriceListItem description={'dives'} price={'180-250 pln'}/></Col>
+                </Row>
+
+                <Row className="treatment_section2" >
+                    <Col sm={12}><hr/></Col>
                 </Row>
             </Container>
             <Footer/>

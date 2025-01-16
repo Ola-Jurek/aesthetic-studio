@@ -2,25 +2,50 @@ import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
 // import React from "react";
 import {Navbar} from "./navbar.jsx";
+import '../css/_treatment_single.scss';
+import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
+import React from "react";
+import zabieg_blizny from "../assets/zabieg_blizny.jpg";
 
-
+function PriceListItem(props) {
+    return (
+        <>
+            <div className='price_list_item'>
+                <a className='price_list_description'> {props.description} </a>
+                <a className='price_list_price'> {props.price} </a>
+            </div>
+        </>
+    );
+}
 
 export function TreatmentBlizny() {
     return (
         <>
             <Navbar/>
-            <Container fluid style={{padding: 0, margin: 0, maxWidth: '100vw',}}>
+
+            <Container>
+                <Row>
+                    <Col sm={12}><hr/></Col>
+                </Row>
+                <Row>
+                    <TreatmentSubmenu/>
+                </Row>
+            </Container>
+
+            <Container fluid style={{maxWidth: '100vw'}} className='treatment_section1'>
 
                 <Row>
-                    <Col sm={12} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid green' }}>
+                    <Col sm={12} >
                         <h1>Blizny i rozstępy</h1>
                     </Col>
                 </Row>
+
                 <Row>
-                    <Col sm={8}>
-                        {/*<img src={foto} style={{height: '400px',backgroundSize:'cover'}}></img>*/}
+                    <Col sm={6} className='treatment_photoPlace'>
+                        <img src={zabieg_blizny} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
-                    <Col sm={4} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid blue' }}>
+
+                    <Col sm={6} className='treatment_small_description'>
                         <h3> Cena: </h3>
                         <p>0d 250 zł </p>
 
@@ -31,11 +56,21 @@ export function TreatmentBlizny() {
                         <p> blizny, rozstępy, ubytki tkanki </p>
                     </Col>
                 </Row>
-                <Row>
-                    <Col sm={8} style={{ wordWrap: 'break-word', lineHeight: '1.6', padding: '10px', border: '2px solid pink', textAlign:'start', paddingLeft:'20px' }}>
-                        <h2> Na czym polega zabieg? </h2>
 
-                        <p> Blizny są powszechnym defektem skórnym, który może znacząco wpłynąć na wygląd i
+            </Container>
+
+            <Container>
+
+                <Row>
+                    <Col sm={12}><hr/></Col>
+                </Row>
+
+                <Row className='treatment_section2'>
+                    <Col sm={12}>
+                        <h3> Na czym polega zabieg? </h3>
+
+                        <p>
+                            Blizny są powszechnym defektem skórnym, który może znacząco wpłynąć na wygląd i
                             samopoczucie każdego człowieka. Tworzenie się blizn jest nieodłącznym procesem w naturalnym
                             cyklu gojenia się skóry. Gdy dochodzi do uszkodzenia ciągłości naskórka, organizm natychmiast
                             rozpoczyna proces naprawy, w którym tworzą się blizny. Chociaż jest to istotny mechanizm obronny
@@ -78,21 +113,36 @@ export function TreatmentBlizny() {
                                 zależności od rodzaju, rozmiaru blizny i obszaru zabiegowego oraz od satysfakcji z uzyskanych
                                 efektów. Zazwyczaj wykonuje się 3-10 zabiegów co 30 dni.
                             </p>
-
-
                         </div>
                     </Col>
                 </Row>
 
 
-                <Row>
-                    <Col sm={3}> </Col>
-                    <Col sm={9}>
-                        <div>price title</div>
-                        <div>price</div>
+                <Row className="treatment_section2">
+                    <Col sm={12}>
+                        <hr/>
+                        <h3> Szczegółowy cennik: </h3>
                     </Col>
+
+                    <Col sm={12}><PriceListItem description={'twarz'} price={'550 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'szyja'} price={'200 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'twarz + szyja'} price={'700 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'dekolt'} price={'250 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'biust'} price={'500 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'twarz + szyja + dekolt'} price={'850 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'dłonie'} price={'200 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'brzuch(rozstępy)'} price={'od 400 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'uda'} price={'od 400 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'blizny'} price={'od 250 PLN'}/></Col>
                 </Row>
+
+                <Row className="treatment_section2" >
+                    <Col sm={12}><hr/></Col>
+                </Row>
+
             </Container>
+
+
             <Footer/>
         </>
     );
