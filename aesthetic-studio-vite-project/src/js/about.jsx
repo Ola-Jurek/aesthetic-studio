@@ -26,7 +26,7 @@ export function About() {
                                 <img className='about_img' src={marta} alt='zdjęcie' ></img>
                             </div>
                             <p>
-                                Marta Kazimierska, magister kosmetologii ze specjalizacją inżynierii produktu kosmetycznego.
+                                Magister kosmetologii ze specjalizacją inżynierii produktu kosmetycznego.
                                 Specjalizuje się w pracy z wszelkimi bliznami, oraz laserowym usuwaniu pigmentów. Prezentuje
                                 koncepcję naukowego rozpatrywania zabiegów, eliminowania tych które mają wątpliwą skuteczność i
                                 obarczone są dużym ryzykiem powikłań. Wieloletnia linergistka doskonale rozumiejąca procesy
@@ -42,7 +42,7 @@ export function About() {
                                 <img className='about_img' src={bartek}></img>
                             </div>
                             <p>
-                                Bartosz Kazimierski, ratownik medyczny. Setki godzin przepracowanych w Ochronie Zdrowia (SOR,
+                                Ratownik medyczny. Setki godzin przepracowanych w Ochronie Zdrowia (SOR,
                                 oddziały szpitalne), stale dyżuruje w Zespołach Ratownictwa Medycznego. Zafiksowany na punkcie
                                 bezpieczeństwa, sterylności i czystości wykonywanych zabiegów. Specjalizuje się w zabiegach
                                 iniekcyjnych i laseroterapii. Każde z wprowadzanych urządzeń i zabiegów rozpatrywał pod względem
