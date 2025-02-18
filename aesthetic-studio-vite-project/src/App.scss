@@ -26,12 +26,51 @@ a {
   background-size: cover;
 }
 
+.h2_main_page {
+  font-family: Poiret One, sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 8px;
+  opacity: 0;
+  animation: fadeInImage 2s forwards;
+  animation-delay: 10ms;
+
+  @keyframes fadeInImage {
+    to {
+      opacity: 1;
+    }
+  }
+}
+
 .free_space {
   display: flex;
+  justify-content: end;
+  margin-top: 1.3rem;
+  opacity: 0;
+  animation: fadeInImage 2s forwards;
+  animation-delay: 10ms;
+
+  @keyframes fadeInImage {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .app-icons {
+    scale: 70%;
+  }
 }
 
 h3 {
   font-family: "Poiret One", sans-serif;
   font-size: 2rem;
-  ;
+  opacity: 0;
+  animation: fadeInImage 2s forwards;
+  animation-delay: 10ms;
+
+  @keyframes fadeInImage {
+    to {
+      opacity: 1;
+    }
+  }
 }

@@ -49,36 +49,32 @@ export function Navbar() {
             <Container >
                 <Row className='nav'>
 
-                    <Col sm={2}>
+                    <Col sm={2.4}>
                         <a href='/'>
                             <img src={logo} className='logo' alt='logo' />
                         </a>
                     </Col>
 
 
-                    <Col sm={2} className='menu_item'> <Link to='/about'> O nas </Link> </Col>
+                    <Col sm={2.4} className='menu_item'> <Link to='/about'> O nas </Link> </Col>
 
-                    <Col sm={2} className='menu_item'> <Link to='/treatments'>Zabiegi </Link> </Col>
+                    <Col sm={2.4} className='menu_item'> <Link to='/treatments'>Zabiegi </Link> </Col>
 
-                    <Col sm={2} className='menu_item'> <Link to='/price_list' > Cennik </Link> </Col>
+                    <Col sm={2.4} className='menu_item'> <Link to='/price_list' > Cennik </Link> </Col>
 
-                    <Col sm={2} className='menu_item'> <Link to='/cosmetics' className='nav_item' >Kosmetyki </Link> </Col>
+                    {/*<Col sm={2} className='menu_item'> <Link to='/cosmetics' className='nav_item' >Kosmetyki </Link> </Col>*/}
 
-                    <Col sm={2} className='menu_item'> <Link to='/contact' className='nav_item' >Kontakt </Link> </Col>
+                    <Col sm={2.4} className='menu_item'> <Link to='/contact' className='nav_item' >Kontakt </Link> </Col>
                 </Row>
             </Container>
 
-{/*<Container >*/}
+            {/*<Container >*/}
 
-{/*    <Row className='menu'>*/}
+            {/*    <Row className='menu'>*/}
+            {/*        /!*<Col sm={2} className='menu_item'> <Searchbar onSearch={handleSearch}/> </Col>*!/*/}
+                        {/*    </Row>*/}
 
-{/*        /!*<Col sm={2} className='menu_item'> <Searchbar onSearch={handleSearch}/> </Col>*!/*/}
-
-
-
-{/*    </Row>*/}
-
-{/*</Container>*/}
+            {/*</Container>*/}
 
         </>
     );

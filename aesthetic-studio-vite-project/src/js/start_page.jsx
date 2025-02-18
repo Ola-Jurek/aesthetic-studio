@@ -1,6 +1,6 @@
 import React from 'react';
-import facebook from "../assets/brand-identity_-facebook-128.png";
-import instagram from "../assets/instagram-47-128.png";
+import facebook from "../assets/facebook-footer.png";
+import instagram from "../assets/instagram-footer.png";
 import logo from "../assets/logo.png";
 import '../css/_start_page.scss';
 import {Container, Row, Col} from "react-grid-system";

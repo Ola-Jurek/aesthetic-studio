@@ -21,35 +21,55 @@ export function About() {
                 <Row className='row'>
 
                     <Col sm={6} className='about_card'>
-                        <h2 className='about_name'>Marta Kazimierska</h2>
-                            <div >
+
+                            <h2 className='about_name'>Marta Kazimierska</h2>
+
+                            <div>
                                 <img className='about_img' src={marta} alt='zdjęcie' ></img>
                             </div>
-                            <p>
-                                Magister kosmetologii ze specjalizacją inżynierii produktu kosmetycznego.
-                                Specjalizuje się w pracy z wszelkimi bliznami, oraz laserowym usuwaniu pigmentów. Prezentuje
-                                koncepcję naukowego rozpatrywania zabiegów, eliminowania tych które mają wątpliwą skuteczność i
-                                obarczone są dużym ryzykiem powikłań. Wieloletnia linergistka doskonale rozumiejąca procesy
-                                zachodzące w skórze w skojarzeniu z pigmentami. Produkty kosmetyczne rozkłada na czynniki
-                                pierwsze, dobierając najwłaściwsze i eliminując marketingowe buble. „Dobry duch Studia”, zawsze
-                                uśmiechnięta, z uwagą i wyrozumiałością podchodząca do problemów naszych klientów.
-                            </p>
+
+
+                                <p className='about_text'>
+                                    Magister kosmetologii ze specjalizacją inżynierii produktu kosmetycznego.
+                                    Specjalizuje się w pracy z wszelkimi bliznami, oraz laserowym usuwaniu pigmentów.
+                                    Prezentuje
+                                    koncepcję naukowego rozpatrywania zabiegów, eliminowania tych które mają wątpliwą
+                                    skuteczność i
+                                    obarczone są dużym ryzykiem powikłań. Wieloletnia linergistka doskonale rozumiejąca
+                                    procesy
+                                    zachodzące w skórze w skojarzeniu z pigmentami. Produkty kosmetyczne rozkłada na
+                                    czynniki
+                                    pierwsze, dobierając najwłaściwsze i eliminując marketingowe buble. „Dobry duch Studia”,
+                                    zawsze
+                                    uśmiechnięta, z uwagą i wyrozumiałością podchodząca do problemów naszych klientów.
+                                </p>
+
                     </Col>
 
-                    <Col sm={6}>
+                    <Col sm={6} className='about_card'>
                         <h2 className='about_name'>Bartosz Kazimierski</h2>
                             <div>
                                 <img className='about_img' src={bartek}></img>
                             </div>
-                            <p>
+
+                        <div>
+                            <p className='about_text'>
                                 Ratownik medyczny. Setki godzin przepracowanych w Ochronie Zdrowia (SOR,
-                                oddziały szpitalne), stale dyżuruje w Zespołach Ratownictwa Medycznego. Zafiksowany na punkcie
-                                bezpieczeństwa, sterylności i czystości wykonywanych zabiegów. Specjalizuje się w zabiegach
-                                iniekcyjnych i laseroterapii. Każde z wprowadzanych urządzeń i zabiegów rozpatrywał pod względem
-                                bezpieczeństwa i czasu rekonwalescencji pozabiegowej. Starannie selekcjonuje produkty, dzieląc je
-                                na skuteczne i „marketingowe”. Od lat walczy z „medycyną zasłyszaną” i „wiedzą ulotkową”.
-                                Maniakalny wielbiciel kawy i długich rozmów przy niej (lub zamiast niej) z każdym klientem.
+                                oddziały szpitalne), stale dyżuruje w Zespołach Ratownictwa Medycznego. Zafiksowany na
+                                punkcie
+                                bezpieczeństwa, sterylności i czystości wykonywanych zabiegów. Specjalizuje się w
+                                zabiegach
+                                iniekcyjnych i laseroterapii. Każde z wprowadzanych urządzeń i zabiegów rozpatrywał pod
+                                względem
+                                bezpieczeństwa i czasu rekonwalescencji pozabiegowej. Starannie selekcjonuje produkty,
+                                dzieląc je
+                                na skuteczne i „marketingowe”. Od lat walczy z „medycyną zasłyszaną” i „wiedzą
+                                ulotkową”.
+                                Maniakalny wielbiciel kawy i długich rozmów przy niej (lub zamiast niej) z każdym
+                                klientem.
                             </p>
+                        </div>
+
                     </Col>
 
                     {/*<Col sm={4}>*/}

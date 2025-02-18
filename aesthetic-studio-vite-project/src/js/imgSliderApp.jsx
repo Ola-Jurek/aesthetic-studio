@@ -34,6 +34,7 @@ export function ImgSliderApp() {
 
         return () => clearInterval(interval);
     }, []);
+
     return (
         <Col sm={12}>
             <div className="slider">
@@ -50,22 +51,35 @@ export function ImgSliderApp() {
                         }}
                     />
                 ))}
-                <div className='slider-text'>
-                    <h3> Kazimierscy Studio Estetyki </h3>
+                <div className='slider-background'>
+                    <div className='slider-text'>
+                        <p> Od 2020 roku prowadzimy Studio Estetyki w którym zapewniamy Państwu najlepsze usługi,
+                            połączenie wiedzy, indywidualnego podejścia, a przede wszystkim bezpieczeństwa wykonywanych
+                            zabiegów. Nie wykonujemy „zabiegów na życzenie”, nie będących w wachlarzu naszych usług.
+                            Ofertę
+                            jaką Państwo przedstawiamy, zbudowaliśmy na bazie wielogodzinnych szkoleń, rozmów,
+                            dobierania
+                            sprzętu i testowania go na długo przed zakupem. Posiadamy sprzęt najwyżej klasy, tylko
+                            sprawdzonych producentów, gwarantujących swoją marką i doświadczeniem najwyższe parametry.
+                            Stosujemy zasadę opieki nad klientem w trakcie całego procesu zabiegowego.
+                            Będzie nam niezmiernie miło spotkać się z Państwem w naszych gabinetach i wspólnie iść drogą
+                            piękna, higieny i zdrowego życia! </p>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div className="dots-container">
-                {images.map((_, index) => (
-                    <span
-                        key={index}
-                        className={`dot ${index === currentIndex ? 'active' : ''}`}
-                        onClick={() => goToSlide(index)}
-                    />
-                ))}
+                <div className="dots-container">
+                    {images.map((_, index) => (
+                        <span
+                            key={index}
+                            className={`dot ${index === currentIndex ? 'active' : ''}`}
+                            onClick={() => goToSlide(index)}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
         </Col>
     );
 }

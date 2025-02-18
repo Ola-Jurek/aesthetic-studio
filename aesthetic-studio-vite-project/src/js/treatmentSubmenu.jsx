@@ -50,7 +50,6 @@ export function TreatmentSubmenu() {
                         <li><Link to='/treatment_lipoliza_iniekcyjna'>Lipoliza iniekcyjna</Link></li>
                         <li><Link to='/treatment_radiofrekwencja_mikroiglowa'>Radiofrekwencja mikroigłowa</Link></li>
                         <li><Link to='/treatment_usuwamie_tatuazy'>Laserowe usuwanie tatuaży</Link></li>
-                        <li><Link href="#">Rewitalizacja skóry dłoni</Link></li>
                     </ul>
 
                 )}
@@ -61,26 +60,23 @@ export function TreatmentSubmenu() {
                 Twarz
                 {isChecked.face && (
                     <ul className="treatment_submenu_item">
-                        <li><Link to="#">Makijaż permanentny</Link></li>
-                        <li><Link to="#">Henna pudrowa</Link></li>
+                        <li><Link to='/treatment_makijaz_permanentny'>Makijaż permanentny</Link></li>
+                        <li><Link to='/treatment_henna_pudrowa'>Henna pudrowa</Link></li>
                         <li><Link to="#">Makijaż okolicznościowy</Link></li>
-                        <li><Link to="#">Mezoteriapia igłowa</Link></li>
-                        <li><Link to="#">Mezoterapia mikroigłowa</Link></li>
-                        <li><Link to="#">Osocze bogatopłytkowe</Link></li>
-                        <li><Link to="#">Radiofrekwencja mikroigłowa</Link></li>
-                        <li><Link to="#">BTX</Link></li>
+                        <li><Link to='/treatment_mezoterapia-iglowa'>Mezoteriapia igłowa</Link></li>
+                        <li><Link to='/treatment_mezoterapia_mikroiglowa'>Mezoterapia mikroigłowa</Link></li>
+                        <li><Link to='/treatment_osocze_bogatoplytkowe'>Osocze bogatopłytkowe</Link></li>
+                        <li><Link to='/treatment_radiofrekwencja_beziglowa'>Radiofrekwencja bezigłowa</Link></li>
+                        <li><Link to='/treatment_modelowanie_ust'>Modelowanie ust</Link></li>
+                        <li><Link to='/treatment_btx'>BTX</Link></li>
                     </ul>
                 )}
             </div>
             <div className={`treatment_submenu ${isChecked.model ? 'open' : ''}`}
                  ref={el => toggleRefs.current.model = el}
                  onClick={() => setIsChecked(prevState => ({...prevState, model: !prevState.model}))}>
-                Modelowanie kwasem hialuronowym
-                {isChecked.model && (
-                    <ul className="treatment_submenu_item">
-                        <li><Link to="#">Modelowanie us</Link></li>
-                    </ul>
-                )}
+                <Link to='/treatment_zamykanie_zmian_naczyniowych'>Zamykanie zmian naczyniowych</Link>
+
             </div>
             <div className={`treatment_submenu ${isChecked.tychology ? 'open' : ''}`}
                  ref={el => toggleRefs.current.tychology = el}
@@ -88,7 +84,7 @@ export function TreatmentSubmenu() {
                 Tychologia
                 {isChecked.tychology && (
                     <ul className="treatment_submenu_item">
-                        <li><Link to="#">Mezoterapia igłowa skóry głowy</Link></li>
+                        <li><Link to='/treatment_mezoterapia_iglowa_skory_glowy'>Mezoterapia igłowa skóry głowy</Link></li>
                     </ul>
                 )}
             </div>

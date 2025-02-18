@@ -1,7 +1,30 @@
+.price_list_submenu {
+  opacity: 0;
+  animation: fadeInImage 2s forwards;
+  animation-delay: 10ms;
+
+  @keyframes fadeInImage {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .submenu_item {}
+}
+
 .price_list_section {
   //background-color: rgba(200, 200, 200, 0.2);
   margin-bottom: 9rem;
   //padding: 1rem 1rem;
+  opacity: 0;
+  animation: fadeInImage 2s forwards;
+  animation-delay: 10ms;
+
+  @keyframes fadeInImage {
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 h1 {
