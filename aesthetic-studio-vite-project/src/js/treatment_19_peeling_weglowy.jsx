@@ -34,7 +34,7 @@ export function TreatmentPeelingWeglowy() {
                 <Row>
                     <Col>
                         <h1> Peeling węglowy</h1>
-                        <p>z wykorzystaniem Laserem ND YAG Q-SWITCH </p>
+                        <p className='treatment_section1_more'>z wykorzystaniem Laserem ND YAG Q-SWITCH </p>
                     </Col>
                 </Row>
 

@@ -36,7 +36,7 @@ export function TreatmentMezoterapiaIglowa() {
                 <Row>
                     <Col sm={12}>
                         <h1>Mezoterapia igłowa</h1>
-                        <p> Twoja Skóra w Lepszej Formie! </p>
+                        <p className='treatment_section1_more'> Twoja Skóra w Lepszej Formie! </p>
                     </Col>
                 </Row>
 

@@ -43,7 +43,6 @@ export function TreatmentSubmenu() {
                  onClick={() => setIsChecked(prevState => ({...prevState, body: !prevState.body}))}>
                 Ciało
                 {isChecked.body && (
-
                     <ul className="treatment_submenu_item">
                         <li><Link to='/treatment_depilacja'>Depilacja laserowa</Link></li>
                         <li><Link to='/treatment_blizny_i_rozstepy'>Terapia blizn i rozstępów</Link></li>

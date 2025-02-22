@@ -35,7 +35,7 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
                 <Row>
                     <Col sm={12}>
                         <h1>Radiofrekwencja Bezigłowa (RF)</h1>
-                        <p> Skuteczne Ujędrnianie i Odmładzanie Skóry! </p>
+                        <p className='treatment_section1_more'> Skuteczne Ujędrnianie i Odmładzanie Skóry! </p>
                     </Col>
                 </Row>
 

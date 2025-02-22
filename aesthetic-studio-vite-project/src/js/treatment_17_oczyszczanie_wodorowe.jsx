@@ -34,7 +34,7 @@ export function TreatmentOczyszczanieWodorowe() {
                 <Row>
                     <Col sm={12}>
                         <h1>Oczyszczanie Wodorowe</h1>
-                        <p>z wykorzystaniem urządzenienia M'onduniq</p>
+                        <p className='treatment_section1_more'>z wykorzystaniem urządzenienia M'onduniq</p>
                     </Col>
                 </Row>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './../css/imgSlider.scss';
+import '../css/_imgSlider_app.scss';
 import {Row, Col} from "react-grid-system"
 
 
@@ -37,23 +37,23 @@ export function ImgSliderApp() {
 
     return (
         <Col sm={12}>
-            <div className="slider">
-            <div className="slider-container">
+            <div className="slider-app">
+            <div className="slider-container-app">
                 {images.map((image, index) => (
                     <img
                         key={index}
                         src={image}
                         alt={`Slide ${index + 1}`}
-                        className={`slider-image ${index === currentIndex ? 'fade-in' : ''}`}
+                        className={`slider-image-app ${index === currentIndex ? 'fade-in' : ''}`}
                         style={{
                             opacity: index === currentIndex ? 1 : 0,
                             transition: 'opacity 3s ease-in-out',
                         }}
                     />
                 ))}
-                <div className='slider-background'>
-                    <div className='slider-text'>
-                        <p> Od 2020 roku prowadzimy Studio Estetyki w którym zapewniamy Państwu najlepsze usługi,
+                <div className='slider-background-app'>
+                    <div className='slider-text-app'>
+                        <p className='slider-text-app-p'> Od 2020 roku prowadzimy Studio Estetyki w którym zapewniamy Państwu najlepsze usługi,
                             połączenie wiedzy, indywidualnego podejścia, a przede wszystkim bezpieczeństwa wykonywanych
                             zabiegów. Nie wykonujemy „zabiegów na życzenie”, nie będących w wachlarzu naszych usług.
                             Ofertę
@@ -70,11 +70,11 @@ export function ImgSliderApp() {
 
             </div>
 
-                <div className="dots-container">
+                <div className="dots-container-app">
                     {images.map((_, index) => (
                         <span
                             key={index}
-                            className={`dot ${index === currentIndex ? 'active' : ''}`}
+                            className={`dot-app ${index === currentIndex ? 'active' : ''}`}
                             onClick={() => goToSlide(index)}
                         />
                     ))}

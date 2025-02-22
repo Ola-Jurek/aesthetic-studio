@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './../css/imgSlider.scss'
+import '../css/_imgSlider-treatments.scss'
 
 import laser from '../assets/zabieg_depilacja.jpg';
 import zabieg1 from './../assets/DC1_9744 gotowe z logo.jpg';
@@ -33,14 +33,14 @@ export function ImgSliderTreatments() {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div className="slider">
-            <div className="slider-container">
+        <div className="slider-treatments">
+            <div className="slider-container-treatments">
                 {images.map((image, index) => (
                     <img
                         key={index}
                         src={image}
                         alt={`Slide ${index + 1}`}
-                        className={`slider-image ${index === currentIndex ? 'fade-in' : ''}`}
+                        className={`slider-image-treatments ${index === currentIndex ? 'fade-in' : ''}`}
                         style={{
                             opacity: index === currentIndex ? 1 : 0,
                             transition: 'opacity 3s ease-in-out',
@@ -49,11 +49,11 @@ export function ImgSliderTreatments() {
                 ))}
             </div>
 
-            <div className="dots-container">
+            <div className="dots-container-treatments">
                 {images.map((_, index) => (
                     <span
                         key={index}
-                        className={`dot ${index === currentIndex ? 'active' : ''}`}
+                        className={`dot-treatments ${index === currentIndex ? 'active' : ''}`}
                         onClick={() => goToSlide(index)}
                     />
                 ))}

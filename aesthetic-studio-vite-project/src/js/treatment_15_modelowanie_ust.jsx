@@ -35,7 +35,7 @@ export function TreatmentModelowanieUst() {
                 <Row>
                     <Col sm={12}>
                         <h1>Modelowanie ust</h1>
-                        <p> piękno w harmonii z naturalnym wyglądem </p>
+                        <p className='treatment_section1_more'> piękno w harmonii z naturalnym wyglądem </p>
                     </Col>
                 </Row>
 

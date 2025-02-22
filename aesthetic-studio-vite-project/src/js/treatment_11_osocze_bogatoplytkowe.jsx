@@ -35,7 +35,7 @@ export function TreatmentOsoczeBogatoplytkowe() {
                 <Row>
                     <Col sm={12}>
                         <h1>Osocze bogatopłytkowe (PRP)</h1>
-                        <p> Naturalne Odmładzanie Twojej Skóry! </p>
+                        <p className='treatment_section1_more'> Naturalne Odmładzanie Twojej Skóry! </p>
                     </Col>
                 </Row>
 

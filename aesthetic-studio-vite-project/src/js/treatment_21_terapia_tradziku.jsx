@@ -35,7 +35,7 @@ export function TreatmentTerapiaTradziku() {
                 <Row>
                     <Col sm={12}>
                         <h1> Kompleksowe Leczenie Trądziku</h1>
-                        <p>Skuteczność Dzięki Wielu Metodom </p>
+                        <p className='treatment_section1_more'>Skuteczność Dzięki Wielu Metodom </p>
 
                     </Col>
                 </Row>

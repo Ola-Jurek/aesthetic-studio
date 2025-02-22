@@ -36,7 +36,7 @@ export function TreatmentHennaPudrowa() {
                 <Row>
                     <Col sm={12}>
                         <h1>Henna i laminacja brwi</h1>
-                        <p> piękno i styl w naturalnym wydaniu </p>
+                        <p className='treatment_section1_more'> piękno i styl w naturalnym wydaniu </p>
                     </Col>
                 </Row>
 

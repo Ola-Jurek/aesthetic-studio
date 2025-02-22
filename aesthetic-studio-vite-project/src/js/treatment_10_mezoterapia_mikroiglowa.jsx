@@ -35,7 +35,7 @@ export function TreatmentMezoterapiaMikroiglowa() {
                 <Row>
                     <Col sm={12}>
                         <h1>Mezoterapia mikroigłowa</h1>
-                        <p> Skuteczna Regeneracja Skóry!  </p>
+                        <p className='treatment_section1_more'> Skuteczna Regeneracja Skóry!  </p>
                     </Col>
                 </Row>
 

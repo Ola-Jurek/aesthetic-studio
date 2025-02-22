@@ -35,7 +35,7 @@ export function TreatmentMezoterapiaIglowaSkoryGlowy() {
                 <Row>
                     <Col sm={12}>
                         <h1>Mezoterapia skóry głowy</h1>
-                        <p> skuteczna regeneracja i stymulacja wzrostu włosów </p>
+                        <p className='treatment_section1_more'> skuteczna regeneracja i stymulacja wzrostu włosów </p>
                     </Col>
                 </Row>
 

@@ -37,6 +37,7 @@ export function TreatmentBlizny() {
                 <Row>
                     <Col sm={12} >
                         <h1>Blizny i rozstępy</h1>
+                        <p className='treatment_section1_more'></p>
                     </Col>
                 </Row>
 
@@ -46,13 +47,13 @@ export function TreatmentBlizny() {
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
-                        <h3> Cena: </h3>
+                        <h2> Cena: </h2>
                         <p>0d 250 zł </p>
 
-                        <h3>Obszar zabigowy:</h3>
+                        <h2>Obszar zabigowy:</h2>
                         <p>Wszelkiego rodzaju blizny</p>
 
-                        <h3>Na problem:</h3>
+                        <h2>Na problem:</h2>
                         <p> blizny, rozstępy, ubytki tkanki </p>
                     </Col>
                 </Row>

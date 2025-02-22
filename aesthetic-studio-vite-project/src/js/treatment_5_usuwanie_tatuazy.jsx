@@ -39,7 +39,7 @@ export function TreatmentUsuwanieTatuazy() {
                 <Row>
                     <Col sm={12} >
                         <h1>Laserowe Usuwanie Tatuażu i Makijażu Permanentnego</h1>
-                        <p>W bezpiecznej technologii ND YAG Q-SWITC</p>
+                        <p className='treatment_section1_more'>W bezpiecznej technologii ND YAG Q-SWITC</p>
                     </Col>
                 </Row>
 

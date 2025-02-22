@@ -24,7 +24,7 @@ export function TreatmentZamykwanieZmianNaczyniowych() {
                 <Row>
                     <Col sm={12}>
                         <h1>Zabiegi zamykania zmian naczyniowych</h1>
-                        <p> laser Quadrostar Pro Yellow</p>
+                        <p className='treatment_section1_more'> laser Quadrostar Pro Yellow</p>
                     </Col>
                 </Row>
 

@@ -38,7 +38,7 @@ export function TreatmentLipoliza() {
                 <Row>
                     <Col sm={12} >
                         <h1>Lipoliza iniekcyjna</h1>
-                        <p>Skuteczny Sposób na Redukcję Tkanki Tłuszczowej</p>
+                        <p className='treatment_section1_more'>Skuteczny Sposób na Redukcję Tkanki Tłuszczowej</p>
                     </Col>
                 </Row>
 

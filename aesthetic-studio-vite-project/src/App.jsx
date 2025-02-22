@@ -4,7 +4,7 @@ import {Navbar} from "./js/navbar.jsx";
 import {Footer} from "./js/footer.jsx";
 import {StartPage} from "./js/start_page.jsx";
 import {ImgSliderApp} from "./js/imgSliderApp.jsx";
-import './css/imgSlider.scss';
+import './css/_imgSlider_app.scss';
 import {Col, Container, Row} from "react-grid-system";
 import React from "react";
 import facebook from "./assets/facebook-app.png";
@@ -30,7 +30,7 @@ export function App() {
               </Col>
 
               <Col sm={4}>
-                  < div className="free_space">
+                  <div className="free_space">
 
                       <div className='app-icons'>
                           <a href='https://www.facebook.com/estetykastudio'>

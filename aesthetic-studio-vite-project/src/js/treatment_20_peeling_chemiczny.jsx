@@ -37,7 +37,7 @@ export function TreatmentPeelingChemiczny() {
                 <Row>
                     <Col sm={12}>
                         <h1> Peelingi chemiczne</h1>
-                        <p>klucz do pięknej skóry</p>
+                        <p className='treatment_section1_more'>klucz do pięknej skóry</p>
                     </Col>
                 </Row>
 

@@ -38,7 +38,7 @@ export function TreatmentRadiofrekwencja() {
                 <Row>
                     <Col sm={12}>
                         <h1>Radiofrekwencja Mikroigłowa</h1>
-                        <p>Nowoczesna Technologia Odmładzania i Modelowania Skóry</p>
+                        <p className='treatment_section1_more'>Nowoczesna Technologia Odmładzania i Modelowania Skóry</p>
                     </Col>
                 </Row>
 

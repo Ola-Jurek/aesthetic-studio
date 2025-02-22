@@ -35,7 +35,7 @@ export function Footer() {
                     </div>
                 </Col>
             </Row>
-        // </Container>
+         </Container>
     );
 }
 

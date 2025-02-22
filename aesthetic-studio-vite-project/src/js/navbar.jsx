@@ -43,40 +43,69 @@ export function Navbar() {
     //     console.log('wyszykiwanie dla:', query);
     // };
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
 
     return (
-        <>
-            <Container >
-                <Row className='nav'>
 
-                    <Col sm={2.4}>
-                        <a href='/'>
-                            <img src={logo} className='logo' alt='logo' />
+        <>
+            <Container>
+                <Row className="nav">
+
+                    <Col sm={2.4} xs={6}>
+                        <a href="/">
+                            <img src={logo} className="logo" alt="logo"/>
                         </a>
                     </Col>
 
+                    <Col xs={6} className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                        ☰
+                    </Col>
 
-                    <Col sm={2.4} className='menu_item'> <Link to='/about'> O nas </Link> </Col>
+                    <Col sm={2.4} className={`menu_item col ${menuOpen ? "open" : ""}`}>
+                        <Link to="/about"> O nas </Link>
+                    </Col>
 
-                    <Col sm={2.4} className='menu_item'> <Link to='/treatments'>Zabiegi </Link> </Col>
+                    <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>
+                        <Link to="/treatments">Zabiegi </Link>
+                    </Col>
 
-                    <Col sm={2.4} className='menu_item'> <Link to='/price_list' > Cennik </Link> </Col>
+                    <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>
+                        <Link to="/price_list"> Cennik </Link>
+                    </Col>
 
-                    {/*<Col sm={2} className='menu_item'> <Link to='/cosmetics' className='nav_item' >Kosmetyki </Link> </Col>*/}
-
-                    <Col sm={2.4} className='menu_item'> <Link to='/contact' className='nav_item' >Kontakt </Link> </Col>
+                    <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>
+                        <Link to="/contact">Kontakt </Link>
+                    </Col>
                 </Row>
             </Container>
-
-            {/*<Container >*/}
-
-            {/*    <Row className='menu'>*/}
-            {/*        /!*<Col sm={2} className='menu_item'> <Searchbar onSearch={handleSearch}/> </Col>*!/*/}
-                        {/*    </Row>*/}
-
-            {/*</Container>*/}
-
         </>
+
+
+        // <>
+        //     <Container >
+        //         <Row className='nav'>
+        //
+        //             <Col sm={2.4}>
+        //                 <a href='/'>
+        //                     <img src={logo} className='logo' alt='logo' />
+        //                 </a>
+        //             </Col>
+        //
+        //
+        //             <Col sm={2.4} className='menu_item'> <Link to='/about'> O nas </Link> </Col>
+        //
+        //             <Col sm={2.4} className='menu_item'> <Link to='/treatments'>Zabiegi </Link> </Col>
+        //
+        //             <Col sm={2.4} className='menu_item'> <Link to='/price_list' > Cennik </Link> </Col>
+        //
+        //             {/*<Col sm={2} className='menu_item'> <Link to='/cosmetics' className='nav_item' >Kosmetyki </Link> </Col>*/}
+        //
+        //             <Col sm={2.4} className='menu_item'> <Link to='/contact' className='nav_item' >Kontakt </Link> </Col>
+        //         </Row>
+        //     </Container>
+        //
+        // </>
     );
 }
 

@@ -35,7 +35,7 @@ export function TreatmentBtx() {
                 <Row>
                     <Col sm={12}>
                         <h1>BTX</h1>
-                        <p> „Wszystko jest trucizną i nic nie jest trucizną. Tylko dawka czyni truciznę” (łac. Omnia sunt venena,
+                        <p className='treatment_section1_more'> „Wszystko jest trucizną i nic nie jest trucizną. Tylko dawka czyni truciznę” (łac. Omnia sunt venena,
                             nihil est sine veneno. Sola dosis facit venenum” Ta sentencja Paracelsusa doskonale odnosi się do
                             działania BTX. </p>
                     </Col>

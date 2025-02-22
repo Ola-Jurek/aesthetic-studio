@@ -55,13 +55,11 @@
   .treatment_submenu {
 
     font-family: "Poiret One", sans-serif;
-    //margin: 1rem 0;
     cursor: pointer;
     padding: 0.2rem 1rem;
     text-transform: uppercase;
     font-size: 1rem;
-    //border: 1px solid #ccc;
-    width: 20%; /* Standardowa szerokość dla desktopów */
+    width: 20%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -82,7 +80,6 @@
       list-style: none;
       z-index: 1000;
       opacity: 80%;
-      //border-bottom: 1px solid goldenrod;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 
       &:hover .submenu {
@@ -107,24 +104,50 @@
   }
 }
 
+
+
 @media (max-width: 768px) {
-  /* Responsywność dla małych ekranów */
-  .treatment_submenu {
-    width: 100%;
-    text-align: left;
-    padding-left: 20px;
-    padding-right: 20px;
+
+  .treatments_nav {
+    //border: 1px solid pink;
+    flex-direction: column;
+
+
+    .treatment_submenu {
+      flex-direction: row;
+      width: 100%;
+      text-align: left;
+      padding-left: 20px;
+      padding-right: 20px;
+
+
+      .treatment_submenu_item {
+        position: absolute; /* Submenu będzie wyświetlane poniżej swojego elementu */
+        top: 9.2rem;
+        left: auto;
+        display: flex;
+        flex-direction: column;
+        opacity: 90%;
+        border-top: 1px solid goldenrod;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+        li {
+          font-size: 1rem;
+          padding: 0.3rem;
+          text-align: center;
+        }
+      }
+      }
+
+
+
+
+
+    }
+
   }
 
-  .treatment_submenu_item {
-    position: static; /* Submenu będzie wyświetlane poniżej swojego elementu */
-    width: 100%; /* Submenu rozciąga się na całą szerokość ekranu */
-    top: auto;
-    left: auto;
-    box-shadow: none;
-    display: block; /* Submenu rozwija się w pionie na urządzeniach mobilnych */
-  }
-}
+
 
 //img {
 //  max-width: 100%;

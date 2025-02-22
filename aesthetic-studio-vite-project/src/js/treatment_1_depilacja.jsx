@@ -42,6 +42,7 @@ export function TreatmentDepilacja() {
                 <Row>
                     <Col sm={12}>
                         <h1>Depilacja laserowa</h1>
+                        <p className='treatment_section1_more'></p>
                     </Col>
                 </Row>
 
