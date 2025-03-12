@@ -34,3 +34,17 @@
     }
   }
 }
+
+.copyrights {
+  font-family: "Poiret One", sans-serif;
+  color: grey;
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .copyrights {
+    font-size: 0.5rem;
+  }
+}

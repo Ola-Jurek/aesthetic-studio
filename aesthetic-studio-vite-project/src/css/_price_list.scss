@@ -82,3 +82,12 @@ h1 {
       }
     }
   }
+
+
+@media (max-width: 768px) {
+
+  hr {
+    border-top: 0.8px solid goldenrod;
+    margin: 0 auto;
+  }
+}

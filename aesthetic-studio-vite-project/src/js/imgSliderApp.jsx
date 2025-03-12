@@ -3,17 +3,17 @@ import '../css/_imgSlider_app.scss';
 import {Row, Col} from "react-grid-system"
 
 
-import laser from '../assets/zabieg_depilacja.jpg';
-import zabieg1 from './../assets/DC1_9744 gotowe z logo.jpg';
-import brwi from './../assets/DC1_9766 GOTOWE Z LOGO.jpg';
-import peeling from './../assets/DC1_9786 GOTOWE Z LGO.jpg';
-import zabieg2 from './../assets/DC1_9605 GOTOWE Z LOOG.jpg';
-import zabieg3 from './../assets/DC1_9754 GOTOWE Z LOGO.jpg';
-import zabieg4 from '../assets/zabieg_mezoterapia.jpg';
-import zabieg5 from '../assets/zabieg_blizny.jpg';
+import gen_factor from './../assets/gen_factor.jpg';
+import brwi from './../assets/brwi.jpg';
+import twarz_maska from './../assets/twarz_maska.jpg';
+import team2 from '../assets/team2.jpg';
+import creme_bar from './../assets/creme_bar.jpg';
+import gen_factor_bootles from './../assets/gen_factor_bootles.jpg';
+import team from './../assets/team.jpg';
+
 
 export function ImgSliderApp() {
-    const images = [laser, zabieg1, brwi, peeling, zabieg2, zabieg3, zabieg4, zabieg5];
+    const images = [team, gen_factor, brwi, twarz_maska, team2, gen_factor_bootles, creme_bar];
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -38,7 +38,7 @@ export function ImgSliderApp() {
     return (
         <Col sm={12}>
             <div className="slider-app">
-            <div className="slider-container-app">
+                <div className="slider-container-app">
                 {images.map((image, index) => (
                     <img
                         key={index}

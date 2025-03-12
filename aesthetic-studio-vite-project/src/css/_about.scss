@@ -41,4 +41,53 @@
 }
 
 
+@media (max-width: 768px) {
 
+  hr {
+    border-top: 0.8px solid goldenrod;
+    margin: 0 auto;
+  }
+
+
+  .about_card {
+
+    .about_name {
+      font-family: "Poiret One", sans-serif;
+      padding: 2px 0;
+      margin: 2rem auto 2rem auto;
+      opacity: 0;
+      animation: fadeInImage 2s forwards;
+      animation-delay: 10ms;
+
+      @keyframes fadeInImage {
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
+    .about_img {
+      height: 500px;
+      width: 100%;
+      border-radius: 5%;
+      background-size: cover;
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeInImage 2s forwards;
+      animation-delay: 10ms;
+
+      @keyframes fadeInImage {
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
+    .about_text {
+      width: 80%;
+      margin: 2rem auto 5rem auto;
+      align-items: center;
+      font-family: "Poiret One", sans-serif;
+    }
+  }
+}

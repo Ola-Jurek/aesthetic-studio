@@ -4,7 +4,7 @@ import {Footer} from "./footer.jsx";
 import {Navbar} from "./navbar.jsx";
 import React from "react";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
-import foto from '../assets/team.jpg'
+import team2 from '../assets/team2.jpg'
 import '../css/_treatment_single.scss';
 
 function PriceListItem(props) {
@@ -44,18 +44,20 @@ export function TreatmentLipoliza() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        <img src={foto} alt='zdjęcie' className='treatment_photo'></img>
+                        <img src={team2} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
+
                         <h2> Cena: </h2>
                         <p>0d 300 zł </p>
 
-                        <h2>Obszar zabigowy:</h2>
-                        <p> </p>
+                        <h2>Czas trwania:</h2>
+                        <p> około 30 - 45 minut </p>
 
                         <h2>Na problem:</h2>
-                        <p> </p>
+                        <p> Redukcja tkanki tłuszczowej </p>
+
                     </Col>
                 </Row>
 
@@ -131,8 +133,8 @@ export function TreatmentLipoliza() {
 
                             <h3> Czas trwania i częstotliwość</h3>
                             <p>
-                                Zabieg trwa średnio do 30 - 45minut, w zależności od obszaru ciała. Aby uzyskać oczekiwane
-                                rezultaty, zaleca się serię 3-6 zabiegów co 4 tygodnie.
+                                Zabieg trwa średnio do 30 - 45 minut, w zależności od obszaru ciała. Aby uzyskać oczekiwane
+                                rezultaty, zaleca się serię 3 - 6 zabiegów co 4 tygodnie.
                             </p>
 
                         </div>

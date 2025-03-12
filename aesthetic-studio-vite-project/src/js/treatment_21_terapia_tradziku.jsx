@@ -4,6 +4,7 @@ import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
 import '../css/_treatment_single.scss';
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
+import gen_factor_zblizenie from "./../assets/gen_factor_zblizenie.jpg"
 
 function PriceListItem(props) {
     return (
@@ -42,10 +43,11 @@ export function TreatmentTerapiaTradziku() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        {/*<img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>*/}
+                        <img src={gen_factor_zblizenie} alt='terapia trądziku' className='treatment_photo'></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
+
                         <h3> Cena: </h3>
                         <p> od 200 zł</p>
 
@@ -54,6 +56,7 @@ export function TreatmentTerapiaTradziku() {
 
                         <h3>Czas trwania</h3>
                         <p> Około 60 minut </p>
+
                     </Col>
                 </Row>
 

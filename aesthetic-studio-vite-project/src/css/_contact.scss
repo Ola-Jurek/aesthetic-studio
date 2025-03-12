@@ -1,0 +1,77 @@
+.contact_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem 0;
+  font-family: "Poiret One", sans-serif;
+
+  .contact_tel{
+    line-height: 0;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 1.2rem;
+      scale: 110%;
+    }
+  }
+  .contact_address {
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0;
+    font-size: 1.5rem;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+    justify-content: center;
+    padding-left: 5rem;
+
+
+    p {
+      font-size: 1.2rem;
+      scale: 110%;
+    }
+  }
+
+  .contact_media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      padding-right: 0.8rem;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .contact_tel {
+    padding-bottom: 1rem;
+  }
+
+  .contact_address {
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+    border-left: none!important;
+    border-right: none!important;
+  }
+
+  .contact_media {
+    padding-top: 2rem;
+    scale: 80%;
+  }
+}
+
+

@@ -3,6 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
+import mezoterapia_skory_glowy from "./../assets/mezoterapia_skory_glowy.jpg"
 
 function PriceListItem(props) {
     return (
@@ -41,7 +42,7 @@ export function TreatmentMezoterapiaIglowaSkoryGlowy() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        {/*<img src={zabieg} alt='zdjęcie' className='treatment_photo'></img>*/}
+                        <img src={mezoterapia_skory_glowy} alt='mezoterapia skóry głowy' className='treatment_photo'></img>
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 

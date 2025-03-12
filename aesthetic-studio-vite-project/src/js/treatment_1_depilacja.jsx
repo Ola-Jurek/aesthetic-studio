@@ -48,9 +48,10 @@ export function TreatmentDepilacja() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        <img src={depilacja} alt='zdjęcie' className='treatment_photo'></img>
+                        <img src={depilacja} alt='zdjęcie depilacji' className='treatment_photo'></img>
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
+
                         <h2> Cena: </h2>
                         <p>0d 150 zł</p>
 
@@ -59,6 +60,7 @@ export function TreatmentDepilacja() {
 
                         <h2>Na problem:</h2>
                         <p> Owłosienie </p>
+
                     </Col>
                 </Row>
 

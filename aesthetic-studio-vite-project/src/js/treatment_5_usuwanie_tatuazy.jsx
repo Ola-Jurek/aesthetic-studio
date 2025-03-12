@@ -5,7 +5,7 @@ import {Navbar} from "./navbar.jsx";
 import React from "react";
 import '../css/_treatment_single.scss';
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
-import team from '../assets/team.jpg';
+import laserowe_usuwanie_tatuazu from '../assets/laserowe_usuwanie_tatuazu.jpg';
 
 function PriceListItem(props) {
     return (
@@ -45,18 +45,19 @@ export function TreatmentUsuwanieTatuazy() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        <img src={team} alt='zdjęcie' className='treatment_photo'></img>
+                        <img src={laserowe_usuwanie_tatuazu} alt='laserowe usuwanie tatuażu' className='treatment_photo'></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
+
                         <h2> Cena: </h2>
                         <p> Od 150 zł</p>
 
                         <h2>Obszar zabigowy:</h2>
                         <p> Różne partie ciała </p>
 
-                        <h2>Na problem:</h2>
-                        <p> </p>
+                        {/*<h2>Na problem:</h2>*/}
+                        {/*<p> </p>*/}
                     </Col>
                 </Row>
 

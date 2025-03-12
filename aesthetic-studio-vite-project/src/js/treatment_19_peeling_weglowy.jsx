@@ -3,6 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
+import team2 from "./../assets/team2.jpg"
 
 function PriceListItem(props) {
     return (
@@ -40,10 +41,11 @@ export function TreatmentPeelingWeglowy() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        {/*<img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>*/}
+                        <img src={team2} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
+
                         <h3> Cena: </h3>
                         <p> od 200 zł</p>
 
@@ -52,6 +54,7 @@ export function TreatmentPeelingWeglowy() {
 
                         <h3>Czas trwania</h3>
                         <p> Około 45 minut </p>
+
                     </Col>
                 </Row>
             </Container>

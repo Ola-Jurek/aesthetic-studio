@@ -3,6 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
+import team from "./../assets/team.jpg"
 
 function PriceListItem(props) {
     return (
@@ -41,9 +42,10 @@ export function TreatmentOsoczeBogatoplytkowe() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        {/*<img src={zabieg} alt='zdjęcie' className='treatment_photo'></img>*/}
+                        <img src={team} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
+
                         <h2> Cena: </h2>
                         <p>od 650 zł</p>
 
@@ -52,6 +54,7 @@ export function TreatmentOsoczeBogatoplytkowe() {
 
                         <h2>Na problem:</h2>
                         <p> Regeneracja skóry </p>
+
                     </Col>
                 </Row>
 

@@ -35,7 +35,10 @@ export function Footer() {
                     </div>
                 </Col>
             </Row>
-         </Container>
+            <Row>
+                <Col sm={12} ><p className='copyrights'>© {new Date().getFullYear()} JSD A.Jurek. Wszelkie prawa zastrzeżone.</p></Col>
+            </Row>
+        </Container>
     );
 }
 

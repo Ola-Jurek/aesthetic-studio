@@ -5,7 +5,7 @@ import {Navbar} from "./navbar.jsx";
 import '../css/_treatment_single.scss';
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import React from "react";
-import zabieg_blizny from "../assets/zabieg_blizny.jpg";
+import zabieg_blizny_zblizenie from "../assets/zabieg_blizny_zblizenie.jpg";
 
 function PriceListItem(props) {
     return (
@@ -35,7 +35,7 @@ export function TreatmentBlizny() {
             <Container fluid style={{maxWidth: '100vw'}} className='treatment_section1'>
 
                 <Row>
-                    <Col sm={12} >
+                    <Col sm={12}>
                         <h1>Blizny i rozstępy</h1>
                         <p className='treatment_section1_more'></p>
                     </Col>
@@ -43,10 +43,11 @@ export function TreatmentBlizny() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        <img src={zabieg_blizny} alt='zdjęcie' className='treatment_photo'></img>
+                        <img src={zabieg_blizny_zblizenie} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
+
                         <h2> Cena: </h2>
                         <p>0d 250 zł </p>
 
@@ -56,6 +57,7 @@ export function TreatmentBlizny() {
                         <h2>Na problem:</h2>
                         <p> blizny, rozstępy, ubytki tkanki </p>
                     </Col>
+
                 </Row>
 
             </Container>

@@ -7,7 +7,7 @@ import '../css/_about.scss';
 
 import marta from "../assets/marta.jpg";
 import bartek from'../assets/bartek.jpg';
-import justyna from '../assets/justyna.jpg';
+import kasia from '../assets/kasia.jpg';
 
 export function About() {
     return (
@@ -15,10 +15,12 @@ export function About() {
             <Navbar/>
             <Container className='container'>
 
-                <Row>
-                    <Col sm={12}><hr/></Col>
-                </Row>
+                {/*<Row>*/}
+                {/*    <Col sm={12}><hr/></Col>*/}
+                {/*</Row>*/}
                 <Row className='row'>
+
+                    <Col sm={12}><hr/></Col>
 
                     <Col sm={6} className='about_card'>
 

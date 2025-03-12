@@ -4,6 +4,7 @@ import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import '../css/_treatment_single.scss';
+import twarz_maska from "./../assets/twarz_maska.jpg"
 
 
 function PriceListItem(props) {
@@ -43,10 +44,11 @@ export function TreatmentPeelingChemiczny() {
 
                 <Row>
                 <Col sm={6} className='treatment_photoPlace'>
-                        {/*<img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>*/}
+                        <img src={twarz_maska} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
+
                         <h3> Cena: </h3>
                         <p> od 200 zł</p>
 
@@ -55,6 +57,7 @@ export function TreatmentPeelingChemiczny() {
 
                         <h3>Czas trwania</h3>
                         <p> Około 45 minut </p>
+
                     </Col>
                 </Row>
 

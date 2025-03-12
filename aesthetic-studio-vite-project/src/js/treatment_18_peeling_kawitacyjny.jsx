@@ -3,6 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
+import team from "./../assets/team.jpg"
 
 function PriceListItem(props) {
     return (
@@ -39,10 +40,11 @@ export function TreatmentPeelingKawitacyjny() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        {/*<img src={zabieg} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>*/}
+                        <img src={team} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
+
                         <h3> Cena: </h3>
                         <p> od 200 zł</p>
 
@@ -51,6 +53,7 @@ export function TreatmentPeelingKawitacyjny() {
 
                         <h3>Czas trwania</h3>
                         <p> Około 30 minut </p>
+
                     </Col>
                 </Row>
 
@@ -67,7 +70,7 @@ export function TreatmentPeelingKawitacyjny() {
 
                         <p>
                             Peeling kawitacyjny to nieinwazyjna i bezbolesna metoda głębokiego oczyszczania skóry, która
-                            wykorzystuje ultradźwięki do usunięcia martwego naskórka i zanieczyszczeń. Urządzenie ………..
+                            wykorzystuje ultradźwięki do usunięcia martwego naskórka i zanieczyszczeń. Urządzenie
                             znane z wysokiej jakości i precyzji, zapewnia doskonałe efekty, nadając skórze zdrowy i promienny
                             wygląd już po pierwszym zabiegu.
                         </p>

@@ -20,7 +20,7 @@ export function App() {
       <Container>
           <Row>
               <Col sm={12}>
-                  <hr/>
+                  <hr className='hr'/>
               </Col>
 
               <Col sm={4}></Col>

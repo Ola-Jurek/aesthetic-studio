@@ -47,6 +47,7 @@ export function TreatmentRadiofrekwencja() {
                         <img src={radiofrekwencja} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
+
                         <h2> Cena: </h2>
                         <p>0d 300 zł </p>
 
@@ -55,6 +56,7 @@ export function TreatmentRadiofrekwencja() {
 
                         <h2>Na problem:</h2>
                         <p> Odmładzanie i modelowanie skóry </p>
+
                     </Col>
                 </Row>
 
