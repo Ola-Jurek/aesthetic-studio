@@ -43,6 +43,7 @@ export function ImgSliderTreatments() {
                         key={index}
                         src={image}
                         alt={`Slide ${index + 1}`}
+                        loading="lazy"
                         className={`slider-image-treatments ${index === currentIndex ? 'fade-in' : ''}`}
                         style={{
                             opacity: index === currentIndex ? 1 : 0,
