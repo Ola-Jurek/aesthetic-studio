@@ -13,14 +13,14 @@
   .slider-container-app {
     position: relative;
     width: 100%;
-    height: 65rem;
+    height: 70rem;
     overflow: hidden;
 
 
     .slider-image-app {
       animation-delay: 10ms;
       width: 100%;
-      height: 100%;
+
       object-fit: cover;
       object-position: center;
       position: absolute;
@@ -37,7 +37,7 @@
 
   .slider-background-app {
     animation-delay: 10ms;
-    background-color: rgba(0, 0, 0, 0.5); /* Jaśniejsze tło z niższą przezroczystością */
+    background-color: rgba(0, 0, 0, 0.6); /* Jaśniejsze tło z niższą przezroczystością */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,8 @@
     margin-top: 1rem;
 
     .slider-text-app {
-      width: 70%;
+      width: 60%;
+      //height: 90%;
       opacity: 0;
       animation: fadeInImage 2s forwards;
       animation-delay: 10ms;
