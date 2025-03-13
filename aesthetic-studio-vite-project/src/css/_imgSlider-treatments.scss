@@ -131,39 +131,6 @@
         }
       }
 
-      //.slider-background {
-      //  animation-delay: 10ms;
-      //  background-color: rgba(0, 0, 0, 0.5); /* Jaśniejsze tło z niższą przezroczystością */
-      //  display: flex;
-      //  justify-content: center;
-      //  align-items: center;
-      //  position: absolute;
-      //  top: 0;
-      //  left: 0;
-      //  right: 0;
-      //  bottom: 0;
-      //  margin-top: 1rem;
-      //
-      //  .slider-text {
-      //    width: 80%;
-      //    opacity: 0;
-      //    animation: fadeInImage 2s forwards;
-      //    animation-delay: 10ms;
-      //
-      //    @keyframes fadeInImage {
-      //      to {
-      //        opacity: 1;
-      //      }
-      //    }
-      //  }
-
-
-      //p {
-      //  font-family: "Poiret One", sans-serif;
-      //  font-size: 1.8rem;
-      //  color: white;
-      //}
-      //}
       .dots-container {
         display: flex;
         justify-content: center;

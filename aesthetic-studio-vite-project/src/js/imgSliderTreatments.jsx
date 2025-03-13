@@ -5,16 +5,13 @@ import zabieg_depilacja from '../assets/zabieg_depilacja.jpg';
 import zabieg_btx from '../assets/zabieg_btx.jpg';
 import gen_factor from './../assets/gen_factor.jpg';
 import brwi from './../assets/brwi.jpg';
-import twarz_maska from './../assets/twarz_maska.jpg';
-import zabieg_mezoterapia from './../assets/zabieg_mezoterapia.jpg';
 import zabieg_blizny from '../assets/zabieg_blizny.jpg';
 import mezoterapia_skory_glowy from '../assets/mezoterapia_skory_glowy.jpg';
-import gen_factor_zblizenie from './../assets/gen_factor_zblizenie.jpg';
 import laserowe_usuwanie_tatuazu from './../assets/laserowe_usuwanie_tatuazu.jpg';
 import zabieg_radiofrekwencja from './../assets/zabieg_radiofrekwencja.jpg';
 
 export function ImgSliderTreatments() {
-    const images = [zabieg_depilacja, zabieg_btx, gen_factor, brwi, twarz_maska, zabieg_mezoterapia, zabieg_blizny, mezoterapia_skory_glowy, gen_factor_zblizenie, laserowe_usuwanie_tatuazu, zabieg_radiofrekwencja];
+    const images = [zabieg_depilacja, zabieg_btx, gen_factor, brwi, zabieg_blizny, mezoterapia_skory_glowy, laserowe_usuwanie_tatuazu, zabieg_radiofrekwencja];
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
