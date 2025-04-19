@@ -33,9 +33,10 @@ export function MobileSlider() {
                             className={`slider-image-app-mobile ${index === currentIndex ? 'fade-in' : ''}`}
                             style={{
                                 opacity: index === currentIndex ? 1 : 0,
-                                transition: 'opacity 4s ease-in-out',
+                                transition: 'opacity 2s ease-in-out, z-index 0s 0.5s',
                                 position: 'absolute',
                                 width: '100%',
+                                zIndex: index === currentIndex ? 1 : 0,
                             }}
                         />
                     ))}
