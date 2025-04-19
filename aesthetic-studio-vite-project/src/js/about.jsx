@@ -7,7 +7,7 @@ import '../css/_about.scss';
 
 import marta from "../assets/marta.jpg";
 import bartek from'../assets/bartek.jpg';
-import kasia from '../assets/kasia.jpg';
+
 
 export function About() {
     return (
