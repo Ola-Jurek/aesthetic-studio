@@ -52,13 +52,13 @@ export function TreatmentDepilacja() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
-                        <p>0d 150 zł</p>
+                        <h3> Cena: </h3>
+                        <p>0d 80 zł</p>
 
-                        <h2>Obszar zabigowy:</h2>
-                        <p>Bikini, Brzuch, Kolana, Łydki, Pachy, Plecy, Przedramiona, Ramiona, Wąsik, Twarz, Uda</p>
+                        <h3>Obszar zabigowy:</h3>
+                        <p>Bikini, Łydki, Uda, Pachy, Wąsik, Twarz </p>
 
-                        <h2>Na problem:</h2>
+                        <h3>Na problem:</h3>
                         <p> Owłosienie </p>
 
                     </Col>
@@ -111,10 +111,19 @@ export function TreatmentDepilacja() {
 
                                 <h3> Zalecenie pozabiegowe: </h3>
                                 <ul>
-                                    <li> Zastosuj preparat łagodzący (żel aloesowy, alantan lub d-panthenol). Do 2 tygodni po zabiegu nie opalaj skóry oraz stosuj krem z filtrem SPF </li>
-                                    <li> Ilość zabiegów oraz efekty są uzależnione od wielu czynników - koloru włosa, stanu hormonalnego, predyspozycji genetycznych oraz innych czynników u każdego pacjenta. Najczęściej nasi klienci wykonują około 6-8 zabiegów w odstępach co około 6-8 tygodni. </li>
-                                    <li> Oczywiście wybierając kilka obszarów </li>
+                                    <li> Zastosuj preparat łagodzący (żel aloesowy, alantan lub d-panthenol), </li>
+                                    <li> Do 2 tygodni po zabiegu nie opalaj skóry oraz stosuj krem z filtrem SPF, </li>
+                                    <li> Nie przegrzewaj w dniu zabiegu organizmu, unikaj ciężkiego treningu, basenu, sauny, </li>
+                                    <li> Nie stosuj gorącej kąpieli. </li>
                                 </ul>
+
+                            <h3></h3>
+
+                            <p> Ilość zabiegów oraz efekty są uzależnione od wielu czynników - koloru włosa, stanu hormonalnego,
+                                predyspozycji genetycznych oraz innych czynników u każdego klienta. Najczęściej nasi klienci wykonują
+                                około 6 - 8 zabiegów w odstępach co około 6 - 8 tygodni. </p>
+
+                            <p> Korzystne rabaty w pakietach dla osób wybierających kilka obszarów.</p>
 
                         </Col>
                     </Row>
@@ -125,21 +134,14 @@ export function TreatmentDepilacja() {
                             <h3> Szczegółowy cennik: </h3>
                         </Col>
 
-                        <Col sm={12}><PriceListItem description={'twarz(wąsik + broda + szyja'} price={'150 PLN'}/></Col>
+                        <Col sm={12}><PriceListItem description={'wąsik'} price={'80 PLN'}/></Col>
+                        <Col sm={12}><PriceListItem description={'broda'} price={'80 PLN'}/></Col>
                         <Col sm={12}><PriceListItem description={'pachy'} price={'150 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'kark'} price={'150 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'przedramiona'} price={'150 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'ramiona'} price={'200 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'klatka pierisowa'} price={'250 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'górna część pleców'} price={'200 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'dolna część pleców'} price={'200 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'brzuch'} price={'200 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'bikini płytkie(linia majtek)'} price={'150 PLN'}/></Col>
+                        <Col sm={12}><PriceListItem description={'bikini płytkie'} price={'150 PLN'}/></Col>
                         <Col sm={12}><PriceListItem description={'bikini głębokie'} price={'250 PLN'}/></Col>
                         <Col sm={12}><PriceListItem description={'łydki'} price={'250 PLN'}/></Col>
                         <Col sm={12}><PriceListItem description={'uda'} price={'300 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'stopy'} price={'150 PLN'}/></Col>
-                        <Col sm={12}><PriceListItem description={'dłonie'} price={'100 PLN'}/></Col>
+                        <Col sm={12}><PriceListItem description={'całe nogi'} price={'od 500 PLN'}/></Col>
                     </Row>
 
                     <Row className="treatment_section2" >

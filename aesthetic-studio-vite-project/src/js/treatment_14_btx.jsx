@@ -37,8 +37,8 @@ export function TreatmentBtx() {
                     <Col sm={12}>
                         <h1>BTX</h1>
                         <p className='treatment_section1_more'> „Wszystko jest trucizną i nic nie jest trucizną. Tylko dawka czyni truciznę” (łac. Omnia sunt venena,
-                            nihil est sine veneno. Sola dosis facit venenum” Ta sentencja Paracelsusa doskonale odnosi się do
-                            działania BTX. </p>
+                            nihil est sine veneno. Sola dosis facit venenum”).  </p>
+                        <p>Ta sentencja Paracelsusa doskonale odnosi się do działania BTX.</p>
                     </Col>
                 </Row>
 
@@ -48,10 +48,10 @@ export function TreatmentBtx() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p> od 300 zł</p>
 
-                        <h2>Czas trwania:</h2>
+                        <h3>Czas trwania:</h3>
                         <p> około 15 minut </p>
 
                     </Col>

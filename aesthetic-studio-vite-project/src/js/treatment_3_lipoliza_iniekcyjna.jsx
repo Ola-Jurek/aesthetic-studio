@@ -4,7 +4,7 @@ import {Footer} from "./footer.jsx";
 import {Navbar} from "./navbar.jsx";
 import React from "react";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
-import team2 from '../assets/team2.jpg'
+import team2 from '../assets/marta_i_bartek2.jpg'
 import '../css/_treatment_single.scss';
 
 function PriceListItem(props) {
@@ -49,13 +49,13 @@ export function TreatmentLipoliza() {
 
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p>0d 300 zł </p>
 
-                        <h2>Czas trwania:</h2>
+                        <h3>Czas trwania:</h3>
                         <p> około 30 - 45 minut </p>
 
-                        <h2>Na problem:</h2>
+                        <h3>Na problem:</h3>
                         <p> Redukcja tkanki tłuszczowej </p>
 
                     </Col>
@@ -80,8 +80,6 @@ export function TreatmentLipoliza() {
 
                         <h3> Dla kogo jest lipoliza iniekcyjna? </h3>
 
-                        <div>
-
                             <ul>
                                 Lipoliza iniekcyjna jest idealna dla osób, które:
                                 <li> Mimo zdrowego trybu życia i regularnych ćwiczeń fizycznych nie mogą pozbyć się
@@ -95,7 +93,7 @@ export function TreatmentLipoliza() {
                                 </li>
                                 <li> Mają stabilną wagę i pragną poprawić kontury swojego ciała.</li>
                             </ul>
-                        </div>
+
 
                         <div>
                             <h3> Jak przebiega zabieg? </h3>
@@ -103,7 +101,7 @@ export function TreatmentLipoliza() {
                                 Zabieg lipolizy iniekcyjnej polega na wstrzyknięciu w tkankę tłuszczową substancji
                                 aktywnych, które rozkładają komórki tłuszczowe. Proces ten jest kontrolowany i bezpieczny,
                                 a jego efekty są trwałe, pod warunkiem utrzymania zdrowego stylu życia. Zabieg jest
-                                wykonywany w seriach, najczęściej co 2-4 tygodnie, w zależności od obszaru i ilości tkanki
+                                wykonywany w seriach, najczęściej co 4 - 6 tygodni, w zależności od obszaru i ilości tkanki
                                 tłuszczowej.
                             </p>
 

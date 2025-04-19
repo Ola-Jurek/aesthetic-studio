@@ -3,7 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
-import team2 from "./../assets/team2.jpg"
+import team2 from "./../assets/marta_i_bartek2.jpg"
 
 function PriceListItem(props) {
     return (
@@ -35,13 +35,13 @@ export function TreatmentPeelingWeglowy() {
                 <Row>
                     <Col>
                         <h1> Peeling węglowy</h1>
-                        <p className='treatment_section1_more'>z wykorzystaniem Laserem ND YAG Q-SWITCH </p>
+                        <p className='treatment_section1_more'>Z wykorzystaniem Laserem ND YAG Q-SWITCH </p>
                     </Col>
                 </Row>
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        <img src={team2} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
+                        <img src={team2} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>

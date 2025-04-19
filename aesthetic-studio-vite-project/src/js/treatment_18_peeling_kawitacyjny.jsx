@@ -3,7 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
-import team from "./../assets/team.jpg"
+import team from "./../assets/marta_i_bartek2.jpg"
 
 function PriceListItem(props) {
     return (
@@ -24,8 +24,7 @@ export function TreatmentPeelingKawitacyjny() {
             <Container>
                 <Row>
                     <Col sm={12}><hr/></Col>
-                </Row>
-                <Row>
+
                     <TreatmentSubmenu/>
                 </Row>
             </Container>
@@ -40,7 +39,7 @@ export function TreatmentPeelingKawitacyjny() {
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        <img src={team} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
+                        <img src={team} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>

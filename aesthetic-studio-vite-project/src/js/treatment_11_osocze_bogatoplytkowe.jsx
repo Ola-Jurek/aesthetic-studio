@@ -3,7 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
-import team from "./../assets/team.jpg"
+import team from "./../assets/marta_i_bartek2.jpg"
 
 function PriceListItem(props) {
     return (
@@ -46,13 +46,13 @@ export function TreatmentOsoczeBogatoplytkowe() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p>od 650 zł</p>
 
-                        <h2>Czas trwania:</h2>
+                        <h3>Czas trwania:</h3>
                         <p>około 60 minut</p>
 
-                        <h2>Na problem:</h2>
+                        <h3>Na problem:</h3>
                         <p> Regeneracja skóry </p>
 
                     </Col>
@@ -88,10 +88,10 @@ export function TreatmentOsoczeBogatoplytkowe() {
 
                         <h3> Ile zabiegów potrzeba? </h3>
                         <ul>
-                            <li> Rekomendowana seria to 3 zabiegi, wykonywane co 4-6 tygodni, w zależności od kondycji skóry. </li>
+                            <li> Rekomendowana seria to 3 zabiegi, wykonywane co 4 - 6 tygodni, w zależności od kondycji skóry. </li>
                             <li> Pierwsze efekty są widoczne już po kilku tygodniach od zabiegu, jednak pełna regeneracja następuje
                                 po serii.</li>
-                            <li> Aby utrzymać efekty, warto powtarzać zabieg co 6-12 miesięcy. </li>
+                            <li> Aby utrzymać efekty, warto powtarzać zabieg co 6 - 12 miesięcy. </li>
                         </ul>
 
                         <h3> Przeciwwskazania: </h3>

@@ -77,55 +77,21 @@ h3 {
 
 @media (max-width: 768px) {
 
+  .hr {
+    margin-bottom: 1rem;
+  }
+
 
   .h2_main_page {
-    font-family: Poiret One, sans-serif;
-    font-size: 1.2rem;
-    font-weight: normal;
-    letter-spacing: 8px;
-    opacity: 0;
-    animation: fadeInImage 2s forwards;
-    animation-delay: 10ms;
-
-    @keyframes fadeInImage {
-      to {
-        opacity: 1;
-      }
-    }
+    display: none;
   }
 
 
 
   .free_space {
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-    opacity: 0;
-    animation: fadeInImage 2s forwards;
-    animation-delay: 10ms;
-
-    @keyframes fadeInImage {
-      to {
-        opacity: 1;
-      }
-    }
-
-    .app-icons {
-      scale: 50%;
-    }
+    display: none;
   }
 
   h3 {
-    font-family: "Poiret One", sans-serif;
-    font-size: 2rem;
-    opacity: 0;
-    animation: fadeInImage 2s forwards;
-    animation-delay: 10ms;
-
-    @keyframes fadeInImage {
-      to {
-        opacity: 1;
-      }
-    }
   }
 }

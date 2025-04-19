@@ -48,46 +48,55 @@
     margin: 0 auto;
   }
 
+.container {
 
-  .about_card {
+  .row {
+    margin-right: 0 !important;
+    .about_card {
+      height: 45%;
+      }
 
-    .about_name {
-      font-family: "Poiret One", sans-serif;
-      padding: 2px 0;
-      margin: 2rem auto 2rem auto;
-      opacity: 0;
-      animation: fadeInImage 2s forwards;
-      animation-delay: 10ms;
+      .about_name {
+        font-family: "Poiret One", sans-serif;
+        padding: 2px 0;
+        margin: 2rem auto 1rem auto;
+        opacity: 0;
+        animation: fadeInImage 2s forwards;
+        animation-delay: 10ms;
 
-      @keyframes fadeInImage {
-        to {
-          opacity: 1;
+        @keyframes fadeInImage {
+          to {
+            opacity: 1;
+          }
         }
       }
-    }
 
-    .about_img {
-      height: 500px;
-      width: 100%;
-      border-radius: 5%;
-      background-size: cover;
-      margin-bottom: 8px;
-      opacity: 0;
-      animation: fadeInImage 2s forwards;
-      animation-delay: 10ms;
+      .about_img {
+        height: 58vh;
+        width: 100%;
+        border-radius: 5%;
+        background-size: cover;
+        margin-bottom: 8px;
+        opacity: 0;
+        animation: fadeInImage 2s forwards;
+        animation-delay: 10ms;
 
-      @keyframes fadeInImage {
-        to {
-          opacity: 1;
+        @keyframes fadeInImage {
+          to {
+            opacity: 1;
+          }
         }
       }
-    }
 
-    .about_text {
-      width: 80%;
-      margin: 2rem auto 5rem auto;
-      align-items: center;
-      font-family: "Poiret One", sans-serif;
+      .about_text {
+        width: 90%;
+        margin: 0.3rem auto 2rem auto;
+        align-items: center;
+        line-height: 1.5rem;
+        font-family: "Poiret One", sans-serif;
+
+      }
     }
   }
 }
+

@@ -60,14 +60,14 @@ export function TreatmentSubmenu() {
                 {isChecked.face && (
                     <ul className="treatment_submenu_item">
                         <li><Link to='/treatment_makijaz_permanentny'>Makijaż permanentny</Link></li>
-                        <li><Link to='/treatment_henna_pudrowa'>Henna pudrowa</Link></li>
-                        <li><Link to="#">Makijaż okolicznościowy</Link></li>
+                        <li><Link to='/treatment_btx'>BTX</Link></li>
+                        {/*<li><Link to='/treatment_henna_pudrowa'>Henna pudrowa</Link></li>*/}
+                        {/*<li><Link to="#">Makijaż okolicznościowy</Link></li>*/}
                         <li><Link to='/treatment_mezoterapia-iglowa'>Mezoteriapia igłowa</Link></li>
                         <li><Link to='/treatment_mezoterapia_mikroiglowa'>Mezoterapia mikroigłowa</Link></li>
                         <li><Link to='/treatment_osocze_bogatoplytkowe'>Osocze bogatopłytkowe</Link></li>
                         <li><Link to='/treatment_radiofrekwencja_beziglowa'>Radiofrekwencja bezigłowa</Link></li>
                         <li><Link to='/treatment_modelowanie_ust'>Modelowanie ust</Link></li>
-                        <li><Link to='/treatment_btx'>BTX</Link></li>
                     </ul>
                 )}
             </div>

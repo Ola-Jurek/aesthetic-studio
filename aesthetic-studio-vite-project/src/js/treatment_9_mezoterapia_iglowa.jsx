@@ -2,7 +2,7 @@ import React from 'react';
 import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
-import team from "../assets/team.jpg";
+import team from "../assets/marta_i_bartek2.jpg";
 import {Footer} from "./footer.jsx";
 
 function PriceListItem(props) {
@@ -45,13 +45,13 @@ export function TreatmentMezoterapiaIglowa() {
                         <img src={team} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p>350 zł</p>
 
-                        <h2>Czas trwania:</h2>
+                        <h3>Czas trwania:</h3>
                         <p>90 minut</p>
 
-                        <h2>Na problem:</h2>
+                        <h3>Na problem:</h3>
                         <p> Poprawa kondycji skóry </p>
                     </Col>
                 </Row>
@@ -67,49 +67,63 @@ export function TreatmentMezoterapiaIglowa() {
                 <Row className='treatment_section2'>
                     <Col sm={12}>
                         <p> Mezoterapia igłowa to jeden z najskuteczniejszych zabiegów medycyny estetycznej,
-                            który działa od wewnątrz, poprawiając kondycję skóry. Polega na wprowadzeniu składników aktywnych
+                            który działa od wewnątrz, poprawiając kondycję skóry. Polega na wprowadzeniu składników
+                            aktywnych
                             bezpośrednio w głąb skóry za pomocą cienkich igieł. Efektem jest intensywne nawilżenie,
                             regeneracja oraz odmłodzenie skóry.
                         </p>
 
 
+                        <h3> Dla kogo jest mezoterapia igłowa? </h3>
                         <ul>
-                            Dla kogo jest mezoterapia igłowa?
                             <li> Osoby z cerą suchą i odwodnioną – zabieg pomaga w głębokim nawilżeniu skóry. </li>
-                            <li> Osoby z oznakami starzenia – redukuje drobne zmarszczki, poprawia elastyczność i napięcie skóry.</li>
-                            <li> Osoby z problemem łysienia – wspomaga wzrost włosów i poprawia ich kondycję - czytaj więcej w dziale trychologia. </li>
-                            <li> Osoby z bliznami potrądzikowymi – wspiera procesy regeneracyjne skóry, wygładzając jej strukturę. </li>
+                            <li> Osoby z oznakami starzenia – redukuje drobne zmarszczki, poprawia elastyczność i
+                                napięcie skóry.
+                            </li>
+                            <li> Osoby z problemem łysienia – wspomaga wzrost włosów i poprawia ich kondycję - czytaj
+                                więcej w dziale trychologia.
+                            </li>
+                            <li> Osoby z bliznami potrądzikowymi – wspiera procesy regeneracyjne skóry, wygładzając jej
+                                strukturę.
+                            </li>
                         </ul>
 
 
                         <h3> Ile zabiegów potrzeba? </h3>
                         <ul>
-                            <li> Standardowa kuracja to seria 3-6 zabiegów, wykonywanych co 2-4 tygodnie. </li>
-                            <li> Pierwsze efekty są widoczne już po kilku dniach, jednak dla optymalnych rezultatów zaleca się pełną serię zabiegów.</li>
-                            <li> Dla podtrzymania efektu rekomenduje się powtarzanie zabiegu co kilka miesięcy. </li>
+                            <li> Standardowa kuracja to seria 3-6 zabiegów, wykonywanych co 4 tygodnie.</li>
+                            <li> Pierwsze efekty są widoczne już po kilku dniach, jednak dla optymalnych rezultatów
+                                zaleca się pełną serię zabiegów.
+                            </li>
+                            <li> Dla podtrzymania efektu rekomenduje się powtarzanie zabiegu co kilka miesięcy.</li>
                         </ul>
 
                         <h3> Przeciwwskazania: </h3>
                         <ul>
-                            <li> Ciąża i karmienie piersią </li>
-                            <li> Choroby autoimmunologiczne </li>
-                            <li> Alergie na składniki preparatu </li>
-                            <li> Infekcje skórne (np. opryszczka) </li>
-                            <li> Aktywne stany zapalne skóry </li>
-                            <li> Skłonność do bliznowacenia i keloidów </li>
-                            <li> Przeziębienie i antybiotykoterapia </li>
+                            <li> Ciąża i karmienie piersią</li>
+                            <li> Choroby autoimmunologiczne</li>
+                            <li> Alergie na składniki preparatu</li>
+                            <li> Infekcje skórne (np. opryszczka)</li>
+                            <li> Aktywne stany zapalne skóry</li>
+                            <li> Skłonność do bliznowacenia i keloidów</li>
+                            <li> Przeziębienie i antybiotykoterapia</li>
                         </ul>
 
                         <h3> Zalecenie pozabiegowe: </h3>
                         <ul>
-                            <li> Unikaj słońca – przez kilka dni po zabiegu należy stosować kremy z filtrem SPF 50+. </li>
-                            <li> Nawilżanie – zwiększ nawilżenie skóry, stosując kremy regenerujące. </li>
-                            <li> Odstaw makijaż na co najmniej 24 godziny po zabiegu, aby pozwolić skórze się zregenerować. </li>
-                            <li> Unikaj wysiłku fizycznego i sauny przez 48 godzin po zabiegu, aby zminimalizować ryzyko podrażnień. </li>
-                            <li> Pij dużo wody – odpowiednie nawodnienie wspomaga proces regeneracji skóry. </li>
+                            <li> Unikaj słońca – przez kilka dni po zabiegu należy stosować kremy z filtrem SPF 50+.
+                            </li>
+                            <li> Nawilżanie – zwiększ nawilżenie skóry, stosując kremy regenerujące.</li>
+                            <li> Odstaw makijaż na co najmniej 24 godziny po zabiegu, aby pozwolić skórze się
+                                zregenerować.
+                            </li>
+                            <li> Unikaj wysiłku fizycznego i sauny przez 48 godzin po zabiegu, aby zminimalizować ryzyko
+                                podrażnień.
+                            </li>
+                            <li> Pij dużo wody – odpowiednie nawodnienie wspomaga proces regeneracji skóry.</li>
                         </ul>
 
-                        <p> Umów się na konsultację i odkryj piękno swojej skóry!  </p>
+                        <p> Umów się na konsultację i odkryj piękno swojej skóry! </p>
 
                         <p> Jeśli chcesz dowiedzieć się więcej o mezoterapii igłowej, zapraszamy do kontaktu!
                             Nasi specjaliści chętnie odpowiedzą na wszystkie pytania i pomogą dobrać

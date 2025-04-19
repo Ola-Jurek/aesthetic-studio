@@ -36,7 +36,7 @@ export function TreatmentMezoterapiaIglowaSkoryGlowy() {
                 <Row>
                     <Col sm={12}>
                         <h1>Mezoterapia skóry głowy</h1>
-                        <p className='treatment_section1_more'> skuteczna regeneracja i stymulacja wzrostu włosów </p>
+                        <p className='treatment_section1_more'> Skuteczna regeneracja i stymulacja wzrostu włosów </p>
                     </Col>
                 </Row>
 
@@ -46,10 +46,10 @@ export function TreatmentMezoterapiaIglowaSkoryGlowy() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p> od 300 zł</p>
 
-                        <h2>Czas trwania:</h2>
+                        <h3>Czas trwania:</h3>
                         <p> 30 - 60 minut </p>
 
                     </Col>

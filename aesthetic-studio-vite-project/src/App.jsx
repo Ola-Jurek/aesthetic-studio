@@ -4,9 +4,10 @@ import {Navbar} from "./js/navbar.jsx";
 import {Footer} from "./js/footer.jsx";
 import {StartPage} from "./js/start_page.jsx";
 import {ImgSliderApp} from "./js/imgSliderApp.jsx";
-import './css/_imgSlider_app.scss';
+import './css/_desktopSlider.scss';
 import {Col, Container, Row} from "react-grid-system";
 import React from "react";
+
 import facebook from "./assets/facebook-app.png";
 import instagram from "./assets/instagram-app.png";
 

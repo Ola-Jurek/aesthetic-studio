@@ -4,10 +4,24 @@
   justify-content: center;
   padding: 10rem 0;
   font-family: "Poiret One", sans-serif;
+  opacity: 0;
+  animation: fadeInImage 2s forwards;
+  animation-delay: 10ms;
+
+  @keyframes fadeInImage {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .contact_header {
+    text-transform: uppercase;
+  }
 
   .contact_tel{
     line-height: 0;
     font-size: 1.5rem;
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +29,7 @@
 
     p {
       font-size: 1.2rem;
-      scale: 110%;
+      //scale: 110%;
     }
   }
   .contact_address {
@@ -33,7 +47,7 @@
 
     p {
       font-size: 1.2rem;
-      scale: 110%;
+      //scale: 110%;
     }
   }
 
@@ -41,6 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    scale: 80%;
 
     a {
       padding-right: 0.8rem;
@@ -55,23 +70,29 @@
     flex-direction: column;
     justify-content: center;
     padding: 2rem 0;
+
+
+    .contact_tel {
+      padding-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .contact_address {
+      border-top: 1px solid goldenrod;
+      border-bottom: 1px solid goldenrod;
+      border-left: none!important;
+      border-right: none!important;
+      font-size: 1.2rem;
+    }
+
+    .contact_media {
+      padding-top: 2rem;
+      scale: 70%;
+    }
+
   }
 
-  .contact_tel {
-    padding-bottom: 1rem;
-  }
 
-  .contact_address {
-    border-top: 1px solid goldenrod;
-    border-bottom: 1px solid goldenrod;
-    border-left: none!important;
-    border-right: none!important;
-  }
-
-  .contact_media {
-    padding-top: 2rem;
-    scale: 80%;
-  }
 }
 
 

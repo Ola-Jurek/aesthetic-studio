@@ -38,13 +38,13 @@ export function TreatmentPeelingChemiczny() {
                 <Row>
                     <Col sm={12}>
                         <h1> Peelingi chemiczne</h1>
-                        <p className='treatment_section1_more'>klucz do pięknej skóry</p>
+                        <p className='treatment_section1_more'>Klucz do pięknej skóry</p>
                     </Col>
                 </Row>
 
                 <Row>
                 <Col sm={6} className='treatment_photoPlace'>
-                        <img src={twarz_maska} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
+                        <img src={twarz_maska} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>
@@ -166,7 +166,8 @@ export function TreatmentPeelingChemiczny() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'dives'} price={'180-250 pln'}/></Col>
+                    <Col sm={12}><PriceListItem description={'dives'} price={'180 - 250 pln'}/></Col>
+                    <Col sm={12}><PriceListItem description={'mesoesthetic'} price={'200 - 250 pln'}/></Col>
                 </Row>
 
                 <Row className="treatment_section2" >

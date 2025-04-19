@@ -3,7 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
-import team from './../assets/team.jpg';
+import team from './../assets/marta_i_bartek2.jpg';
 
 function PriceListItem(props) {
     return (
@@ -36,7 +36,7 @@ export function TreatmentModelowanieUst() {
                 <Row>
                     <Col sm={12}>
                         <h1>Modelowanie ust</h1>
-                        <p className='treatment_section1_more'> piękno w harmonii z naturalnym wyglądem </p>
+                        <p className='treatment_section1_more'> Piękno w harmonii z naturalnym wyglądem </p>
                     </Col>
                 </Row>
 
@@ -46,10 +46,10 @@ export function TreatmentModelowanieUst() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p> 800 zł</p>
 
-                        <h2>Czas trwania:</h2>
+                        <h3>Czas trwania:</h3>
                         <p> około 30 minut </p>
 
                     </Col>
@@ -80,10 +80,8 @@ export function TreatmentModelowanieUst() {
                             zapewnić komfort, a preparat jest aplikowany za pomocą cienkiej igły. Rezultat jest widoczny
                             natychmiast, choć pełny efekt uwidacznia się po kilku dniach, gdy opuchlizna ustępuje. </p>
 
-                        <p> Rekomendujemy serię zabiegów od 4 do 6 w odstępach 3 tygodni każdy </p>
 
-
-                        <h3> Przeciwwskazania do mezoterapii </h3>
+                        <h3> Przeciwwskazania do modelowania ust </h3>
 
                         <ul> Mimo że modelowanie ust jest bezpieczne, istnieją pewne przeciwwskazania:
                             <li> Ciąża i okres karmienia piersią, </li>

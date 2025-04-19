@@ -24,14 +24,14 @@ export function Contact() {
                     <Row className='contact_row'>
 
                         <Col sm={4} className="contact_tel">
-                            <h4>Kontakt:</h4>
+                            <h4 className='contact_header'>Kontakt:</h4>
                             <p> + 48 661 111 247 </p>
                         </Col>
 
 
                         <Col sm={4} className="contact_address">
 
-                            <h4>Adres:</h4>
+                            <h4 className='contact_header'>Adres:</h4>
                             <p>Qubus Hotel, pok. 217 </p>
                             <p>Głogów, Pl. Konstytucji 3 maja 1 </p>
 

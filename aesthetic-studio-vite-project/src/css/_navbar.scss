@@ -1,77 +1,3 @@
-//.nav {
-//  font-family: Poiret One, sans-serif;
-//  font-size: 1.5em;
-//  color: goldenrod;
-//  width: 100%;
-//  margin-bottom: 1.5rem;
-//  opacity: 0;
-//  animation: fadeInImage 1s forwards;
-//  animation-delay: 5ms;
-//  display: flex;
-//  align-items: center;
-//  justify-content: space-between;
-//  position: relative;
-//
-//  @keyframes fadeInImage {
-//    to {
-//      opacity: 1;
-//    }
-//  }
-//
-//  .logo {
-//    scale: 200%;
-//    padding-top: 2rem;
-//  }
-//
-//  .menu-toggle {
-//    display: none;
-//    font-size: 2rem;
-//    cursor: pointer;
-//    padding: 1rem;
-//  }
-//
-//  .menu_item {
-//    text-decoration: none;
-//    color: goldenrod;
-//    padding: 1rem;
-//    transition: color 0.3s ease-in-out;
-//
-//    &:hover {
-//      color: white;
-//    }
-//  }
-//
-//  /* Responsywność */
-//  @media (max-width: 768px) {
-//    .nav {
-//      flex-direction: row;
-//      justify-content: space-between;
-//    }
-//
-//    .menu-toggle {
-//      display: block; /* Pokazuje ikonę hamburgera */
-//    }
-//
-//    .menu_item {
-//      display: none; /* Ukrywa menu w wersji mobilnej */
-//      width: 100%;
-//      text-align: center;
-//      padding: 1rem;
-//      background-color: black;
-//      border-bottom: 1px solid goldenrod;
-//    }
-//
-//    .menu_item.open {
-//      display: block; /* Pokazuje menu po kliknięciu */
-//    }
-//  }
-//}
-
-
-
-
-
-
 
 .nav {
   font-family: Poiret One, sans-serif;
@@ -183,8 +109,8 @@
 
   .menu_item.open {
     position: absolute;
-    height: 2rem;
-    //background: rgba(0, 0, 0, 0.2); /* Półprzezroczyste menu */
+    height: 1.6rem;
+    //background: rgba(0, 0, 0, 0.1); /* Półprzezroczyste menu */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -205,9 +131,10 @@
 
   .menu_item a {
     color: goldenrod;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+    margin-left: -15px!important;
   }
 
   }

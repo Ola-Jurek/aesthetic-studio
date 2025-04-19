@@ -1,3 +1,10 @@
+//
+//
+// !!!!!!!!!!!!!!!!!!!!!!!!!!! DISABLED
+//
+//
+//
+//
 import React from 'react';
 import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";

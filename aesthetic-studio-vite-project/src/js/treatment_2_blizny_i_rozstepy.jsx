@@ -48,13 +48,13 @@ export function TreatmentBlizny() {
 
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p>0d 250 zł </p>
 
-                        <h2>Obszar zabigowy:</h2>
+                        <h3>Obszar zabigowy:</h3>
                         <p>Wszelkiego rodzaju blizny</p>
 
-                        <h2>Na problem:</h2>
+                        <h3>Na problem:</h3>
                         <p> blizny, rozstępy, ubytki tkanki </p>
                     </Col>
 
@@ -104,7 +104,7 @@ export function TreatmentBlizny() {
                                 Zabieg mikronakłuwania zwykle wiąże się z niewielkim lub umiarkowanym bólem, który może
                                 się różnić w zależności od obszaru poddanego zabiegowi, parametrów urządzenia, długości wysuwu
                                 igły, głębokości iniekcji oraz indywidualnej tolerancji bólu. Po zabiegu może pojawić się rumień, który
-                                zazwyczaj ustępuje w ciągu 38 kilku do kilkunastu godzin, oraz możliwy obrzęk i uczucie pieczenia.
+                                zazwyczaj ustępuje w ciągu kilku do kilkunastu godzin, oraz możliwy obrzęk i uczucie pieczenia.
                                 Proces regeneracji i przebudowy skóry w obszarze poddanym zabiegowi może trwać nawet kilka
                                 tygodni od jego wykonania.
                             </p>
@@ -127,16 +127,8 @@ export function TreatmentBlizny() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'twarz'} price={'550 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'szyja'} price={'200 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'twarz + szyja'} price={'700 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'dekolt'} price={'250 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'biust'} price={'500 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'twarz + szyja + dekolt'} price={'850 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'dłonie'} price={'200 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'brzuch(rozstępy)'} price={'od 400 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'uda'} price={'od 400 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'blizny'} price={'od 250 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'blizny | rozstępy'} price={'od 200 PLN'}/></Col>
+
                 </Row>
 
                 <Row className="treatment_section2" >

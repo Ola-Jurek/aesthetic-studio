@@ -50,10 +50,10 @@ export function TreatmentUsuwanieTatuazy() {
 
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
-                        <p> Od 150 zł</p>
+                        <h3> Cena: </h3>
+                        <p> Od 200 zł</p>
 
-                        <h2>Obszar zabigowy:</h2>
+                        <h3>Obszar zabigowy:</h3>
                         <p> Różne partie ciała </p>
 
                         {/*<h2>Na problem:</h2>*/}
@@ -79,10 +79,8 @@ export function TreatmentUsuwanieTatuazy() {
                             barwnika bez uszkodzenia skóry.
                         </p>
 
-
                         <h3> Mechanizm Działania</h3>
 
-                        <div>
                             <ul>
                                 Proces laserowego usuwania tatuażu i makijażu permanentnego opiera się na działaniu
                                 wysokoenergetycznych impulsów światła laserowego, które są absorbowane przez pigmenty
@@ -98,10 +96,9 @@ export function TreatmentUsuwanieTatuazy() {
                                     limfatyczny organizmu, co prowadzi do stopniowego rozjaśniania tatuażu lub makijażu.
                                 </li>
                             </ul>
-                        </div>
 
-                        <div>
-                            <h3> Zalety bezpiecznej technologii ND YAG Q-SWITCH </h3>
+
+                            <h3> Zalety bezpiecznej technologii <br/> ND YAG Q-SWITCH </h3>
 
                             <ul>
                                 Pracuje w parametrach nanosekundowych, praca w tym trybie pozwala usuwać makijaże
@@ -156,7 +153,6 @@ export function TreatmentUsuwanieTatuazy() {
                                 dotyczących pielęgnacji skóry po zabiegu.
                             </p>
 
-                        </div>
                     </Col>
                 </Row>
 
@@ -166,7 +162,7 @@ export function TreatmentUsuwanieTatuazy() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'Usuwanie laserowe tatuażu/makijażu permanentnego'} price={'od 150 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'Laserowe usuwanie'} price={'od 150 PLN'}/></Col>
 
                 </Row>
 

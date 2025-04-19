@@ -39,6 +39,18 @@ h1 {
     text-transform: uppercase;
   }
 
+  .heading_description {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 0;
+    line-height: 0.2;
+  }
+
+  .price_list_text {
+    font-family: "Poiret One", sans-serif;
+  }
+
   .price_list_item {
     font-family: "Poiret One", sans-serif;
     display: flex;
@@ -85,9 +97,67 @@ h1 {
 
 
 @media (max-width: 768px) {
+.price_list_section{
+  > :last-child {
+    margin-bottom: -20%;
+  }
+  .price_list_row {
+
+    h1 {
+      font-family: "Poiret One", sans-serif;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin: -3% 0;
+    }
+
+    .price_list_heading {
+      font-family: "Poiret One", sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-top: 3.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .heading_description {
+      font-family: "Poiret One", sans-serif;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 0;
+    }
+
+    .price_list_text {
+      font-family: "Poiret One", sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.2rem;
+      margin-bottom: 3%;
+    }
+
+    .price_list_item {
+      font-family: "Poiret One", sans-serif;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-transform: uppercase;
+      padding: 0.2rem 0.3rem;
+          }
+  }
+}
+
+
+  .submenu {
+    > :nth-child(2) {
+      padding-top: 1.5rem;
+    }
+  }
+
+  .submenu_item {
+    line-height: 0.25rem;
+  }
 
   hr {
     border-top: 0.8px solid goldenrod;
     margin: 0 auto;
   }
 }
+

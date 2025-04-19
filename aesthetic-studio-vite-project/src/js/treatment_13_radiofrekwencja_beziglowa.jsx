@@ -3,7 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
-import team2 from "./../assets/team2.jpg"
+import team2 from "./../assets/marta_i_bartek2.jpg"
 
 function PriceListItem(props) {
     return (
@@ -23,6 +23,7 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
 
             <Container>
                 <Row>
+
                     <Col sm={12}><hr/></Col>
 
                     <TreatmentSubmenu/>
@@ -46,13 +47,13 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p> od 150 zł </p>
 
-                        <h2>Czas trwania:</h2>
+                        <h3>Czas trwania:</h3>
                         <p> od 30 min </p>
 
-                        <h2>Na problem:</h2>
+                        <h3>Na problem:</h3>
                         <p> Poprawa kondycji skóry </p>
 
                     </Col>
@@ -127,15 +128,15 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
                 <Row className="treatment_section2">
                     <Col sm={12}>
                         <hr/>
-                        <h3> Szczegółowy cennik: </h3>
+                        {/*<h3> Szczegółowy cennik: </h3>*/}
                     </Col>
 
 
                 </Row>
 
-                <Row className="treatment_section2" >
-                    <Col sm={12}><hr/></Col>
-                </Row>
+                {/*<Row className="treatment_section2" >*/}
+                {/*    <Col sm={12}><hr/></Col>*/}
+                {/*</Row>*/}
 
             </Container>
 

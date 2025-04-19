@@ -3,7 +3,7 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {Footer} from "./footer.jsx";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
-import team2 from "./../assets/team2.jpg"
+import team2 from "./../assets/marta_i_bartek2.jpg"
 
 function PriceListItem(props) {
     return (
@@ -23,10 +23,11 @@ export function TreatmentOczyszczanieWodorowe() {
 
             <Container>
                 <Row>
+
                     <Col sm={12}><hr/></Col>
-                </Row>
-                <Row>
+
                     <TreatmentSubmenu/>
+
                 </Row>
             </Container>
 
@@ -35,13 +36,13 @@ export function TreatmentOczyszczanieWodorowe() {
                 <Row>
                     <Col sm={12}>
                         <h1>Oczyszczanie Wodorowe</h1>
-                        <p className='treatment_section1_more'>z wykorzystaniem urządzenienia M'onduniq</p>
+                        <p className='treatment_section1_more'>Z wykorzystaniem urządzenienia M'onduniq</p>
                     </Col>
                 </Row>
 
                 <Row>
                     <Col sm={6} className='treatment_photoPlace'>
-                        <img src={team2} alt='zdjęcie' style={{height: '400px',backgroundSize:'cover'}}></img>
+                        <img src={team2} alt='zdjęcie' className='treatment_photo'></img>
                     </Col>
 
                     <Col sm={6} className='treatment_small_description'>

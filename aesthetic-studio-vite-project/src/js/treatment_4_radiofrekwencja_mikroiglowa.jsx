@@ -48,13 +48,13 @@ export function TreatmentRadiofrekwencja() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p>0d 300 zł </p>
 
-                        <h2>Obszar zabigowy:</h2>
+                        <h3>Obszar zabigowy:</h3>
                         <p> Różne partie ciała: twarz, szyja, dekolt, brzuch, uda </p>
 
-                        <h2>Na problem:</h2>
+                        <h3>Na problem:</h3>
                         <p> Odmładzanie i modelowanie skóry </p>
 
                     </Col>
@@ -80,7 +80,6 @@ export function TreatmentRadiofrekwencja() {
 
                         <h3> Mechanizm Działania</h3>
 
-                        <div>
                             <ul>
                                 Radiofrekwencja mikroigłowa działa na dwóch poziomach:
                                 <li>Mikronakłuwanie: Specjalne mikroigły wnikają w skórę na określoną głębokość, tworząc
@@ -91,9 +90,9 @@ export function TreatmentRadiofrekwencja() {
                                     produkcji kolagenu oraz skurczenie się istniejących włókien kolagenowych, co skutkuje
                                     ujędrnieniem i wygładzeniem skóry.</li>
                             </ul>
-                        </div>
 
-                        <div>
+
+
                             <h3> Na czym polega zabieg? </h3>
                             <p>
                                 Zabieg radiofrekwencji mikroigłowej rozpoczyna się od demakijażu i przygotowania skóry do
@@ -117,7 +116,7 @@ export function TreatmentRadiofrekwencja() {
                                 zaczerwienienie i obrzęk, które ustępują w ciągu kilku dni.
                             </p>
 
-                        </div>
+
                     </Col>
                 </Row>
             </Container>

@@ -3,7 +3,18 @@ import {Navbar} from "./navbar.jsx";
 import {Col, Container, Row} from "react-grid-system";
 import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
-import team from "./../assets/team.jpg";
+import team from "./../assets/marta_i_bartek2.jpg";
+
+function PriceListItem(props) {
+    return (
+        <>
+            <div className='price_list_item'>
+                <a className='price_list_description'> {props.description} </a>
+                <a className='price_list_price'> {props.price} </a>
+            </div>
+        </>
+    );
+}
 
 export function TreatmentZamykwanieZmianNaczyniowych() {
     return (
@@ -25,7 +36,7 @@ export function TreatmentZamykwanieZmianNaczyniowych() {
                 <Row>
                     <Col sm={12}>
                         <h1>Zabiegi zamykania zmian naczyniowych</h1>
-                        <p className='treatment_section1_more'> laser Quadrostar Pro Yellow</p>
+                        <p className='treatment_section1_more'> Laser Quadrostar Pro Yellow</p>
                     </Col>
                 </Row>
 
@@ -35,10 +46,10 @@ export function TreatmentZamykwanieZmianNaczyniowych() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h2> Cena: </h2>
+                        <h3> Cena: </h3>
                         <p> od 300 zł</p>
 
-                        <h2>Czas trwania:</h2>
+                        <h3>Czas trwania:</h3>
                         <p> około 15 minut </p>
 
                     </Col>
@@ -144,6 +155,11 @@ export function TreatmentZamykwanieZmianNaczyniowych() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
+                    <Col sm={12}><PriceListItem description={'Pojedyńcze naczynka'} price={'100 pln'}/></Col>
+                    <Col sm={12}><PriceListItem description={'Nos'} price={'200 pln'}/></Col>
+                    <Col sm={12}><PriceListItem description={'Broda'} price={'200 pln'}/></Col>
+                    <Col sm={12}><PriceListItem description={'Policzki'} price={'300 pln'}/></Col>
+                    <Col sm={12}><PriceListItem description={'Twarz'} price={'400 pln'}/></Col>
 
                 </Row>
 
