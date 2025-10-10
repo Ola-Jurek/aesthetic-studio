@@ -29,6 +29,8 @@ import {TreatmentMezoterapiaIglowaSkoryGlowy} from "./js/treatment_16_mezoterapi
 import {TreatmentModelowanieUst} from "./js/treatment_15_modelowanie_ust.jsx";
 import {TreatmentBtx} from "./js/treatment_14_btx.jsx";
 import {TreatmentZamykwanieZmianNaczyniowych} from "./js/treatment_22_zamykwanie_zmian_naczyniowych.jsx";
+import {TreatmentLaserFrakcyjny} from "./js/treatment_12_laser_frakcyjny.jsx";
+import {TreatmentLiftera} from "./js/treatment_23_liftera.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -59,6 +61,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/treatment_peeling_weglowy' element={<TreatmentPeelingWeglowy/>}/>
               <Route path='/treatment_peeling_chemiczny' element={<TreatmentPeelingChemiczny/>}/>
               <Route path='/treatment_terapia_tradziku' element={<TreatmentTerapiaTradziku/>}/>
+              <Route path='/treatment_laser_frakcyjny' element={<TreatmentLaserFrakcyjny/>}/>
+              <Route path='/treatment_liftera' element={<TreatmentLiftera/>}/>
               <Route path='/cosmetics' element={<Cosmetics/>}/>
               <Route path='/contact' element={<Contact/>}/>
               <Route path='/start_page' element={<StartPage/>}/>

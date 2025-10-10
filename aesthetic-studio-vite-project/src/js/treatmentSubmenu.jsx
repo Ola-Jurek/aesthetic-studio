@@ -49,6 +49,7 @@ export function TreatmentSubmenu() {
                         <li><Link to='/treatment_lipoliza_iniekcyjna'>Lipoliza iniekcyjna</Link></li>
                         <li><Link to='/treatment_radiofrekwencja_mikroiglowa'>Radiofrekwencja mikroigłowa</Link></li>
                         <li><Link to='/treatment_usuwamie_tatuazy'>Laserowe usuwanie tatuaży</Link></li>
+                        <li><Link to='/treatment_laser_frakcyjny'>Laser Frakcyjny</Link></li>
                     </ul>
 
                 )}
@@ -68,6 +69,7 @@ export function TreatmentSubmenu() {
                         <li><Link to='/treatment_osocze_bogatoplytkowe'>Osocze bogatopłytkowe</Link></li>
                         <li><Link to='/treatment_radiofrekwencja_beziglowa'>Radiofrekwencja bezigłowa</Link></li>
                         <li><Link to='/treatment_modelowanie_ust'>Modelowanie ust</Link></li>
+                        <li><Link to='/treatment_liftera'>Lifting twarzy i okolic</Link></li>
                     </ul>
                 )}
             </div>

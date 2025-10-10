@@ -162,7 +162,7 @@ export function TreatmentUsuwanieTatuazy() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'Laserowe usuwanie'} price={'od 150 PLN'}/></Col>
+                    <Col sm={12}><PriceListItem description={'Laserowe usuwanie'} price={'od 200 PLN'}/></Col>
 
                 </Row>
 
