@@ -82,7 +82,7 @@ export function TreatmentSubmenu() {
             <div className={`treatment_submenu ${isChecked.tychology ? 'open' : ''}`}
                  ref={el => toggleRefs.current.tychology = el}
                  onClick={() => setIsChecked(prevState => ({...prevState, tychology: !prevState.tychology}))}>
-                Tychologia
+                Trychologia
                 {isChecked.tychology && (
                     <ul className="treatment_submenu_item">
                         <li><Link to='/treatment_mezoterapia_iglowa_skory_glowy'>Mezoterapia igłowa skóry głowy</Link></li>
