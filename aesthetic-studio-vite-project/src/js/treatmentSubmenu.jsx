@@ -99,7 +99,7 @@ export function TreatmentSubmenu() {
                         <li><Link to='/treatment_peeling_kawitacyjny'>Peeling kawitacyjny</Link></li>
                         <li><Link to='/treatment_peeling_weglowy'>Peeling węglowy</Link></li>
                         <li><Link to='/treatment_peeling_chemiczny'>Peeling chemiczny</Link></li>
-                        <li><Link to='/treatment_terapia_tradziku'>Indywidualne terapie trądziku</Link></li>
+                        <li><Link to='/treatment_terapia_tradziku'>Indywidualne terapie t  rądziku</Link></li>
                     </ul>
                 )}
             </div>

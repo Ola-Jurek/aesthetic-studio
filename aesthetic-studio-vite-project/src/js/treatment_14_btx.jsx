@@ -5,6 +5,9 @@ import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
 import zabieg_btx from "../assets/zabieg_btx.jpg";
 
+import { getTreatment } from '../utils/treatmentHelper';
+import ReactMarkdown from 'react-markdown';
+
 function PriceListItem(props) {
     return (
         <>
@@ -17,6 +20,11 @@ function PriceListItem(props) {
 }
 
 export function TreatmentBtx() {
+
+    const content = getTreatment('btx');
+
+    if (!content) return null;
+
     return (
         <>
             <Navbar/>
@@ -35,10 +43,13 @@ export function TreatmentBtx() {
 
                 <Row>
                     <Col sm={12}>
-                        <h1>BTX</h1>
-                        <p className='treatment_section1_more'> „Wszystko jest trucizną i nic nie jest trucizną. Tylko dawka czyni truciznę” (łac. Omnia sunt venena,
-                            nihil est sine veneno. Sola dosis facit venenum”).  </p>
-                        <p>Ta sentencja Paracelsusa doskonale odnosi się do działania BTX.</p>
+                        <h1>{content?.title}</h1>
+                        <p className='treatment_section1_more'>
+                            {content?.description && (
+                                <p className='treatment_section1_more'>{content.description}</p>
+                            )}
+                        </p>
+
                     </Col>
                 </Row>
 
@@ -48,11 +59,33 @@ export function TreatmentBtx() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h3> Cena: </h3>
-                        <p> od 300 zł</p>
+                        {content?.main_price && (
+                            <>
+                                <h3> Cena: </h3>
+                                <p>{content.main_price}</p>
+                            </>
+                        )}
 
-                        <h3>Czas trwania:</h3>
-                        <p> około 15 minut </p>
+                        {content?.treatment_area && (
+                            <>
+                                <h3>Obszar zabiegowy:</h3>
+                                <p>{content.treatment_area}</p>
+                            </>
+                        )}
+
+                        {content?.duration && (
+                            <>
+                                <h3>Czas trwania:</h3>
+                                <p>{content.duration}</p>
+                            </>
+                        )}
+
+                        {content?.problem && (
+                            <>
+                                <h3>Na problem:</h3>
+                                <p>{content.problem}</p>
+                            </>
+                        )}
 
                     </Col>
                 </Row>
@@ -67,47 +100,8 @@ export function TreatmentBtx() {
 
                 <Row className='treatment_section2'>
                     <Col sm={12}>
-                        <p> Zabiegi z wykorzystaniem toksyny botulinowej, należą do najczęściej wykonywanych
-                            zabiegów z zakresu medycyny i kosmetologii estetycznej na świecie. Odpowiednie podanie preparatu
-                            pozwala na relaksację mięśnia, a tym samym optyczne zredukowanie ilości zmarszczek. W rękach
-                            doświadczonego zabiegowca staje się doskonałym narzędziem do redukcji zmarszczek poprzecznych
-                            czoła, gładzizny (lwia zmarszczka), czy bocznego kąta oka.
-                        </p>
 
-                        <p> Działanie opiera się na zachamowaniu produkcji acetylocholiny odpowiedzialnej za
-                            przekaźnictwo nerwowe. Efekt utrzymuje się 12-16 tyg i jest w pełni wycofujący się z naszego
-                            organizmu. </p>
-
-
-                        <h3>Przebieg zabiegu</h3>
-
-                        <p> Po zebraniu wywiadu medycznego i zakwalifikowaniu, zostaje
-                            wykonane kilka bezbolesnych iniekcji w strefie zabiegowej. Efekt zaczyna być widoczny po około 3-5
-                            dniach, a w pełni widoczny jest po 2 tygodniach. Po upływie 14 dni przeprowadzana jest kontrola
-                            wraz z ewentualną bezpłatną korekcją. </p>
-
-
-                        <h3> Przeciwwskazania do BTX </h3>
-
-                        <ul>
-                            <li> Choroby nerwowo - mięśniowe myasthenia gravis, zespół Lamberta-Eatona, </li>
-                            <li> Uczulenie na substancję aktywną lub substancje pomocnicze, </li>
-                            <li> Zakażenie w okolicy planowanych iniekcji, </li>
-                            <li> Koagulopatie, </li>
-                            <li> Leczenie lekami przeciwzakrzepowymi, </li>
-                            <li> Antybiotykoterapia (włącznie z przeprowadzoną w ciągu minionych 14 dni), </li>
-                            <li> Ciąża, okres laktacji.</li>
-                        </ul>
-
-
-                        <h3> Zalecenie pozabiegowe: </h3>
-
-                        <ul>
-                            <li> W ciągu 4h od wykonania zabiegu nie powinno się pochylać głowy ku dołowi, </li>
-                            <li> Nie należy rozmasowywać miejsc wykonania iniekcji, </li>
-                            <li> Powstrzymywanie się przed znacznym wysiłkim fizycznym przez 24h po zabiegu </li>
-                            <li> Zakaz podróżowania samolotem 24h po zabiegu. </li>
-                        </ul>
+                        <ReactMarkdown>{content?.full_text}</ReactMarkdown>
 
                     </Col>
                 </Row>
@@ -118,9 +112,19 @@ export function TreatmentBtx() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'jedna partia'} price={'300 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'dwie partie'} price={'500 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'trzy partie'} price={'700 PLN'}/></Col>
+                    <Col sm={12}>
+                        {content?.detailed_prices && content.detailed_prices.length > 0 ? (
+                            content.detailed_prices.map((item, index) => (
+                                <PriceListItem
+                                    key={index}
+                                    description={item.area}
+                                    price={item.cost}
+                                />
+                            ))
+                        ) : (
+                            <p>Cennik w trakcie aktualizacji...</p>
+                        )}
+                    </Col>
                 </Row>
 
                 <Row className="treatment_section2" >

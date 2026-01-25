@@ -31,11 +31,16 @@ import {TreatmentBtx} from "./js/treatment_14_btx.jsx";
 import {TreatmentZamykwanieZmianNaczyniowych} from "./js/treatment_22_zamykwanie_zmian_naczyniowych.jsx";
 import {TreatmentLaserFrakcyjny} from "./js/treatment_12_laser_frakcyjny.jsx";
 import {TreatmentLiftera} from "./js/treatment_23_liftera.jsx";
+import {ScrollToTop} from "./js/scrollToTop.jsx";
+import {Navbar} from "./js/navbar.jsx";
+import {Footer} from "./js/footer.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <HashRouter>
+          <Navbar/>
+          <ScrollToTop/>
           <Routes>
               <Route path='/' element={<App/>} />
               <Route path='/about' element={<About/>}/>
@@ -67,6 +72,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/contact' element={<Contact/>}/>
               <Route path='/start_page' element={<StartPage/>}/>
           </Routes>
+          <Footer/>
       </HashRouter>
 
   </React.StrictMode>

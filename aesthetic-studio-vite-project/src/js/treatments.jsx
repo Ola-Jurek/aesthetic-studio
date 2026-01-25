@@ -12,7 +12,7 @@ export function Treatments() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
                 <Container>
 
@@ -27,7 +27,7 @@ export function Treatments() {
                 </Container>
 
             <ImgSliderTreatments/>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

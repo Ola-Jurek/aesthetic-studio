@@ -7,6 +7,9 @@ import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import React from "react";
 import zabieg_blizny_zblizenie from "../assets/zabieg_blizny_zblizenie.jpg";
 
+import { getTreatment } from '../utils/treatmentHelper';
+import ReactMarkdown from 'react-markdown';
+
 function PriceListItem(props) {
     return (
         <>
@@ -19,6 +22,11 @@ function PriceListItem(props) {
 }
 
 export function TreatmentBlizny() {
+
+    const content = getTreatment('blizny');
+
+    if (!content) return null;
+
     return (
         <>
             <Navbar/>
@@ -36,8 +44,13 @@ export function TreatmentBlizny() {
 
                 <Row>
                     <Col sm={12}>
-                        <h1>Blizny i rozstępy</h1>
-                        <p className='treatment_section1_more'></p>
+                        <h1>{content?.title}</h1>
+                        <p className='treatment_section1_more'>
+                            {content?.description && (
+                                <p className='treatment_section1_more'>{content.description}</p>
+                            )}
+                        </p>
+
                     </Col>
                 </Row>
 
@@ -49,13 +62,14 @@ export function TreatmentBlizny() {
                     <Col sm={6} className='treatment_small_description'>
 
                         <h3> Cena: </h3>
-                        <p>0d 250 zł </p>
+                        <p>{content?.main_price}</p>
 
-                        <h3>Obszar zabigowy:</h3>
-                        <p>Wszelkiego rodzaju blizny</p>
+                        <h3>Obszar zabiegowy:</h3>
+                        <p>{content?.treatment_area}</p>
 
                         <h3>Na problem:</h3>
-                        <p> blizny, rozstępy, ubytki tkanki </p>
+                        <p>{content?.problem}</p>
+
                     </Col>
 
                 </Row>
@@ -65,58 +79,15 @@ export function TreatmentBlizny() {
             <Container>
 
                 <Row>
-                    <Col sm={12}><hr/></Col>
+                    <Col sm={12}>
+                        <hr/>
+                    </Col>
                 </Row>
 
                 <Row className='treatment_section2'>
                     <Col sm={12}>
-                        <h3> Na czym polega zabieg? </h3>
+                        <ReactMarkdown>{content?.full_text}</ReactMarkdown>
 
-                        <p>
-                            Blizny są powszechnym defektem skórnym, który może znacząco wpłynąć na wygląd i
-                            samopoczucie każdego człowieka. Tworzenie się blizn jest nieodłącznym procesem w naturalnym
-                            cyklu gojenia się skóry. Gdy dochodzi do uszkodzenia ciągłości naskórka, organizm natychmiast
-                            rozpoczyna proces naprawy, w którym tworzą się blizny. Chociaż jest to istotny mechanizm obronny
-                            organizmu, mający na celu zabezpieczenie rany i przywrócenie integralności skóry, jednakże blizny
-                            mogą prowadzić do różnorodnych problemów i obniżać komfort życia jednostki. Blizny, będące
-                            efektem tego niezbędnego procesu gojenia, mogą być bolesne, swędzące, a także ograniczać zakres
-                            ruchów skóry. Mogą przybierać różne formy, wielkości i kolory. Pojawiają się w wyniku różnych
-                            przyczyn, takich jak urazy, oparzenia czy też operacje chirurgiczne. Pozostają one często na ciele
-                            przez całe życie. Ponadto stanowią wyzwanie estetyczne i często prowadzą do kompleksu związanego
-                            z wyglądem skóry. Ich obecność może prowadzić nie tylko do problemów kosmetycznych, ale
-                            również do powikłań fizycznych i psychicznych.
-                        </p>
-
-                        <p>
-                            Jako jedyni w naszym regionie prowadzimy terapię blizn metodą ScarINK. Mikronakłuwanie
-                            to proces polegający na kontrolowanym wywołaniu mikrouszkodzeń na powierzchni skóry za pomocą
-                            specjalnego urządzenia PURO. Jest to niewielkie automatyczne narzędzie wyposażone w igły
-
-                            precyzyjnie nakłuwające skórę. Celem tego zabiegu jest wytworzenie kontrolowanego urazu skóry i
-                            rozpoczęcie naturalnego procesu odbudowy włókien kolagenu i nowej tkanki skórnej. Dodatkowo po
-                            wykonanym zabiegu wykorzystuje się składniki aktywne oraz preparatu stymulujące Gen Factor,
-                            które mają za zadanie wspomagać zainicjowane procesy naprawcze skóry.
-                        </p>
-
-                        <div>
-                            <h3> Proces regeneracji: </h3>
-                            <p>
-                                Zabieg mikronakłuwania zwykle wiąże się z niewielkim lub umiarkowanym bólem, który może
-                                się różnić w zależności od obszaru poddanego zabiegowi, parametrów urządzenia, długości wysuwu
-                                igły, głębokości iniekcji oraz indywidualnej tolerancji bólu. Po zabiegu może pojawić się rumień, który
-                                zazwyczaj ustępuje w ciągu kilku do kilkunastu godzin, oraz możliwy obrzęk i uczucie pieczenia.
-                                Proces regeneracji i przebudowy skóry w obszarze poddanym zabiegowi może trwać nawet kilka
-                                tygodni od jego wykonania.
-                            </p>
-
-                            <h3> Kiedy najlepiej wykonać zabieg? </h3>
-                            <p>
-                                Procedurę mikronakłuć na bliźnie można przeprowadzić najwcześniej po sześciu miesiącach
-                                od momentu jej powstania. Liczba zabiegów oraz ich częstotliwość jest ustalana indywidualnie w
-                                zależności od rodzaju, rozmiaru blizny i obszaru zabiegowego oraz od satysfakcji z uzyskanych
-                                efektów. Zazwyczaj wykonuje się 3-10 zabiegów co 30 dni.
-                            </p>
-                        </div>
                     </Col>
                 </Row>
 
@@ -127,7 +98,19 @@ export function TreatmentBlizny() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'blizny | rozstępy'} price={'od 200 PLN'}/></Col>
+                    <Col sm={12}>
+                        {content?.detailed_prices && content.detailed_prices.length > 0 ? (
+                            content.detailed_prices.map((item, index) => (
+                                <PriceListItem
+                                    key={index}
+                                    description={item.area}
+                                    price={item.cost}
+                                />
+                            ))
+                        ) : (
+                            <p>Cennik w trakcie aktualizacji...</p>
+                        )}
+                    </Col>
 
                 </Row>
 

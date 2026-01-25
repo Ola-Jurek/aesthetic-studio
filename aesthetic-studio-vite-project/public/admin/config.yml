@@ -1,0 +1,90 @@
+
+backend:
+  name: git-gateway
+  repo: Ola-Jurek/aesthetic-studio
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "content"
+    label: "Edycja Treści"
+    files:
+      - file: "src/data/content.json"
+        label: "Zabiegi i Ceny"
+        name: "treatments_data"
+        fields:
+          - label: "Kategorie"
+            name: "treatments"
+            widget: "object"
+            fields:
+              # --- SEKCJA CIAŁO ---
+              - label: "CIAŁO"
+                name: "body"
+                widget: "object"
+                fields:
+                  - label: "Depilacja laserowa"
+                    name: "depilacja"
+                    widget: "object"
+                    fields: &treatment_fields
+                      - { label: "Tytuł zabiegu", name: "title", widget: "string" }
+                      - { label: "Krótki opis", name: "description", widget: "string", required: false}
+                      - { label: "Cena główna (np. od 80 zł)", name: "main_price", widget: "string", required: false}
+                      - { label: "Obszar zabiegowy", name: "treatment_area", widget: "string", required: false}
+                      - { label: "Czas trwania", name: "duration", widget: "string", required: false}
+                      - { label: "Na problem", name: "problem", widget: "string", required: false}
+                      - { label: "Opis technologii (długi tekst)", name: "full_text", widget: "markdown", required: false}
+                      - label: "Szczegółowa lista cen"
+                        name: "detailed_prices"
+                        widget: "list"
+                        summary: "{{fields.area}} - {{fields.cost}}"
+                        fields:
+                          - { label: "Obszar (np. Wąsik)", name: "area", widget: "string" }
+                          - { label: "Cena (np. 80 PLN)", name: "cost", widget: "string" }
+
+                  - { label: "Terapia blizn", name: "blizny", widget: "object", fields: *treatment_fields }
+                  - { label: "Lipoliza iniekcyjna", name: "lipoliza", widget: "object", fields: *treatment_fields }
+                  - { label: "Radiofrekwencja mikroigłowa", name: "radiofrekwencja_mikro", widget: "object", fields: *treatment_fields }
+                  - { label: "Laserowe usuwanie tatuaży", name: "tatuaze", widget: "object", fields: *treatment_fields }
+                  - { label: "Laser Frakcyjny", name: "laser_frakcyjny", widget: "object", fields: *treatment_fields }
+
+              # --- SEKCJA TWARZ ---
+              - label: "TWARZ"
+                name: "face"
+                widget: "object"
+                fields:
+                  - { label: "Makijaż permanentny", name: "makijaz_perm", widget: "object", fields: *treatment_fields }
+                  - { label: "BTX", name: "btx", widget: "object", fields: *treatment_fields }
+                  - { label: "Terapie przy użyciu BTX", name: "btx_terapie", widget: "object", fields: *treatment_fields }
+                  - { label: "Mezoterapia igłowa", name: "mezoterapia_iglowa", widget: "object", fields: *treatment_fields }
+                  - { label: "Mezoterapia mikroigłowa", name: "mezoterapia_mikro", widget: "object", fields: *treatment_fields }
+                  - { label: "Osocze bogatopłytkowe", name: "osocze", widget: "object", fields: *treatment_fields }
+                  - { label: "Radiofrekwencja bezigłowa", name: "radiofrekwencja_bez", widget: "object", fields: *treatment_fields }
+                  - { label: "Modelowanie ust", name: "usta", widget: "object", fields: *treatment_fields }
+                  - { label: "Lifting twarzy (Liftera)", name: "liftera", widget: "object", fields: *treatment_fields }
+
+              # --- SEKCJA NACZYNKA ---
+              - label: "ZAMYKANIE ZMIAN NACZYNOWYCH"
+                name: "vascular"
+                widget: "object"
+                fields:
+                  - { label: "Zamykanie zmian naczyniowych", name: "zamykanie_naczyn", widget: "object", fields: *treatment_fields }
+
+              # --- SEKCJA TRYCHOLOGIA ---
+              - label: "TRYCHOLOGIA"
+                name: "trichology"
+                widget: "object"
+                fields:
+                  - { label: "Mezoterapia igłowa skóry głowy", name: "glowa", widget: "object", fields: *treatment_fields }
+
+              # --- SEKCJA TRĄDZIK ---
+              - label: "TRĄDZIK"
+                name: "acne"
+                widget: "object"
+                fields:
+                  - { label: "Oczyszczanie wodorowe", name: "wodorowe", widget: "object", fields: *treatment_fields }
+                  - { label: "Peeling kawitacyjny", name: "kawitacja", widget: "object", fields: *treatment_fields }
+                  - { label: "Peeling węglowy", name: "weglowy", widget: "object", fields: *treatment_fields }
+                  - { label: "Peeling chemiczny", name: "chemiczny", widget: "object", fields: *treatment_fields }
+                  - { label: "Indywidualne terapie trądziku", name: "terapia_tradziku", widget: "object", fields: *treatment_fields }

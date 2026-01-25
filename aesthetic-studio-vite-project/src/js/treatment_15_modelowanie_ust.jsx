@@ -5,6 +5,9 @@ import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
 import team from './../assets/marta_i_bartek2.jpg';
 
+import { getTreatment } from '../utils/treatmentHelper';
+import ReactMarkdown from 'react-markdown';
+
 function PriceListItem(props) {
     return (
         <>
@@ -17,6 +20,11 @@ function PriceListItem(props) {
 }
 
 export function TreatmentModelowanieUst() {
+
+    const content = getTreatment('usta');
+
+    if (!content) return null;
+
     return (
         <>
             <Navbar/>
@@ -35,8 +43,13 @@ export function TreatmentModelowanieUst() {
 
                 <Row>
                     <Col sm={12}>
-                        <h1>Modelowanie ust</h1>
-                        <p className='treatment_section1_more'> Piękno w harmonii z naturalnym wyglądem </p>
+                        <h1>{content?.title}</h1>
+                        <p className='treatment_section1_more'>
+                            {content?.description && (
+                                <p className='treatment_section1_more'>{content.description}</p>
+                            )}
+                        </p>
+
                     </Col>
                 </Row>
 
@@ -46,11 +59,33 @@ export function TreatmentModelowanieUst() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h3> Cena: </h3>
-                        <p> 800 zł</p>
+                        {content?.main_price && (
+                            <>
+                                <h3> Cena: </h3>
+                                <p>{content.main_price}</p>
+                            </>
+                        )}
 
-                        <h3>Czas trwania:</h3>
-                        <p> około 30 minut </p>
+                        {content?.treatment_area && (
+                            <>
+                                <h3>Obszar zabiegowy:</h3>
+                                <p>{content.treatment_area}</p>
+                            </>
+                        )}
+
+                        {content?.duration && (
+                            <>
+                                <h3>Czas trwania:</h3>
+                                <p>{content.duration}</p>
+                            </>
+                        )}
+
+                        {content?.problem && (
+                            <>
+                                <h3>Na problem:</h3>
+                                <p>{content.problem}</p>
+                            </>
+                        )}
 
                     </Col>
                 </Row>
@@ -65,50 +100,7 @@ export function TreatmentModelowanieUst() {
 
                 <Row className='treatment_section2'>
                     <Col sm={12}>
-                        <p> Modelowanie ust to zabieg, który pozwala podkreślić kształt, objętość oraz kontur ust, zapewniając
-                            harmonijny i estetyczny wygląd twarzy. Wykorzystanie kwasu hialuronowego, naturalnego składnika
-                            występującego w organizmie, sprawia, że efekty są subtelne, a usta nawilżone i pełniejsze. To idealna
-                            opcja dla osób pragnących zwiększyć objętość warg, wyrównać asymetrię lub poprawić ich kontur.
-                        </p>
-
-
-
-                        <h3>Przebieg zabiegu</h3>
-
-                        <p> Zabieg rozpoczyna się od konsultacji, podczas której dobierana jest
-                            odpowiednia ilość preparatu i oczekiwany efekt. Następnie stosowane jest znieczulenie, aby
-                            zapewnić komfort, a preparat jest aplikowany za pomocą cienkiej igły. Rezultat jest widoczny
-                            natychmiast, choć pełny efekt uwidacznia się po kilku dniach, gdy opuchlizna ustępuje. </p>
-
-
-                        <h3> Przeciwwskazania do modelowania ust </h3>
-
-                        <ul> Mimo że modelowanie ust jest bezpieczne, istnieją pewne przeciwwskazania:
-                            <li> Ciąża i okres karmienia piersią, </li>
-                            <li> Skłonność do powstawania blizn przerostowych (keloidów),</li>
-                            <li> Aktywne infekcje lub opryszczka, </li>
-                            <li> Przebyta atybiotykoterapia, </li>
-                            <li> Przyjmowanie sterydów, </li>
-                            <li> Alergia na składniki preparatu, </li>
-                            <li> Choroby autoimmunologiczne i cukrzyca (niewyrównana),</li>
-                            <li> Nowotwory. </li>
-                        </ul>
-
-                        <p> Przed zabiegiem ważna jest szczegółowa konsultacja w celu wykluczenia ryzyka.</p>
-
-                        <h3> Zalecenie pozabiegowe: </h3>
-
-                        <ul> Aby zapewnić długotrwały efekt i szybkie gojenie:
-                            <li> Przez pierwsze 24 godziny unikaj dotykania i masowania ust. </li>
-                            <li> Nie spożywaj gorących napojów i nie wystawiaj ust na działanie wysokich temperatur (sauna,
-                                solarium). </li>
-                            <li> Unikaj intensywnego wysiłku fizycznego przez 2-3 dni. </li>
-                            <li> Stosuj delikatne nawilżanie według zaleceń specjalisty. </li>
-                            <li> Obserwuj skórę – w przypadku silnego obrzęku lub bólu skontaktuj się z osobą wykonującą zabieg. </li>
-                        </ul>
-
-                        <p>Modelowanie ust pozwala cieszyć się pełniejszymi, zmysłowymi wargami, zachowując jednocześnie
-                            naturalność i harmonię twarzy. </p>
+                        <ReactMarkdown>{content?.full_text}</ReactMarkdown>
 
                     </Col>
                 </Row>
@@ -119,7 +111,19 @@ export function TreatmentModelowanieUst() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'usta'} price={'800 PLN'}/></Col>
+                    <Col sm={12}>
+                        {content?.detailed_prices && content.detailed_prices.length > 0 ? (
+                            content.detailed_prices.map((item, index) => (
+                                <PriceListItem
+                                    key={index}
+                                    description={item.area}
+                                    price={item.cost}
+                                />
+                            ))
+                        ) : (
+                            <p>Cennik w trakcie aktualizacji...</p>
+                        )}
+                    </Col>
 
                 </Row>
 

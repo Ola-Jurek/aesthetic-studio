@@ -5,7 +5,11 @@ import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
 import team from "./../assets/marta_i_bartek2.jpg"
 
+import { getTreatment } from '../utils/treatmentHelper';
+import ReactMarkdown from 'react-markdown';
+
 function PriceListItem(props) {
+
     return (
         <>
             <div className='price_list_item'>
@@ -17,6 +21,11 @@ function PriceListItem(props) {
 }
 
 export function TreatmentOsoczeBogatoplytkowe() {
+
+    const content = getTreatment('osocze');
+
+    if (!content) return null;
+
     return (
         <>
             <Navbar/>
@@ -35,8 +44,13 @@ export function TreatmentOsoczeBogatoplytkowe() {
 
                 <Row>
                     <Col sm={12}>
-                        <h1>Osocze bogatopłytkowe (PRP)</h1>
-                        <p className='treatment_section1_more'> Naturalne Odmładzanie Twojej Skóry! </p>
+                        <h1>{content?.title}</h1>
+                        <p className='treatment_section1_more'>
+                            {content?.description && (
+                                <p className='treatment_section1_more'>{content.description}</p>
+                            )}
+                        </p>
+
                     </Col>
                 </Row>
 
@@ -46,14 +60,33 @@ export function TreatmentOsoczeBogatoplytkowe() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h3> Cena: </h3>
-                        <p>od 650 zł</p>
+                        {content?.main_price && (
+                            <>
+                                <h3> Cena: </h3>
+                                <p>{content.main_price}</p>
+                            </>
+                        )}
 
-                        <h3>Czas trwania:</h3>
-                        <p>około 60 minut</p>
+                        {content?.treatment_area && (
+                            <>
+                                <h3>Obszar zabiegowy:</h3>
+                                <p>{content.treatment_area}</p>
+                            </>
+                        )}
 
-                        <h3>Na problem:</h3>
-                        <p> Regeneracja skóry </p>
+                        {content?.duration && (
+                            <>
+                                <h3>Czas trwania:</h3>
+                                <p>{content.duration}</p>
+                            </>
+                        )}
+
+                        {content?.problem && (
+                            <>
+                                <h3>Na problem:</h3>
+                                <p>{content.problem}</p>
+                            </>
+                        )}
 
                     </Col>
                 </Row>
@@ -68,57 +101,8 @@ export function TreatmentOsoczeBogatoplytkowe() {
 
                 <Row className='treatment_section2'>
                     <Col sm={12}>
-                        <p> Zabieg z osoczem bogatopłytkowym (PRP), znany również jako "wampirzy lifting", to jeden z
-                            najnowocześniejszych i najbardziej naturalnych zabiegów medycyny estetycznej. Polega na
-                            wykorzystaniu osocza uzyskanego z własnej krwi pacjenta, co sprawia, że jest to metoda wyjątkowo
-                            bezpieczna i skuteczna. Osocze bogate w płytki krwi stymuluje procesy regeneracyjne, zwiększając
-                            produkcję kolagenu i elastyny.
-                        </p>
 
-
-                        <ul>
-                            Dla kogo jest zabieg z osoczem bogatopłytkowym?
-                            <li> Osoby z oznakami starzenia – redukuje zmarszczki i poprawia napięcie skóry. </li>
-                            <li> Osoby z cerą zmęczoną i odwodnioną – działa regenerująco i odmładzająco.</li>
-                            <li> Osoby z bliznami potrądzikowymi – wspomaga procesy naprawcze i wygładza skórę. </li>
-                            <li> Osoby z przebarwieniami – wyrównuje koloryt skóry i redukuje przebarwienia. </li>
-                            <li> Osoby z problemem łysienia – wspiera odrastanie włosów i poprawia ich kondycję. </li>
-                        </ul>
-
-
-                        <h3> Ile zabiegów potrzeba? </h3>
-                        <ul>
-                            <li> Rekomendowana seria to 3 zabiegi, wykonywane co 4 - 6 tygodni, w zależności od kondycji skóry. </li>
-                            <li> Pierwsze efekty są widoczne już po kilku tygodniach od zabiegu, jednak pełna regeneracja następuje
-                                po serii.</li>
-                            <li> Aby utrzymać efekty, warto powtarzać zabieg co 6 - 12 miesięcy. </li>
-                        </ul>
-
-                        <h3> Przeciwwskazania: </h3>
-                        <ul>
-                            <li> Ciąża i karmienie piersią </li>
-                            <li> Choroby autoimmunologiczne </li>
-                            <li> Infekcje skórne (np. opryszczka)</li>
-                            <li> Choroby nowotworowe </li>
-                            <li> Stany zapalne skóry </li>
-                            <li> Przyjmowanie leków przeciwzakrzepowych i przeciwzapalnych</li>
-                        </ul>
-
-                        <h3> Zalecenie pozabiegowe: </h3>
-                        <ul>
-                            <li> Unikaj ekspozycji na słońce przez tydzień po zabiegu, stosując krem z filtrem SPF 50+. </li>
-                            <li> Nawilżaj skórę – stosuj kremy łagodzące i regenerujące, aby wspierać procesy odbudowy skóry. </li>
-                            <li> Odstaw makijaż na 24 godziny po zabiegu, aby zmniejszyć ryzyko podrażnień. </li>
-                            <li> Unikaj intensywnego wysiłku fizycznego, sauny i gorących kąpieli przez 48 godzin po zabiegu. </li>
-                            <li> Pij dużo wody, aby wspierać procesy regeneracyjne organizmu. </li>
-                        </ul>
-
-                        <h3>Wybierz naturalną regenerację skóry dzięki osoczu bogatopłytkowemu!</h3>
-
-                        <p> Zapraszamy na konsultację, podczas której nasi specjaliści ocenią stan Twojej skóry i zaproponują
-                            indywidualny plan zabiegowy. Pozwól sobie na naturalne odmłodzenie i poprawę kondycji skóry! </p>
-
-                        <p> Zdrowa i promienna skóra bez sztucznych dodatków! </p>
+                        <ReactMarkdown>{content?.full_text}</ReactMarkdown>
 
                     </Col>
                 </Row>
@@ -129,9 +113,19 @@ export function TreatmentOsoczeBogatoplytkowe() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'twarz'} price={'650 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'twarz + szyja'} price={'800 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'twarz + szyja + dekolt'} price={'900 PLN'}/></Col>
+                    <Col sm={12}>
+                        {content?.detailed_prices && content.detailed_prices.length > 0 ? (
+                            content.detailed_prices.map((item, index) => (
+                                <PriceListItem
+                                    key={index}
+                                    description={item.area}
+                                    price={item.cost}
+                                />
+                            ))
+                        ) : (
+                            <p>Cennik w trakcie aktualizacji...</p>
+                        )}
+                    </Col>
 
                 </Row>
 

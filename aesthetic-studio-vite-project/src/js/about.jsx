@@ -12,7 +12,7 @@ import bartek from'../assets/bartek.jpg';
 export function About() {
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
             <Container className='container'>
 
                 {/*<Row>*/}
@@ -133,7 +133,7 @@ export function About() {
                 </Row>
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

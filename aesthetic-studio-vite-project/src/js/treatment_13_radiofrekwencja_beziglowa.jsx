@@ -5,18 +5,26 @@ import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import {Footer} from "./footer.jsx";
 import team2 from "./../assets/marta_i_bartek2.jpg"
 
-function PriceListItem(props) {
-    return (
-        <>
-            <div className='price_list_item'>
-                <a className='price_list_description'> {props.description} </a>
-                <a className='price_list_price'> {props.price} </a>
-            </div>
-        </>
-    );
-}
+import { getTreatment } from '../utils/treatmentHelper';
+import ReactMarkdown from 'react-markdown';
+
+// function PriceListItem(props) {
+//     return (
+//         <>
+//             <div className='price_list_item'>
+//                 <a className='price_list_description'> {props.description} </a>
+//                 <a className='price_list_price'> {props.price} </a>
+//             </div>
+//         </>
+//     );
+// }
 
 export function TreatmentRadiofrekwencjaBeziglowa() {
+
+    const content = getTreatment('radiofrekwencja_bez');
+
+    if (!content) return null;
+
     return (
         <>
             <Navbar/>
@@ -36,8 +44,13 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
 
                 <Row>
                     <Col sm={12}>
-                        <h1>Radiofrekwencja Bezigłowa (RF)</h1>
-                        <p className='treatment_section1_more'> Skuteczne Ujędrnianie i Odmładzanie Skóry! </p>
+                        <h1>{content?.title}</h1>
+                        <p className='treatment_section1_more'>
+                            {content?.description && (
+                                <p className='treatment_section1_more'>{content.description}</p>
+                            )}
+                        </p>
+
                     </Col>
                 </Row>
 
@@ -47,14 +60,33 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
                     </Col>
                     <Col sm={6} className='treatment_small_description'>
 
-                        <h3> Cena: </h3>
-                        <p> od 150 zł </p>
+                        {content?.main_price && (
+                            <>
+                                <h3> Cena: </h3>
+                                <p>{content.main_price}</p>
+                            </>
+                        )}
 
-                        <h3>Czas trwania:</h3>
-                        <p> od 30 min </p>
+                        {content?.treatment_area && (
+                            <>
+                                <h3>Obszar zabiegowy:</h3>
+                                <p>{content.treatment_area}</p>
+                            </>
+                        )}
 
-                        <h3>Na problem:</h3>
-                        <p> Poprawa kondycji skóry </p>
+                        {content?.duration && (
+                            <>
+                                <h3>Czas trwania:</h3>
+                                <p>{content.duration}</p>
+                            </>
+                        )}
+
+                        {content?.problem && (
+                            <>
+                                <h3>Na problem:</h3>
+                                <p>{content.problem}</p>
+                            </>
+                        )}
 
                     </Col>
                 </Row>
@@ -69,58 +101,7 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
 
                 <Row className='treatment_section2'>
                     <Col sm={12}>
-                        <p> Radiofrekwencja bezigłowa (RF) to nowoczesny zabieg, który działa na skórę za pomocą fal
-                            radiowych. Zabieg stymuluje głębokie warstwy skóry, podgrzewając je i pobudzając produkcję
-                            kolagenu oraz elastyny. Dzięki temu skóra staje się bardziej jędrna, elastyczna i widocznie
-                            odmłodzona, a wszystko to bez igieł i inwazyjnych metod!
-                        </p>
-
-
-                        <ul>
-                            Dla kogo jest radiofrekwencja bezigłowa?
-                            <li> Osoby z oznakami starzenia – wygładza drobne zmarszczki i poprawia napięcie skóry. </li>
-                            <li> Osoby z utratą jędrności skóry – skutecznie ujędrnia skórę na twarzy i ciele. </li>
-                            <li> Osoby z cellulitem – fale radiowe pomagają redukować widoczność cellulitu. </li>
-                            <li> Osoby z rozszerzonymi porami – zmniejsza widoczność porów i poprawia strukturę skóry. </li>
-                            <li> Osoby po ciąży lub odchudzaniu – poprawia wygląd luźnej skóry i wspomaga jej regenerację. </li>
-                        </ul>
-
-
-                        <h3> Ile zabiegów potrzeba? </h3>
-                        <ul>
-                            <li> Standardowa seria to 4-8 zabiegów, wykonywanych co 1-2 tygodnie, w zależności od potrzeb
-                                skóry. </li>
-                            <li> Pierwsze efekty są widoczne już po kilku sesjach, jednak najlepsze rezultaty pojawiają się po
-                                zakończeniu pełnej serii.</li>
-                            <li> Dla utrzymania efektów zaleca się powtarzanie zabiegu co 6-12 miesięcy. </li>
-                        </ul>
-
-                        <h3> Przeciwwskazania: </h3>
-                        <ul>
-                            <li> Ciąża i karmienie piersią </li>
-                            <li> Rozrusznik serca i implanty metalowe w obszarze zabiegowym </li>
-                            <li> Choroby nowotworowe </li>
-                            <li> Aktywne infekcje skórne lub stany zapalne </li>
-                            <li> Problemy z krążeniem (zakrzepica, niewydolność serca) </li>
-                        </ul>
-
-                        <h3> Zalecenie pozabiegowe: </h3>
-                        <ul>
-                            <li> Unikaj słońca przez kilka dni po zabiegu, stosując krem z filtrem SPF 50+. </li>
-                            <li> Nawilżaj skórę – używaj kremów regenerujących, aby wspierać odbudowę skóry. </li>
-                            <li> Unikaj gorących kąpieli, sauny i basenu przez 48 godzin po zabiegu, aby zapobiec podrażnieniom. </li>
-                            <li> Unikaj intensywnego wysiłku fizycznego przez 24 godziny, aby zminimalizować ryzyko wystąpienia
-                                obrzęków. </li>
-                            <li> Pij dużo wody, aby przyspieszyć proces detoksykacji i wspierać regenerację skóry. </li>
-                        </ul>
-
-                        <p> Wypróbuj radiofrekwencję bezigłową i ciesz się gładką, jędrną skórą! </p>
-
-                        <p> Zapraszamy na konsultację, podczas której nasi specjaliści ocenią potrzeby Twojej skóry i dobiorą
-                            odpowiedni plan zabiegowy. Zaufaj sprawdzonej technologii i odkryj piękno na nowo!
-                        </p>
-
-                        <p> Skuteczna regeneracja bez igieł i skalpela! </p>
+                        <ReactMarkdown>{content?.full_text}</ReactMarkdown>
 
                     </Col>
                 </Row>

@@ -16,7 +16,7 @@ export function App() {
 
   return (
     <>
-      <Navbar/>
+      {/*<Navbar/>*/}
 
       <Container>
           <Row>
@@ -54,7 +54,7 @@ export function App() {
 
         <ImgSliderApp/>
 
-        <Footer/>
+        {/*<Footer/>*/}
     </>
   )
 }

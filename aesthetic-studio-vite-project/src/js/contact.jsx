@@ -10,7 +10,7 @@ export function Contact() {
     return (
         <>
 
-            <Navbar/>
+            {/*<Navbar/>*/}
             <Container>
                 <Row>
                     <Col sm={12}>
@@ -54,7 +54,7 @@ export function Contact() {
                     </Row>
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

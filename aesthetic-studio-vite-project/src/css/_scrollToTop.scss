@@ -1,0 +1,20 @@
+/* Style dla wszystkich */
+.scroll-icon {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  z-index: 9999;
+}
+
+/* Poprawka dla telefonów */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px; /* Nieco niżej na mobile */
+    right: 20px;
+  }
+  .scroll-icon {
+    width: 40px; /* Trochę mniejszy, by nie zasłaniał tekstu */
+    height: 40px;
+    background-color: rgba(195, 163, 122, 0.8); /* Lekko przezroczysty na mobile */
+  }
+}

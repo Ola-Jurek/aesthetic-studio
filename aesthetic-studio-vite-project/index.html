@@ -1,19 +1,33 @@
 <!doctype html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="./src/assets/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="depilacja laserowa, depilacja, zabiegi kosmetyczne, laseroterapia, botox"/>
-    <meta name="description" content="Profesjonalne i bezpieczne zabiegi medycyny estetycznej w M&B Kazimierscy. Umów się na wizytę już dziś!"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Open+Sans:wght@300;400&family=Poiret+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Poiret+One&family=Sacramento&display=swap" rel="stylesheet">
-    <title> Studio Estetyki - M&B Kazimierscy</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="./src/assets/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="depilacja laserowa, depilacja, zabiegi kosmetyczne, laseroterapia, botox"/>
+  <meta name="description" content="Profesjonalne i bezpieczne zabiegi medycyny estetycznej w M&B Kazimierscy. Umów się na wizytę już dziś!"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Open+Sans:wght@300;400&family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Poiret+One&family=Sacramento&display=swap" rel="stylesheet">
+  <title> Studio Estetyki - M&B Kazimierscy</title>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
+</body>
 </html>

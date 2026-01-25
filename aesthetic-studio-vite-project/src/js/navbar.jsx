@@ -45,40 +45,73 @@ export function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const closeMenu = () => setMenuOpen(false);
 
     return (
 
         <>
             <Container>
                 <Row className="nav">
-
                     <Col sm={2.4} xs={6}>
-                        <a href="/">
+                        {/* Zmieniamy na Link, żeby nie przeładowywało strony przy powrocie do Home */}
+                        <Link to="/" onClick={closeMenu}>
                             <img src={logo} className="logo" alt="logo"/>
-                        </a>
+                        </Link>
                     </Col>
 
                     <Col xs={6} className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
                         ☰
                     </Col>
 
+                    {/* Dodajemy onClick={closeMenu} do każdego linku */}
                     <Col sm={2.4} className={`menu_item col ${menuOpen ? "open" : ""}`}>
-                        <Link to="/about"> O nas </Link>
+                        <Link to="/about" onClick={closeMenu}> O nas </Link>
                     </Col>
 
                     <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>
-                        <Link to="/treatments">Zabiegi </Link>
+                        <Link to="/treatments" onClick={closeMenu}> Zabiegi </Link>
                     </Col>
 
                     <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>
-                        <Link to="/price_list"> Cennik </Link>
+                        <Link to="/price_list" onClick={closeMenu}> Cennik </Link>
                     </Col>
 
                     <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>
-                        <Link to="/contact">Kontakt </Link>
+                        <Link to="/contact" onClick={closeMenu}> Kontakt </Link>
                     </Col>
                 </Row>
             </Container>
+
+            {/*<Container>*/}
+            {/*    <Row className="nav">*/}
+
+            {/*        <Col sm={2.4} xs={6}>*/}
+            {/*            <a href="/">*/}
+            {/*                <img src={logo} className="logo" alt="logo"/>*/}
+            {/*            </a>*/}
+            {/*        </Col>*/}
+
+            {/*        <Col xs={6} className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>*/}
+            {/*            ☰*/}
+            {/*        </Col>*/}
+
+            {/*        <Col sm={2.4} className={`menu_item col ${menuOpen ? "open" : ""}`}>*/}
+            {/*            <Link to="/about"> O nas </Link>*/}
+            {/*        </Col>*/}
+
+            {/*        <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>*/}
+            {/*            <Link to="/treatments">Zabiegi </Link>*/}
+            {/*        </Col>*/}
+
+            {/*        <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>*/}
+            {/*            <Link to="/price_list"> Cennik </Link>*/}
+            {/*        </Col>*/}
+
+            {/*        <Col sm={2.4} className={`menu_item ${menuOpen ? "open" : ""}`}>*/}
+            {/*            <Link to="/contact">Kontakt </Link>*/}
+            {/*        </Col>*/}
+            {/*    </Row>*/}
+            {/*</Container>*/}
         </>
 
 

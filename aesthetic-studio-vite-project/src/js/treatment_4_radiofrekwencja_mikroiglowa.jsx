@@ -7,6 +7,9 @@ import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import '../css/_treatment_single.scss';
 import radiofrekwencja from '../assets/zabieg_radiofrekwencja.jpg'
 
+import { getTreatment } from '../utils/treatmentHelper';
+import ReactMarkdown from 'react-markdown';
+
 function PriceListItem(props) {
     return (
         <>
@@ -19,6 +22,10 @@ function PriceListItem(props) {
 }
 
 export function TreatmentRadiofrekwencja() {
+
+    const content = getTreatment('radiofrekwencja_mikro');
+
+    if (!content) return null;
 
     return (
         <>
@@ -37,8 +44,12 @@ export function TreatmentRadiofrekwencja() {
 
                 <Row>
                     <Col sm={12}>
-                        <h1>Radiofrekwencja Mikroigłowa</h1>
-                        <p className='treatment_section1_more'>Nowoczesna Technologia Odmładzania i Modelowania Skóry</p>
+                        <h1>{content?.title}</h1>
+                        <p className='treatment_section1_more'>
+                            {content?.description && (
+                                <p className='treatment_section1_more'>{content.description}</p>
+                            )}
+                        </p>
                     </Col>
                 </Row>
 
@@ -49,13 +60,13 @@ export function TreatmentRadiofrekwencja() {
                     <Col sm={6} className='treatment_small_description'>
 
                         <h3> Cena: </h3>
-                        <p>0d 300 zł </p>
+                        <p>{content?.main_price} </p>
 
                         <h3>Obszar zabigowy:</h3>
-                        <p> Różne partie ciała: twarz, szyja, dekolt, brzuch, uda </p>
+                        <p> {content?.treatment_area} </p>
 
                         <h3>Na problem:</h3>
-                        <p> Odmładzanie i modelowanie skóry </p>
+                        <p> {content?.problem} </p>
 
                     </Col>
                 </Row>
@@ -71,50 +82,7 @@ export function TreatmentRadiofrekwencja() {
                 <Row className='treatment_section2'>
                     <Col sm={12}>
 
-                        <p>Radiofrekwencja mikroigłowa to innowacyjna metoda poprawy kondycji skóry, która łączy
-                            zalety mikronakłuwania i radiofrekwencji. Zabieg ten cieszy się coraz większą popularnością
-                            ze względu na swoje wszechstronne działanie i efektywność w redukcji wielu problemów
-                            skórnych.
-                        </p>
-
-
-                        <h3> Mechanizm Działania</h3>
-
-                            <ul>
-                                Radiofrekwencja mikroigłowa działa na dwóch poziomach:
-                                <li>Mikronakłuwanie: Specjalne mikroigły wnikają w skórę na określoną głębokość, tworząc
-                                    mikrouszkodzenia. Te kontrolowane nakłucia stymulują naturalne procesy regeneracyjne
-                                    skóry, pobudzając produkcję kolagenu i elastyny. </li>
-                                <li>Radiofrekwencja: Po wprowadzeniu mikroigieł, przez nie emitowane są fale radiowe, które
-                                    generują ciepło w głębszych warstwach skóry. Ciepło to powoduje dalszą stymulację
-                                    produkcji kolagenu oraz skurczenie się istniejących włókien kolagenowych, co skutkuje
-                                    ujędrnieniem i wygładzeniem skóry.</li>
-                            </ul>
-
-
-
-                            <h3> Na czym polega zabieg? </h3>
-                            <p>
-                                Zabieg radiofrekwencji mikroigłowej rozpoczyna się od demakijażu i przygotowania skóry do
-                                zabiegu. Następnie, za pomocą specjalnego urządzenia firmy Medika wyposażonego w
-                                mikroigły, wykonywane są nakłucia skóry, a przez mikroigły emitowane są fale radiowe. Cały
-                                proces trwa około 30-60 minut, w zależności od obszaru zabiegowego.
-                            </p>
-
-                            <h3> Zalecana seria zabiegów </h3>
-                            <p>
-                                Aby uzyskać optymalne rezultaty, zaleca się wykonanie serii zabiegów. Liczba sesji jest
-                                indywidualnie dostosowywana do potrzeb klienta, ale zazwyczaj wynosi od 3 do 6 zabiegów
-                                przeprowadzanych w odstępach 4-6 tygodniowych.
-                            </p>
-
-                            <h3> Efekty i rekonwalescencja</h3>
-                            <p>
-                                Pierwsze efekty radiofrekwencji mikroigłowej można zauważyć już po pierwszym zabiegu,
-                                jednak pełne rezultaty są widoczne po zakończeniu serii zabiegów. Skóra staje się jędrniejsza,
-                                gładsza, a zmarszczki i blizny zostają zredukowane. Po zabiegu może wystąpić lekkie
-                                zaczerwienienie i obrzęk, które ustępują w ciągu kilku dni.
-                            </p>
+                        <ReactMarkdown>{content?.full_text}</ReactMarkdown>
 
 
                     </Col>
@@ -128,16 +96,21 @@ export function TreatmentRadiofrekwencja() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'twarz'} price={'550 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'szyja'} price={'200 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'twarz + szyja'} price={'700 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'dekolt'} price={'250 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'biust'} price={'500 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'twarz + szyja + dekolt'} price={'850 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'dłonie'} price={'200 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'brzuch(rozstępy)'} price={'od 400 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'uda'} price={'od 400 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'blizny'} price={'od 250 PLN'}/></Col>
+                    <Col sm={12}>
+
+                        {content?.detailed_prices && content.detailed_prices.length > 0 ? (
+                            content.detailed_prices.map((item, index) => (
+                                <PriceListItem
+                                    key={index}
+                                    description={item.area}
+                                    price={item.cost}
+                                />
+                            ))
+                        ) : (
+                            <p>Cennik w trakcie aktualizacji...</p>
+                        )}
+
+                    </Col>
                 </Row>
 
                 <Row className="treatment_section2" >

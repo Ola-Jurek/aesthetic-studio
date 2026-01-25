@@ -7,6 +7,9 @@ import {TreatmentSubmenu} from "./treatmentSubmenu.jsx";
 import team2 from '../assets/marta_i_bartek2.jpg'
 import '../css/_treatment_single.scss';
 
+import { getTreatment } from '../utils/treatmentHelper';
+import ReactMarkdown from 'react-markdown';
+
 function PriceListItem(props) {
     return (
         <>
@@ -19,6 +22,10 @@ function PriceListItem(props) {
 }
 
 export function TreatmentLipoliza() {
+
+    const content = getTreatment('lipoliza');
+
+    if (!content) return null;
 
     return (
         <>
@@ -36,9 +43,14 @@ export function TreatmentLipoliza() {
             <Container fluid style={{ maxWidth: '100vw'}} className="treatment_section1">
 
                 <Row>
-                    <Col sm={12} >
-                        <h1>Lipoliza iniekcyjna</h1>
-                        <p className='treatment_section1_more'>Skuteczny Sposób na Redukcję Tkanki Tłuszczowej</p>
+                    <Col sm={12}>
+                        <h1>{content?.title}</h1>
+                        <p className='treatment_section1_more'>
+                            {content?.description && (
+                                <p className='treatment_section1_more'>{content.description}</p>
+                            )}
+                        </p>
+
                     </Col>
                 </Row>
 
@@ -50,13 +62,13 @@ export function TreatmentLipoliza() {
                     <Col sm={6} className='treatment_small_description'>
 
                         <h3> Cena: </h3>
-                        <p>0d 300 zł </p>
+                        <p>{content?.main_price} </p>
 
                         <h3>Czas trwania:</h3>
-                        <p> około 30 - 45 minut </p>
+                        <p> {content?.duration}</p>
 
                         <h3>Na problem:</h3>
-                        <p> Redukcja tkanki tłuszczowej </p>
+                        <p> {content?.problem} </p>
 
                     </Col>
                 </Row>
@@ -72,70 +84,8 @@ export function TreatmentLipoliza() {
                 <Row className="treatment_section2">
                     <Col sm={12}>
 
-                        <p> Lipoliza iniekcyjna to nowoczesna metoda modelowania sylwetki, polegająca na redukcji
-                            lokalnych złogów tłuszczu poprzez wstrzyknięcie specjalnych substancji rozkładających
-                            tłuszcz. Zabieg ten jest coraz bardziej popularny wśród osób pragnących uzyskać smuklejszą
-                            sylwetkę bez konieczności poddawania się inwazyjnym operacjom chirurgicznym.</p>
+                        <ReactMarkdown>{content?.full_text}</ReactMarkdown>
 
-
-                        <h3> Dla kogo jest lipoliza iniekcyjna? </h3>
-
-                            <ul>
-                                Lipoliza iniekcyjna jest idealna dla osób, które:
-                                <li> Mimo zdrowego trybu życia i regularnych ćwiczeń fizycznych nie mogą pozbyć się
-                                    uporczywego tłuszczu w niektórych partiach ciała.
-                                </li>
-                                <li> Chcą zredukować tłuszcz w miejscach takich jak: podbródek, ramiona, brzuch, uda,
-                                    biodra, kolana czy pośladki.
-                                </li>
-                                <li> Poszukują nieinwazyjnych metod modelowania sylwetki, które nie wymagają długiej
-                                    rekonwalescencji.
-                                </li>
-                                <li> Mają stabilną wagę i pragną poprawić kontury swojego ciała.</li>
-                            </ul>
-
-
-                        <div>
-                            <h3> Jak przebiega zabieg? </h3>
-                            <p>
-                                Zabieg lipolizy iniekcyjnej polega na wstrzyknięciu w tkankę tłuszczową substancji
-                                aktywnych, które rozkładają komórki tłuszczowe. Proces ten jest kontrolowany i bezpieczny,
-                                a jego efekty są trwałe, pod warunkiem utrzymania zdrowego stylu życia. Zabieg jest
-                                wykonywany w seriach, najczęściej co 4 - 6 tygodni, w zależności od obszaru i ilości tkanki
-                                tłuszczowej.
-                            </p>
-
-                            <h3> Ilość zabiegów </h3>
-                           <p>
-                               Liczba zabiegów potrzebnych do osiągnięcia optymalnych rezultatów jest indywidualna i
-                               zależy od wielkości obszaru, który ma być poddany lipolizie, oraz od reakcji organizmu na
-                               substancje wstrzyknięte. Zazwyczaj seria obejmuje od 2 do 6 zabiegów.
-                           </p>
-
-                            <h3> Efekty i rekonwalescencja</h3>
-                            <p>
-                                Pierwsze efekty lipolizy iniekcyjnej można zauważyć już po kilku tygodniach od pierwszego
-                                zabiegu, jednak pełne rezultaty widoczne są po zakończeniu całej serii. Po zabiegu klient
-                                może wrócić do codziennych czynności niemal od razu, choć zaleca się unikanie
-                                intensywnego wysiłku fizycznego przez kilka dni. Mogą pojawić się drobne siniaki i
-                                opuchlizna, które ustępują w ciągu kilku dni.
-                            </p>
-
-                            <h3> Bezpieczeństwo</h3>
-                            <p>
-                                Lipoliza iniekcyjna to skuteczny sposób na redukcję tkanki tłuszczowej i modelowanie
-                                sylwetki, który może pomóc wielu osobom osiągnąć wymarzoną figurę bez potrzeby
-                                korzystania z bardziej inwazyjnych metod. Jeśli masz pytania lub chcesz umówić się na
-                                konsultację, skontaktuj się z nami!
-                            </p>
-
-                            <h3> Czas trwania i częstotliwość</h3>
-                            <p>
-                                Zabieg trwa średnio do 30 - 45 minut, w zależności od obszaru ciała. Aby uzyskać oczekiwane
-                                rezultaty, zaleca się serię 3 - 6 zabiegów co 4 tygodnie.
-                            </p>
-
-                        </div>
                     </Col>
                 </Row>
 
@@ -146,9 +96,21 @@ export function TreatmentLipoliza() {
                         <h3> Szczegółowy cennik: </h3>
                     </Col>
 
-                    <Col sm={12}><PriceListItem description={'podbródek'} price={'250 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'brzuch'} price={'300 PLN'}/></Col>
-                    <Col sm={12}><PriceListItem description={'uda'} price={'350 PLN'}/></Col>
+                    <Col sm={12}>
+
+                        {content?.detailed_prices && content.detailed_prices.length > 0 ? (
+                            content.detailed_prices.map((item, index) => (
+                                <PriceListItem
+                                    key={index}
+                                    description={item.area}
+                                    price={item.cost}
+                                />
+                            ))
+                        ) : (
+                            <p>Cennik w trakcie aktualizacji...</p>
+                        )}
+
+                    </Col>
                 </Row>
 
                 <Row className="treatment_section2" >
