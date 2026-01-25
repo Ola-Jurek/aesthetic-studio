@@ -27,7 +27,7 @@ export function TreatmentOczyszczanieWodorowe() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -134,7 +134,7 @@ export function TreatmentOczyszczanieWodorowe() {
                 </Row>
 
             </Container>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

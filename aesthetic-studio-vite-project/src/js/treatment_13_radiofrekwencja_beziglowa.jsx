@@ -27,7 +27,7 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -121,7 +121,7 @@ export function TreatmentRadiofrekwencjaBeziglowa() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

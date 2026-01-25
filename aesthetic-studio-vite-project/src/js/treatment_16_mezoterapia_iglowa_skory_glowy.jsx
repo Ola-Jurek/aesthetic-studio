@@ -27,7 +27,7 @@ export function TreatmentMezoterapiaIglowaSkoryGlowy() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -133,7 +133,7 @@ export function TreatmentMezoterapiaIglowaSkoryGlowy() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

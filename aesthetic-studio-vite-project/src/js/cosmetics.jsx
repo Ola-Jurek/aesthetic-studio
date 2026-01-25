@@ -7,7 +7,7 @@ export function Cosmetics(props) {
     return (
         <>
 
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -17,7 +17,7 @@ export function Cosmetics(props) {
 
             <div> Podstrona o kosmetykach </div>
 
-            <Footer/>
+            {/*<Footer/>*/}
 
         </>
     );

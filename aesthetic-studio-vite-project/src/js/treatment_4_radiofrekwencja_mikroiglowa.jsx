@@ -29,7 +29,7 @@ export function TreatmentRadiofrekwencja() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -119,7 +119,7 @@ export function TreatmentRadiofrekwencja() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

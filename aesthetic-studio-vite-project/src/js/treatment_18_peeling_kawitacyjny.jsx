@@ -27,7 +27,7 @@ export function TreatmentPeelingKawitacyjny() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -117,7 +117,7 @@ export function TreatmentPeelingKawitacyjny() {
                     <Col sm={12}><hr/></Col>
                 </Row>
             </Container>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     )
 }

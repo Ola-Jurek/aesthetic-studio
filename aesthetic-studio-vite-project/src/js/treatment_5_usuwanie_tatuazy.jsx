@@ -29,7 +29,7 @@ export function TreatmentUsuwanieTatuazy() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -137,7 +137,7 @@ export function TreatmentUsuwanieTatuazy() {
                 </Row>
 
             </Container>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

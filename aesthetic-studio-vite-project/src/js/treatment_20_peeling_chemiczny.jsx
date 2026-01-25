@@ -30,7 +30,7 @@ export function TreatmentPeelingChemiczny() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -134,7 +134,7 @@ export function TreatmentPeelingChemiczny() {
                     <Col sm={12}><hr/></Col>
                 </Row>
             </Container>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     )
 }

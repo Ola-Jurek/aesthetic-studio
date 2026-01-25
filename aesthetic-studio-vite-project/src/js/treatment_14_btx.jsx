@@ -27,7 +27,7 @@ export function TreatmentBtx() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -133,7 +133,7 @@ export function TreatmentBtx() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

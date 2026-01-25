@@ -27,7 +27,7 @@ function PriceListItem(props) {
 export function TreatmentHennaPudrowa() {
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -131,7 +131,7 @@ export function TreatmentHennaPudrowa() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

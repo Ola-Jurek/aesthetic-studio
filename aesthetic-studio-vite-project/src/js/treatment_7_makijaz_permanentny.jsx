@@ -27,7 +27,7 @@ export function TreatmentMakijazPermanentny() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -133,7 +133,7 @@ export function TreatmentMakijazPermanentny() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

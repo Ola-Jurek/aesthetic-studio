@@ -27,7 +27,7 @@ export function TreatmentModelowanieUst() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -133,7 +133,7 @@ export function TreatmentModelowanieUst() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

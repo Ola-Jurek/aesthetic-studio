@@ -28,7 +28,7 @@ export function TreatmentOsoczeBogatoplytkowe() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -135,7 +135,7 @@ export function TreatmentOsoczeBogatoplytkowe() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

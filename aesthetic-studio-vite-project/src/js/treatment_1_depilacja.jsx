@@ -33,7 +33,7 @@ export function TreatmentDepilacja() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -140,7 +140,7 @@ export function TreatmentDepilacja() {
 
                 </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

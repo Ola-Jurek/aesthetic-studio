@@ -28,7 +28,7 @@ export function TreatmentMezoterapiaMikroiglowa() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -134,7 +134,7 @@ export function TreatmentMezoterapiaMikroiglowa() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

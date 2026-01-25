@@ -28,7 +28,7 @@ export function TreatmentLaserFrakcyjny() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -137,7 +137,7 @@ export function TreatmentLaserFrakcyjny() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

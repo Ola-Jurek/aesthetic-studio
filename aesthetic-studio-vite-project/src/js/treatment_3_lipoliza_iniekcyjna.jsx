@@ -29,7 +29,7 @@ export function TreatmentLipoliza() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -118,7 +118,7 @@ export function TreatmentLipoliza() {
                 </Row>
 
             </Container>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

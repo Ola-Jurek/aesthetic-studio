@@ -27,7 +27,7 @@ export function TreatmentLiftera() {
     if (!content) return null;
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -136,7 +136,7 @@ export function TreatmentLiftera() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

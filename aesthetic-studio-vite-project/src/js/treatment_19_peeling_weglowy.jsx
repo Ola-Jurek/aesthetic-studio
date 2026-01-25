@@ -27,7 +27,7 @@ export function TreatmentPeelingWeglowy() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -131,7 +131,7 @@ export function TreatmentPeelingWeglowy() {
                     <Col sm={12}><hr/></Col>
                 </Row>
             </Container>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     )
 }

@@ -29,7 +29,7 @@ export function TreatmentBlizny() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -121,7 +121,7 @@ export function TreatmentBlizny() {
             </Container>
 
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

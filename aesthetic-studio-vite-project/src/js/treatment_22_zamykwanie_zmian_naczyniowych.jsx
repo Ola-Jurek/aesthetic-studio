@@ -27,7 +27,7 @@ export function TreatmentZamykwanieZmianNaczyniowych() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -134,7 +134,7 @@ export function TreatmentZamykwanieZmianNaczyniowych() {
 
             </Container>
 
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

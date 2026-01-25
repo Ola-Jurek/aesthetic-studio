@@ -28,7 +28,7 @@ export function TreatmentTerapiaTradziku() {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
             <Container>
                 <Row>
@@ -109,7 +109,7 @@ export function TreatmentTerapiaTradziku() {
                 </Row>
 
             </Container>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     )
 }
