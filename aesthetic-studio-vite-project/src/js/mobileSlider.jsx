@@ -16,17 +16,14 @@ export function MobileSlider() {
         setCurrentIndex((prev) => (prev + 1) % photos.length);
     };
 
+
     useEffect(() => {
         const interval = setInterval(() => {
-            setFade(true);
-            setTimeout(() => {
-                setCurrentIndex((prev) => (prev + 1) % photos.length);
-                setFade(false);
-            }, 1000); // fade duration
-        }, 7000);
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % photos.length);
+        }, 6000); // <--- TEN CZAS MUSI BYĆ TAKI SAM JAK W CSS (3s)
 
-        return () => clearInterval(interval);
-    }, []);
+        return () => clearInterval(interval); // To jest kluczowe, żeby nie "pędziło"!
+    }, [photos.length]);
 
         return (
             <Col sm={12}>
@@ -35,16 +32,13 @@ export function MobileSlider() {
                         {/*{photos.map((photo, index) => (*/}
                         {/*{prevIndex !== null && isTransitioning && (*/}
                             <img
+                                key={currentIndex}
                                 src={photos[currentIndex]}
                                 alt={`Slide ${currentIndex}`}
-                                className="slider-image-app-mobile"
-                                // key={index}
-                                // src={photo}
-                                // alt={`Slide ${index}`}
-                                // className={`slider-image-app-mobile ${index === currentIndex ? 'fade-in' : ''}`}
+                                className="slider-image-app-mobile fade-in"
                                 style={{
-                                    opacity: fade ? 0 : 1,
-                                    transition: 'opacity 2s ease-in-ou',
+                                    // opacity: fade ? 0 : 1,
+                                    // transition: 'opacity 2s ease-in-ou',
                                     position: 'absolute',
                                     width: '100%',
                                     zIndex: 1,
