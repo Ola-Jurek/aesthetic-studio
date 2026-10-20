@@ -85,12 +85,14 @@
       .treatment_submenu_item {
         position: absolute;
         top: 8.3rem;
-        left: auto;
+        left: 0;
+        right: 0;
+        width: auto;
         display: flex;
         flex-direction: column;
         opacity: 90%;
         border-top: 1px solid goldenrod;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 
         > :first-child {
           padding-top: 1rem;
