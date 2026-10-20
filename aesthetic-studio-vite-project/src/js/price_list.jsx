@@ -44,11 +44,13 @@ export function PriceList  () {
         return null;
     };
 
-    const PriceBlock = ({ id, tKey, overrideTitle, subTitle, footerNote }) => {
-        const t = getT(tKey);
-        if (!t) return null;
+    const PriceBlock = ({ id, tKey, overrideTitle, subTitle, footerNote, items }) => {
+        const t = tKey ? getT(tKey) : null;
+        const source = items || t?.detailed_prices;
+        if (!source) return null;
 
-        const displayTitle = overrideTitle || t.title;
+        const displayTitle = overrideTitle || t?.title;
+        const rows = source.filter((item) => item?.cost);
 
         return (
             <>
@@ -65,7 +67,7 @@ export function PriceList  () {
                 <Col sm={12}><hr/></Col>
 
                 {/* 2. Lista cen z JSON */}
-                {t.detailed_prices?.map((item, idx) => (
+                {rows.map((item, idx) => (
                     <Col sm={12} key={idx}>
                         <PriceListItem description={item.area} price={item.cost}/>
                     </Col>
@@ -102,8 +104,15 @@ export function PriceList  () {
         { to: "price15", label: "Zabieg pielęgnacyjny" },
         { to: "price16", label: "Laser Frakcyjny" },
         { to: "price18", label: "Liftera" },
+        { to: "price19", label: "modelowanie sylwetki" },
+        { to: "price19a", label: "ujędrnianie twarzy" },
         { to: "price17", label: "Konsultacja" }
     ];
+
+    const modelowaniePrices = getT('modelowanie_ciala')?.detailed_prices || [];
+    const faceHeadingIndex = modelowaniePrices.findIndex((item) => item.area.includes('Ujędrnianie'));
+    const modelowanieBodyPrices = faceHeadingIndex === -1 ? modelowaniePrices : modelowaniePrices.slice(0, faceHeadingIndex);
+    const modelowanieFacePrices = faceHeadingIndex === -1 ? [] : modelowaniePrices.slice(faceHeadingIndex + 1);
 
     return (
         <>
@@ -160,6 +169,22 @@ export function PriceList  () {
                     <PriceBlock id="price16" tKey="laser_frakcyjny" overrideTitle="Laser Medyczny CO₂" subTitle="Finexel" />
 
                     <PriceBlock id="price18" tKey="liftera" overrideTitle="Terapia MFU - lifting twarzy i okolic" subTitle="Liftera Advance" />
+
+                    <PriceBlock
+                        id="price19"
+                        overrideTitle="Modelowanie sylwetki, redukcja cellulitu"
+                        subTitle="Venus Legacy"
+                        footerNote="Seria składa się z 6 zabiegów. Pierwsza kwota to cena 1 zabiegu, druga to cena serii."
+                        items={modelowanieBodyPrices}
+                    />
+
+                    <PriceBlock
+                        id="price19a"
+                        overrideTitle="Ujędrnianie twarzy"
+                        subTitle="Venus Legacy"
+                        footerNote="Seria składa się z 6 zabiegów. Pierwsza kwota to cena 1 zabiegu, druga to cena serii."
+                        items={modelowanieFacePrices}
+                    />
 
                     <Col sm={12} id='price17'>{<PriceListHeading title={'Konsultacja'}/>}</Col>
                      <Col sm={12}><hr/></Col>

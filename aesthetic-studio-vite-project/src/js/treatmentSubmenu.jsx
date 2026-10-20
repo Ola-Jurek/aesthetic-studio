@@ -50,6 +50,7 @@ export function TreatmentSubmenu() {
                         <li><Link to='/treatment_radiofrekwencja_mikroiglowa'>Radiofrekwencja mikroigłowa</Link></li>
                         <li><Link to='/treatment_usuwamie_tatuazy'>Laserowe usuwanie tatuaży</Link></li>
                         <li><Link to='/treatment_laser_frakcyjny'>Laser Frakcyjny</Link></li>
+                        <li><Link to='/treatment_modelowanie_ciala'>Modelowanie ciała</Link></li>
                     </ul>
 
                 )}
@@ -67,7 +68,10 @@ export function TreatmentSubmenu() {
                         <li><Link to='/treatment_mezoterapia-iglowa'>Mezoteriapia igłowa</Link></li>
                         <li><Link to='/treatment_mezoterapia_mikroiglowa'>Mezoterapia mikroigłowa</Link></li>
                         <li><Link to='/treatment_osocze_bogatoplytkowe'>Osocze bogatopłytkowe</Link></li>
-                        <li><Link to='/treatment_radiofrekwencja_beziglowa'>Radiofrekwencja bezigłowa</Link></li>
+                        {/* Radiofrekwencja bezigłowa ukryta — zabieg niewykonywany, strona zostaje w plikach roboczych */}
+                        {/*<li><Link to='/treatment_radiofrekwencja_beziglowa'>Radiofrekwencja bezigłowa</Link></li>*/}
+                        <li><Link to='/treatment_glass_skin'>Oczyszczanie – Glass Skin</Link></li>
+                        <li><Link to='/treatment_analiza_skory'>Analiza skóry</Link></li>
                         <li><Link to='/treatment_modelowanie_ust'>Modelowanie ust</Link></li>
                         <li><Link to='/treatment_liftera'>Lifting twarzy i okolic</Link></li>
                     </ul>

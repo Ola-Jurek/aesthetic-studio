@@ -22,7 +22,10 @@ import {TreatmentTerapiaTradziku} from "./js/treatment_21_terapia_tradziku.jsx";
 import {TreatmentMezoterapiaIglowa} from "./js/treatment_9_mezoterapia_iglowa.jsx";
 import {TreatmentMezoterapiaMikroiglowa} from "./js/treatment_10_mezoterapia_mikroiglowa.jsx";
 import {TreatmentOsoczeBogatoplytkowe} from "./js/treatment_11_osocze_bogatoplytkowe.jsx";
-import {TreatmentRadiofrekwencjaBeziglowa} from "./js/treatment_13_radiofrekwencja_beziglowa.jsx";
+// Radiofrekwencja bezigłowa ukryta — komponent zostaje, trasa wyłączona
+// import {TreatmentRadiofrekwencjaBeziglowa} from "./js/treatment_13_radiofrekwencja_beziglowa.jsx";
+import {TreatmentGlassSkin} from "./js/treatment_24_glass_skin.jsx";
+import {TreatmentAnalizaSkory} from "./js/treatment_25_analiza_skory.jsx";
 import {TreatmentMakijazPermanentny} from "./js/treatment_7_makijaz_permanentny.jsx";
 import {TreatmentHennaPudrowa} from "./js/treatment_8_henna_pudrowa.jsx";
 import {TreatmentMezoterapiaIglowaSkoryGlowy} from "./js/treatment_16_mezoterapia_iglowa_skory_glowy.jsx";
@@ -30,6 +33,7 @@ import {TreatmentModelowanieUst} from "./js/treatment_15_modelowanie_ust.jsx";
 import {TreatmentBtx} from "./js/treatment_14_btx.jsx";
 import {TreatmentZamykwanieZmianNaczyniowych} from "./js/treatment_22_zamykwanie_zmian_naczyniowych.jsx";
 import {TreatmentLaserFrakcyjny} from "./js/treatment_12_laser_frakcyjny.jsx";
+import {TreatmentModelowanieCiala} from "./js/treatment_26_modelowanie_ciala.jsx";
 import {TreatmentLiftera} from "./js/treatment_23_liftera.jsx";
 import {ScrollToTop} from "./js/scrollToTop.jsx";
 import {Navbar} from "./js/navbar.jsx";
@@ -56,7 +60,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/treatment_mezoterapia-iglowa' element={<TreatmentMezoterapiaIglowa/>}/>
               <Route path='/treatment_mezoterapia_mikroiglowa' element={<TreatmentMezoterapiaMikroiglowa/>}/>
               <Route path='/treatment_osocze_bogatoplytkowe' element={<TreatmentOsoczeBogatoplytkowe/>}/>
-              <Route path='/treatment_radiofrekwencja_beziglowa' element={<TreatmentRadiofrekwencjaBeziglowa/>}/>
+              {/*<Route path='/treatment_radiofrekwencja_beziglowa' element={<TreatmentRadiofrekwencjaBeziglowa/>}/>*/}
+              <Route path='/treatment_glass_skin' element={<TreatmentGlassSkin/>}/>
+              <Route path='/treatment_analiza_skory' element={<TreatmentAnalizaSkory/>}/>
               <Route path='/treatment_modelowanie_ust' element={<TreatmentModelowanieUst/>}/>
               <Route path='/treatment_btx' element={<TreatmentBtx/>}/>
               <Route path='/treatment_zamykanie_zmian_naczyniowych' element={<TreatmentZamykwanieZmianNaczyniowych/>}/>
@@ -67,6 +73,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/treatment_peeling_chemiczny' element={<TreatmentPeelingChemiczny/>}/>
               <Route path='/treatment_terapia_tradziku' element={<TreatmentTerapiaTradziku/>}/>
               <Route path='/treatment_laser_frakcyjny' element={<TreatmentLaserFrakcyjny/>}/>
+              <Route path='/treatment_modelowanie_ciala' element={<TreatmentModelowanieCiala/>}/>
               <Route path='/treatment_liftera' element={<TreatmentLiftera/>}/>
               <Route path='/cosmetics' element={<Cosmetics/>}/>
               <Route path='/contact' element={<Contact/>}/>

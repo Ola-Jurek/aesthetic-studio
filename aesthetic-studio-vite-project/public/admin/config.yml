@@ -48,6 +48,7 @@ collections:
                   - { label: "Radiofrekwencja mikroigłowa", name: "radiofrekwencja_mikro", widget: "object", fields: *treatment_fields }
                   - { label: "Laserowe usuwanie tatuaży", name: "tatuaze", widget: "object", fields: *treatment_fields }
                   - { label: "Laser Frakcyjny", name: "laser_frakcyjny", widget: "object", fields: *treatment_fields }
+                  - { label: "Modelowanie ciała", name: "modelowanie_ciala", widget: "object", fields: *treatment_fields }
 
               # --- SEKCJA TWARZ ---
               - label: "TWARZ"
@@ -61,6 +62,8 @@ collections:
                   - { label: "Mezoterapia mikroigłowa", name: "mezoterapia_mikro", widget: "object", fields: *treatment_fields }
                   - { label: "Osocze bogatopłytkowe", name: "osocze", widget: "object", fields: *treatment_fields }
                   - { label: "Radiofrekwencja bezigłowa", name: "radiofrekwencja_bez", widget: "object", fields: *treatment_fields }
+                  - { label: "Oczyszczanie – Glass Skin", name: "glass_skin", widget: "object", fields: *treatment_fields }
+                  - { label: "Analiza skóry", name: "analiza_skory", widget: "object", fields: *treatment_fields }
                   - { label: "Modelowanie ust", name: "usta", widget: "object", fields: *treatment_fields }
                   - { label: "Lifting twarzy (Liftera)", name: "liftera", widget: "object", fields: *treatment_fields }
 
