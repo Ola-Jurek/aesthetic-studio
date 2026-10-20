@@ -84,7 +84,8 @@
 
       .treatment_submenu_item {
         position: absolute;
-        top: 8.3rem;
+        top: calc(100% + 20px);
+        margin: 0;
         left: auto;
         display: flex;
         flex-direction: column;
