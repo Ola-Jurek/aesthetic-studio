@@ -90,30 +90,33 @@
 @media (max-width: 768px) {
 
   .treatment_section1 {
-    position: relative;
     margin: 0;
-    padding-top: 270px;
 
     h1 {
-      position: static;
       width: 95%;
       font-size: 1.4rem;
-      margin: 0 0 0.4rem;
+      position: absolute;
+      margin-top: 17rem;
     }
 
     .treatment_section1_more {
       display: block;
-      position: static;
+      position: absolute;
       width: 95%;
-      margin: 0 0 0.6rem;
+      margin-top: 20rem;
+      margin-bottom: 0;
       font-size: 1rem;
       line-height: 1.4;
+
+      .treatment_section1_more {
+        position: static;
+        width: auto;
+        margin: 0;
+      }
     }
 
       .treatment_photoPlace {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
         height: 250px;
         overflow: hidden;
@@ -130,16 +133,14 @@
 
           &--product {
             object-fit: contain;
-            top: 0;
-            height: 100%;
             background: #fff;
           }
         }
       }
 
       .treatment_small_description {
-        margin-top: 1.2rem;
-        line-height: 1.3;
+        margin-top: 9.5rem;
+        line-height: 1rem;
 
 
         h3 {
